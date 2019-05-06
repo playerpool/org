@@ -118,7 +118,7 @@
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                     .call(yaxis);
             
-                d3.selectAll("p")
+                d3.selectAll("button")
                     .on("click", function() {
                         
                         var person = d3.select(this).attr("id")
