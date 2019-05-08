@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v5.min.js"></script>
         <style>
             div.tooltip {	
                 position: absolute;			
@@ -16,18 +16,43 @@
                 border-radius: 8px;			
                 pointer-events: none;			
             }
+            
+            .button {
+                  background-color: CORNFLOWERBLUE; 
+                  border: none;
+                  color: white;
+                  padding: 5px 30px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline;
+                  font-family: "Gill Sans";
+                  font-size: 16px;
+                  margin: 2px 2px;
+                  cursor: pointer;
+                }
+
+                .Alex {background-color: TOMATO;}
+                .Farach {background-color: DARKKHAKI;}
+                .Lloyd {background-color: MEDIUMORCHID;}
+                .Bryan {background-color: FORESTGREEN;}
+                .James {background-color: DARKTURQUOISE;}
+                .Josh {background-color: GOLDENROD;}
+                .Rob {background-color: SLATEGRAY;}
+
         </style>
     </head>
     <body>
-        <button id="Adam">Adam</p>
-        <button id="Alex">Dr. Katz</p>
-        <button id="Andrew F">Farach</p>
-        <button id="Andrew L">Lloyd</p>
-        <button id="Bryan">Bryan</p>
-        <button id="James">James</p>
-        <button id="Josh">Josh</p>
-        <button id="Rob">Rob</p>
+        <h3 style="font-family:Gill Sans">Historical dot plot</h3>
+        <button class="button" id="Adam" color="CORNFLOWERBLUE">Adam</p>
+        <button class="button Alex" id="Alex" color="TOMATO">Dr. Katz</p>
+        <button class="button Farach" id="Andrew F" color="DARKKHAKI">Farach</p>
+        <button class="button Lloyd" id="Andrew L" color="MEDIUMORCHID">Lloyd</p>
+        <button class="button Bryan" id="Bryan" color="FORESTGREEN">Bryan</p>
+        <button class="button James" id="James" color="DARKTURQUOISE">James</p>
+        <button class="button Josh" id="Josh" color="GOLDENROD">Josh</p>
+        <button class="button Rob" id="Rob" color="SLATEGRAY">Rob</p>
         <script type="text/javascript">
+            
             var dataset;
             
             var margin = {top: 30, right: 50, bottom: 20, left: 50},
@@ -87,13 +112,14 @@
                     .data(dataset)
                     .enter()
                     .append("circle")
-                    .attr("r", h/100)
+                    .attr("r", h/90)
                     .attr("cx", function(d) { 
                         return xscale(d.year) + margin.left;
                     })
                     .attr("cy", function(d) {
                         return yscale(d.totalpoints) + margin.top;
                     })
+                    .attr("fill", "CORNFLOWERBLUE")
                     .on("mouseover", function(d) {		
                         div.transition()		
                             .duration(200)		
@@ -122,6 +148,8 @@
                     .on("click", function() {
                         
                         var person = d3.select(this).attr("id")
+                        
+                        var color = d3.select(this).attr("color")
                         
                         dataset = data.filter(function(d) { 
                         return d.person == person; 
@@ -152,7 +180,8 @@
                             })
                             .attr("cy", function(d) {
                                 return yscale(d.totalpoints) + margin.top;
-                            });
+                            })
+                            .attr("fill", color);
                         
                         svg.select(".x.axis")
                             .transition()
