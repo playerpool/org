@@ -1,0 +1,40 @@
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 120px;					
+    height: 55px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+.button {
+      background-color: CORNFLOWERBLUE; 
+      border: none;
+      color: white;
+      padding: 5px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline;
+      font-family: "Gill Sans";
+      font-size: 16px;
+      margin: 2px 2px;
+      cursor: pointer;
+    }
+
+.Alex {background-color: TOMATO;}
+.Farach {background-color: DARKKHAKI;}
+.Lloyd {background-color: MEDIUMORCHID;}
+.Bryan {background-color: FORESTGREEN;}
+.James {background-color: DARKTURQUOISE;}
+.Josh {background-color: GOLDENROD;}
+.Rob {background-color: SLATEGRAY;}
+
+h3 {
+    font-family:Gill Sans;
+    font-size: 24px;
+    line-height: 28px;
+}
