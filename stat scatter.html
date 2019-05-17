@@ -43,9 +43,7 @@
                     pick: +d.overallpick
                 };
             }).then(function(data) {
-                dataset = data.filter(function(d) { 
-                    return d.person == "Adam"; 
-                });
+                dataset = data;
                 console.log(dataset);
                 
                 var yscale = d3.scaleLinear()
@@ -85,7 +83,7 @@
                     .attr("cy", function(d) {
                         return yscale(d.totalpoints) + margin.top;
                     })
-                    .attr("fill", "CORNFLOWERBLUE")
+                    .attr("fill", "#898888")
                     .on("mouseover", function(d) {		
                         div.transition()		
                             .duration(200)		
@@ -120,23 +118,19 @@
                         dataset = data.filter(function(d) { 
                         return d.person == person; 
                         });
-
-                        yscale.domain([0, d3.max(dataset, function(d) {
-                                return d.totalpoints;
-                        })])
-                        
-                        xscale.domain([d3.min(dataset, function(d) {
-                            return d.pick;
-                        }),
-                         d3.max(dataset, function(d) {
-                            return d.pick;
-                        })])
                     
                         var duration = 750;
                     
-                        svg.selectAll("circle")
-                            .data(dataset)
+                      var circ = svg.selectAll("circle")
+                            .data(dataset);
+                    
+                        circ.exit()
                             .transition()
+                            .duration(duration)
+                            .style("fill-opacity", 1e-6)
+                            .remove();
+                            
+                        circ.transition()
                             .delay(function(d,i) {
                                 return i*dataset.length/30;
                             })
@@ -147,11 +141,7 @@
                             .attr("cy", function(d) {
                                 return yscale(d.totalpoints) + margin.top;
                             })
-                            .attr("fill", color)
-                        
-                            .exit().remove();
-                           
-                            
+                            .attr("fill", color);
                         
                         svg.select(".x.axis")
                             .transition()
