@@ -4,24 +4,68 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif&display=swap" rel="stylesheet">
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylesheet.css">
         <style></style>
     </head>
     <title>Player Pool</title>
     <body>
-        
-        <h3 style="">Playerpool.org</h3>
-        
-        <button onclick="window.location.href='historical dot plot.html'" class="button" color="CORNFLOWERBLUE">Historical dot plot</p>
-       
-        <button onclick="window.location.href='kernel density.html'" class="button Alex" color="TOMATO">Kernel density</p>
-        
-        <button onclick="window.location.href='step chart.html'" class="button Farach" color="DARKKHAKI">Cumulative points rank</p>
-        
-        <button onclick="window.location.href='Table 1.html'" class="button Lloyd" color="MEDIUMORCHID">Stats table</p>
-        
-        <button onclick="window.location.href='stat scatter.html'" class="button Bryan" color="FORESTGREEN">Points vs pick #</p>
-        
+        <!-- Note -->
+        <div style="background:white;padding: 5px">
+          <h4 style="text-align:center">Alpha</h4>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+          <h1>NCAA Player Pool</h1>
+          <p style="font-size: 20px">New look, same great taste</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+          <a href="historical dot plot.html">Dot plot</a>
+          <a href="kernel%20density.html">Kernel density</a>
+          <a href="step%20chart.html">Cumulative rank</a>
+          <a href="Table%201.html">Stats table</a>
+          <a href="stat%20scatter.html">Pts vs. draft pick</a>
+          <a href="sankey.html">Draft pick vs. finish</a>
+          <a href="stat%20scatter%20alt.html">Stat scatter</a>
+        </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+          <div class="side">
+            <h2>Sheets</h2>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="button">NCAA Player Pool</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="button">Player Pool Draft</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="button">Cheat Sheet</button>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+          </div>
+          <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
     </body>
 </html>
