@@ -5,41 +5,126 @@
 /* Style the body */
 body {
   font-family: sans-serif;
-  margin: 0;
+  margin:  10;
+}
+
+h3 {
+    font-family: "";
 }
 
 /* Header/logo Title */
 .header {
-  padding: .1px;
-  text-align: center;
-  background: beige;
+  padding: 0.1px;
+  text-align: left;
+ /* background: linear-gradient(to right, lightgray 10%, beige 100%); */
+  background: white;
   color: darkblue;
-  font-size: 28px;
-  font-family: 'PT Sans', sans-serif;
+  position: inherit;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header h1 {
+    padding-left: 150px;
+    font-size: 40px;
 }
 
 /* Style the top navigation bar */
-.navbar {
+.navbar1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+  margin: 0px;
+  border-top: 1px solid darkblue;
+  border-bottom: 1px solid darkblue;
+  padding-left: 0px;
+}
+.navbar2 {
   display: flex;
   background-color: white;
   margin: .1px;
-  border-top: 1px solid darkblue;
+  border-top: 0px solid darkblue;
   border-bottom: 1px solid darkblue;
+  padding-left: 20px;
 }
 
 /* Style the navigation bar links */
-.navbar a {
+.navbar1 a {
   color: darkblue;
-  padding: 4px 40px;
+  padding: 4px 30px;
   text-decoration: none;
   text-align: center;
-  font-family: 'PT Serif', serif;
+  font-family: 'Forum', cursive;
+  padding-left: 15px;
+}
+.navbar2 a {
+  color: darkblue;
+  padding: 4px 50px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Forum', cursive;
+  font-size: 18px;
+  padding-left: 50px;
 }
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    color: darkblue;
+    padding: 4px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    border: none;
+    font-size: 18px;
+}
 /* Change color on hover */
-.navbar a:hover {
+.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: beige;
   color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 127px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: darkblue;
+    padding: 4px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Forum', cursive;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: beige;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+#Lloydphoto {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+.header img {
+    float: left;
+    padding: 15px 15px;
+    cursor: pointer;
 }
 
 /* Column container */
@@ -51,20 +136,48 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 10%;
-  background-color: #f1f1f1;
+  flex: 5%;
+  background-color: whitesmoke;
   padding: 2px;
   text-align: center;
-    border-right: 1px solid darkblue;
-    font-family: 'PT Serif', serif;
+  border-right: 0px solid darkblue;
+  font-family: 'Forum', cursive;
+}
+
+.side h3 {
+    font-family: "Forum", cursive;
+    color: darkblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.side div {
+    height: 30px;
+}
+    
+.side a {
+    font-family: "Forum", cursive;
+    color: darkblue;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.side div:hover {
+    background-color: beige;
 }
 
 /* Main column */
 .main {
   flex: 75%;
   background-color: white;
-  padding: 20px;
-    font-family: 'PT Serif', serif;
+  font-family: 'Forum', cursive;
+  padding-left: 50px;
+  padding-right: 150px;
+  color: darkblue;
 }
 
 /* Fake image, just for this example */
@@ -78,22 +191,34 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: whitesmoke;
 }
 
 .button {
       background-color: darkblue; 
       border: none;
       color: white;
-      padding: 5px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-flex;
+      padding: 4px 20px;
       font-family: 'PT Serif', serif;
       font-size: 16px;
-      margin: 2px 2px;
+      margin-right: 10px;
       cursor: pointer;
+      width: 200px;
+      border-radius: 2px;
     }
+
+.button:hover {
+    background-color: beige;
+    color: darkblue;
+}
+
+hr { 
+    display: block;
+    margin: 5px 0px;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
