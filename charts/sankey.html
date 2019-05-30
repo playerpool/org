@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="shortcut icon" href="images/favicon.jpg"/>
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/d3-sankey@0"></script>
@@ -208,14 +208,12 @@
         var labs = svg.selectAll("text")
             .data(labels.pick)
             .enter()
-            .append("text");
-            
-        var textlabs = labs
+            .append("text")
             .attr("id", "textlab")
-            .attr("x", d => d.x)
-            .attr("y", d => d.y)
+            .attr("x", 100)
+            .attr("y", 100)
             .text(d => d.name)
-            .attr("fill", "white");
+            .attr("fill", "black");
             
         </script>
     </body>
