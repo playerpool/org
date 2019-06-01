@@ -5,216 +5,97 @@
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/d3-sankey@0"></script>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../stylesheet.css">
         <style></style>
     </head>
     <title>Player Pool - Start vs. finish</title>
     <body>
-        <div>
-            <h3 style="">Draft position vs. finish</h3>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='/index.html'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="button">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="button" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="button" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+            <div class="dropdown">    
+                <button class="dropbtn">Sheets</button>
+                <div class="dropdown-content">
+                    <a href="../sheets/record%20book.html">Record book</a>
+                    <hr>
+                    <a href="../sheets/sheet09.html">2009</a>
+                    <a href="../sheets/sheet10.html">2010</a>
+                    <a href="../sheets/sheet11.html">2011</a>
+                    <a href="../sheets/sheet12.html">2012</a>
+                    <a href="../sheets/sheet13.html">2013</a>
+                    <a href="../sheets/sheet14.html">2014</a>
+                    <a href="../sheets/sheet15.html">2015</a>
+                    <a href="../sheets/sheet16.html">2016</a>
+                    <a href="../sheets/sheet17.html">2017</a>
+                    <a href="../sheets/sheet18.html">2018</a>
+                    <a href="../sheets/sheet19.html">2019</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Charts</button>
+                <div class="dropdown-content">
+                    <a href="historical dot plot.html">Dot plot</a>
+                    <a href="kernel%20density.html">Kernel density</a>
+                    <a href="step%20chart.html">Cumulative rank</a>
+                    <a href="stat%20scatter.html">Points vs. draft pick</a>
+                    <a href="sankey.html">Draft pick vs. finish</a>
+                    <a href="stat%20choose%20scatter.html">Stats scatter</a>
+                    <a href="round%20dot%20plot.html">Points by round</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Tables</button>
+                <div class="dropdown-content">
+                    <a href="../tables/Table%201.html">Tournament level</a>
+                    <a href="../tables/Table%202.html">Round level</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Words</button>
+                <div class="dropdown-content">
+                    <a href="../words/preview14.html">Previews</a>
+                    <a href="../words/feature18.html">Features</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+          <div class="side">
+            <h3>Data filter</h3>
+            <button class="button Adam" id="Adam" color="CORNFLOWERBLUE">Adam</button>
+            <button class="button Alex" id="Alex" color="TOMATO">Dr. Katz</button>
+            <button class="button Farach" id="Andrew F" color="DARKKHAKI">Farach</button>
+            <button class="button Lloyd" id="Andrew L" color="MEDIUMORCHID">Lloyd</button>
+            <button class="button Bryan" id="Bryan" color="FORESTGREEN">Bryan</button>
+            <button class="button James" id="James" color="DARKTURQUOISE">James</button>
+            <button class="button Josh" id="Josh" color="GOLDENROD">Josh</button>
+            <button class="button Rob" id="Rob" color="SLATEGRAY">Rob</button>
+          </div> 
+          <div class="main">
+            <h2>Start vs. finish - Sankey plot</h2>
             <p>Enter the Sankey diagram, a chord plot with parallel columns of nodes and pleasantly curved links scaled to reflect magnitude (in our case, number of occurances).</p>
-            <div id="sankey"></div>
-        </div>  
-          
-        <script>
-
-        var div = d3.select("body")
-                .append("div")
-                .attr("class", "tooltip")				
-                .style("opacity", 0);
-            
-        var dataset,
-            margin = {top: 30, right: 30, bottom: 30, left: 50},
-            width = 700 - margin.left - margin.right,
-            height = 700 - margin.top - margin.bottom;
-
-        var svg = d3.select("#sankey")
-          .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
-
-        var data = {
-            nodes: [
-            {id: "A1"},
-            {id: "A2"},
-            {id: "A3"},
-            {id: "A4"},
-            {id: "A5"},
-            {id: "A6"},
-            {id: "A7"},
-            {id: "A8"},
-            {id: "B1"},
-            {id: "B2"},
-            {id: "B3"},
-            {id: "B4"},
-            {id: "B5"},
-            {id: "B6"},
-            {id: "B7"},
-            {id: "B8"},
-            ],
-            links: [
-            { source: "A1", target: "B1", value: 2},
-            { source: "A1", target: "B2", value: 0},
-            { source: "A1", target: "B3", value: 2},
-            { source: "A1", target: "B4", value: 1},
-            { source: "A1", target: "B5", value: 0},
-            { source: "A1", target: "B6", value: 3},
-            { source: "A1", target: "B7", value: 3},
-            { source: "A1", target: "B8", value: 0},
-            { source: "A2", target: "B1", value: 1},
-            { source: "A2", target: "B2", value: 2},
-            { source: "A2", target: "B3", value: 0},
-            { source: "A2", target: "B4", value: 3},
-            { source: "A2", target: "B5", value: 1},
-            { source: "A2", target: "B6", value: 0},
-            { source: "A2", target: "B7", value: 3},
-            { source: "A2", target: "B8", value: 1},
-            { source: "A3", target: "B1", value: 4},
-            { source: "A3", target: "B2", value: 1},
-            { source: "A3", target: "B3", value: 2},
-            { source: "A3", target: "B4", value: 0},
-            { source: "A3", target: "B5", value: 1},
-            { source: "A3", target: "B6", value: 1},
-            { source: "A3", target: "B7", value: 0},
-            { source: "A3", target: "B8", value: 2},
-            { source: "A4", target: "B1", value: 0},
-            { source: "A4", target: "B2", value: 2},
-            { source: "A4", target: "B3", value: 3},
-            { source: "A4", target: "B4", value: 1},
-            { source: "A4", target: "B5", value: 1},
-            { source: "A4", target: "B6", value: 2},
-            { source: "A4", target: "B7", value: 0},
-            { source: "A4", target: "B8", value: 2},
-            { source: "A5", target: "B1", value: 0},
-            { source: "A5", target: "B2", value: 2},
-            { source: "A5", target: "B3", value: 0},
-            { source: "A5", target: "B4", value: 1},
-            { source: "A5", target: "B5", value: 3},
-            { source: "A5", target: "B6", value: 2},
-            { source: "A5", target: "B7", value: 1},
-            { source: "A5", target: "B8", value: 2},
-            { source: "A6", target: "B1", value: 0},
-            { source: "A6", target: "B2", value: 1},
-            { source: "A6", target: "B3", value: 0},
-            { source: "A6", target: "B4", value: 2},
-            { source: "A6", target: "B5", value: 2},
-            { source: "A6", target: "B6", value: 2},
-            { source: "A6", target: "B7", value: 3},
-            { source: "A6", target: "B8", value: 1},
-            { source: "A7", target: "B1", value: 1},
-            { source: "A7", target: "B2", value: 3},
-            { source: "A7", target: "B3", value: 1},
-            { source: "A7", target: "B4", value: 2},
-            { source: "A7", target: "B5", value: 2},
-            { source: "A7", target: "B6", value: 1},
-            { source: "A7", target: "B7", value: 0},
-            { source: "A7", target: "B8", value: 1},
-            { source: "A8", target: "B1", value: 3},
-            { source: "A8", target: "B2", value: 1},
-            { source: "A8", target: "B3", value: 2},
-            { source: "A8", target: "B4", value: 1},
-            { source: "A8", target: "B5", value: 1},
-            { source: "A8", target: "B6", value: 0},
-            { source: "A8", target: "B7", value: 1},
-            { source: "A8", target: "B8", value: 2},
-            ]
-        };
+            <div class="chart"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../scripts/sankey.js"></script>
         
-        const sankey = d3.sankey()
-                .size([width, height])
-                .nodeId(d => d.id)
-                .nodeWidth(30)
-                .nodePadding(40)
-                .nodeAlign(d3.sankeyCenter)
-                .nodeSort(null);
-        let graph = sankey(data);
-
-        graph.nodes.forEach(node => {
-            node.width = node.x1 - node.x0;
-            node.height = node.y1 - node.y0;
-        });
-            
-        let links = svg.append("g")
-               .classed("links", true)
-               .selectAll("path")
-               .data(graph.links)
-               .enter()
-               .append("path")
-               .classed("link", true)
-               .attr("d", d3.sankeyLinkHorizontal())
-               .attr("fill", "none")
-               .attr("stroke", "lightgray")
-               .attr("stroke-width", d => d.width)
-               .attr("stoke-opacity", 0.5)
-               .on("mouseover", function(d) {
-                    div.transition()		
-                        .duration(200)		
-                        .style("opacity", .9);		
-                    div.html(d.source.id + " " + d.target.id + " " + d.source.value)	
-                        .style("left", (d3.event.pageX) + "px")		
-                        .style("top", (d3.event.pageY - 28) + "px");	
-                    })					
-                .on("mouseout", function(d) {		
-                    div.transition()		
-                        .duration(500)		
-                        .style("opacity", 0);	
-                });
-
-        links.append("title")
-            .selectAll("text")
-            .data(graph.links)
-            .enter()
-            .append("text")
-               .text(function(d) {
-			return d.source + " → " + d.target;
-            });
-        
-        let nodes = svg.append("g")
-               .classed("nodes", true)
-               .selectAll("rect")
-               .data(graph.nodes)
-               .enter()
-               .append("rect")
-               .classed("node", true)
-               .attr("x", d => d.x0)
-               .attr("y", d => d.y0)
-               .attr("width", d => d.x1 - d.x0)
-               .attr("height", d => d.y1 - d.y0)
-               .attr("fill", "darkblue")
-               .attr("opacity", 0.8);
-        
-        var labels = {
-            pick: [
-                {name: "1st", x: margin.left-45, y: margin.top},
-                {name: "2nd", x: margin.left-45, y: margin.top + (height+margin.top)/8},
-                {name: "3rd", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*2},
-                {name: "4th", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*3},
-                {name: "5th", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*4},
-                {name: "6th", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*5},
-                {name: "7th", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*6},
-                {name: "8th", x: margin.left-45, y: margin.top + ((height+margin.top)/8)*7},
-            ],
-            finish: [
-                {name: "1st", x: width/2, y: height/2},
-            ]
-        };
-        
-        var labs = svg.selectAll("text")
-            .data(labels.pick)
-            .enter()
-            .append("text")
-            .attr("id", "textlab")
-            .attr("x", 100)
-            .attr("y", 100)
-            .text(d => d.name)
-            .attr("fill", "black");
-            
-        </script>
+        <!-- Footer -->
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
     </body>
 </html>

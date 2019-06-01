@@ -5,175 +5,95 @@
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../stylesheet.css">
         <style></style>
     </head>
-    <title>Player Pool - Density plot</title>
+    <title>Player Pool dot org</title>
     <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='/index.html'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="button">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="button" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="button" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+            <div class="dropdown">    
+                <button class="dropbtn">Sheets</button>
+                <div class="dropdown-content">
+                    <a href="../sheets/record%20book.html">Record book</a>
+                    <hr>
+                    <a href="../sheets/sheet09.html">2009</a>
+                    <a href="../sheets/sheet10.html">2010</a>
+                    <a href="../sheets/sheet11.html">2011</a>
+                    <a href="../sheets/sheet12.html">2012</a>
+                    <a href="../sheets/sheet13.html">2013</a>
+                    <a href="../sheets/sheet14.html">2014</a>
+                    <a href="../sheets/sheet15.html">2015</a>
+                    <a href="../sheets/sheet16.html">2016</a>
+                    <a href="../sheets/sheet17.html">2017</a>
+                    <a href="../sheets/sheet18.html">2018</a>
+                    <a href="../sheets/sheet19.html">2019</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Charts</button>
+                <div class="dropdown-content">
+                    <a href="historical dot plot.html">Dot plot</a>
+                    <a href="kernel%20density.html">Kernel density</a>
+                    <a href="step%20chart.html">Cumulative rank</a>
+                    <a href="stat%20scatter.html">Points vs. draft pick</a>
+                    <a href="sankey.html">Draft pick vs. finish</a>
+                    <a href="stat%20choose%20scatter.html">Stats scatter</a>
+                    <a href="round%20dot%20plot.html">Points by round</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Tables</button>
+                <div class="dropdown-content">
+                    <a href="../tables/Table%201.html">Tournament level</a>
+                    <a href="../tables/Table%202.html">Round level</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Words</button>
+                <div class="dropdown-content">
+                    <a href="../words/preview14.html">Previews</a>
+                    <a href="../words/feature18.html">Features</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+          <div class="side">
+            <h3>Data filter</h3>
+            <button class="button Adam" id="Adam" color="CORNFLOWERBLUE">Adam</button>
+            <button class="button Alex" id="Alex" color="TOMATO">Dr. Katz</button>
+            <button class="button Farach" id="Andrew F" color="DARKKHAKI">Farach</button>
+            <button class="button Lloyd" id="Andrew L" color="MEDIUMORCHID">Lloyd</button>
+            <button class="button Bryan" id="Bryan" color="FORESTGREEN">Bryan</button>
+            <button class="button James" id="James" color="DARKTURQUOISE">James</button>
+            <button class="button Josh" id="Josh" color="GOLDENROD">Josh</button>
+            <button class="button Rob" id="Rob" color="SLATEGRAY">Rob</button>
+          </div> 
+          <div class="main">
+            <h2>Kernel density plot</h2>
+            <div class="chart"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../scripts/kernel%20density.js"></script>
         
-        <h3 style="">Individual density plot</h3>
-        
-        <button class="button" id="Adam" color="CORNFLOWERBLUE">Adam</button>
-        <button class="button Alex" id="Alex" color="TOMATO">Dr. Katz</button>
-        <button class="button Farach" id="Andrew F" color="DARKKHAKI">Farach</button>
-        <button class="button Lloyd" id="Andrew L" color="MEDIUMORCHID">Lloyd</button>
-        <button class="button Bryan" id="Bryan" color="FORESTGREEN">Bryan</button>
-        <button class="button James" id="James" color="DARKTURQUOISE">James</button>
-        <button class="button Josh" id="Josh" color="GOLDENROD">Josh</button>
-        <button class="button Rob" id="Rob" color="SLATEGRAY">Rob</button>
-
-        <script>
-
-        var dataset;
-        // set the dimensions and margins of the graph
-        var margin = {top: 30, right: 30, bottom: 30, left: 50},
-            width = 860 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
-
-        // append the svg object to the body of the page
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
-
-        // get the data
-        var data = d3.csv("../data/pp.csv", function(d) {
-
-          return {
-                    year: +d.year,
-                    person: d.person,
-                    totalpoints: +d.totalpoints,
-                    player: d.player,
-                    school: d.school,
-                    seed: +d.seed,
-                    gamesplayed: +d.gamesplayed,
-                    pick: +d.overallpick
-                };
-            }).then(function(data) {
-                dataset = data.filter(function(d) { 
-                    return d.person == "Adam"; 
-                });
-                console.log(dataset);
-
-          var x = d3.scaleLinear()
-            .domain([0, 141])
-            .range([0, width]);
-          
-          var y = d3.scaleLinear()
-                    .range([height, 0])
-                    .domain([0, 0.025]);
-          
-            var xaxis = d3.axisBottom()
-                    .scale(x);
-                
-            var yaxis = d3.axisLeft()
-                    .scale(y);
-
-          // Compute kernel density estimation for the first group
-          var kde = kernelDensityEstimator(kernelEpanechnikov(15), x.ticks(140))
-          var density =  kde( data
-            .filter(function(d){ return d.person == "Adam"})
-            .map(function(d){  return +d.totalpoints; })
-          )
-
-          // Plot the curve
-          var area = d3.area()
-                  .x(function(d) { return x(d[0]); })
-                  .y0(function() { return y.range()[0]})
-                  .y1(function(d) { return y(d[1]); });
-          var curve = svg
-            .append('g')
-            .append("path")
-              .attr("class", "mypath")
-              .datum(density)
-              .attr("fill", "CORNFLOWERBLUE")
-              .attr("opacity", ".8")
-              .attr("stroke", "CORNFLOWERBLUE")
-              .attr("stroke-width", 3)
-              .attr("stroke-linejoin", "round")
-              .attr("d", area);
-
-            svg.append("g")
-                    .attr("class", "x axis") // assigning an axis attribute (optional)
-                    .attr("transform", "translate(0," + (height) + ")")
-                    .call(xaxis)
-            .append("text")
-                    .attr("x", margin.left/2)
-                    .attr("y", -20)
-                    .attr("fill", "#000")
-                    .attr("text-anchor", "start")
-                    .attr("font-family", "Gill Sans")
-                    .attr("font-size", "16px")
-                    .text("Player tournament points");
-                
-                svg.append("g")
-                    .attr("class", "y axis") // assigning an axis attribute (optional)
-                    .attr("transform", "translate(0,0)")
-                    .call(yaxis);
-
-          d3.selectAll("button")
-                    .on("click", function() {
-                        
-                        var person = d3.select(this).attr("id")
-                        
-                        var color = d3.select(this).attr("color")
-                        
-                        x.domain([0, 141]);
-                        y.domain([0, 0.025]);
-                        
-                        kde = kernelDensityEstimator(kernelEpanechnikov(15), x.ticks(140))
-                        var density = kde(data.filter(function(d) { 
-                        return d.person == person; 
-                        })
-                        .map(function(d){return +d.totalpoints; }))
-              
-            var duration = 1000;
-              
-            var area = d3.area()
-                .x(function(d) { return x(d[0]); })
-                  .y0(function() { return y.range()[0]})
-                  .y1(function(d) { return y(d[1]); });
-                        
-              curve
-              .datum(density)
-              .transition()
-              .duration(duration)
-              .attr("d", area)
-              .attr("stroke", color)
-              .attr("fill", color);
-              
-              svg.select(".x.axis")
-                            .transition()
-                            .duration(duration)
-                            .call(xaxis);
-                    
-                        svg.select(".y.axis")
-                            .transition()
-                            .duration(duration)
-                            .call(yaxis); 
-               }); 
-
-             
-        });
-
-        // Function to compute density
-        function kernelDensityEstimator(kernel, X) {
-          return function(V) {
-            return X.map(function(x) {
-              return [x, d3.mean(V, function(v) { return kernel(x - v); })];
-            });
-          };
-        }
-        function kernelEpanechnikov(k) {
-          return function(v) {
-            return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
-          };
-        }
-
-        </script>
+        <!-- Footer -->
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
     </body>
 </html>

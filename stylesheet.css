@@ -212,6 +212,21 @@ h3 {
     color: darkblue;
 }
 
+div .side .button { 
+      border: none;
+      color: white;
+      padding: 4px 20px;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      margin-right: 1px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 2px;
+      width: 110px;
+    }
+
+
+
 hr { 
     display: block;
     margin: 5px 0px;
@@ -225,4 +240,59 @@ hr {
   .row, .navbar {   
     flex-direction: column;
   }
+}
+
+.Adam {background-color: cornflowerblue}
+.Alex {background-color: TOMATO;}
+.Farach {background-color: DARKKHAKI;}
+.Lloyd {background-color: MEDIUMORCHID;}
+.Bryan {background-color: FORESTGREEN;}
+.James {background-color: DARKTURQUOISE;}
+.Josh {background-color: GOLDENROD;}
+.Rob {background-color: SLATEGRAY;}
+
+.side .button:hover {
+    background-color: black;
+    opacity: 0.5;
+    }
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 120px;					
+    height: 60px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    border-bottom: 1px solid black;
+    background-color: bisque;
+    font-family: "Gill Sans";
+    text-align: center;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th:hover {background-color: salmon;}
+
+td {
+  text-align: center;
+  font-size: 18px;
+}
+
+td:first-child {
+    text-align: left;
 }

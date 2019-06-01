@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <link rel="shortcut icon" href="../images/favicon.jpg"/>
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
         <link rel="stylesheet" href="../stylesheet.css">
         <style></style>
     </head>
@@ -27,31 +28,31 @@
             <div class="dropdown">    
                 <button class="dropbtn">Sheets</button>
                 <div class="dropdown-content">
-                    <a href="record%20book.html">Record book</a>
+                    <a href="../sheets/record%20book.html">Record book</a>
                     <hr>
-                    <a href="sheet09.html">2009</a>
-                    <a href="sheet10.html">2010</a>
-                    <a href="sheet11.html">2011</a>
-                    <a href="sheet12.html">2012</a>
-                    <a href="sheet13.html">2013</a>
-                    <a href="sheet14.html">2014</a>
-                    <a href="sheet15.html">2015</a>
-                    <a href="sheet16.html">2016</a>
-                    <a href="sheet17.html">2017</a>
-                    <a href="sheet18.html">2018</a>
-                    <a href="sheet19.html">2019</a>
+                    <a href="../sheets/sheet09.html">2009</a>
+                    <a href="../sheets/sheet10.html">2010</a>
+                    <a href="../sheets/sheet11.html">2011</a>
+                    <a href="../sheets/sheet12.html">2012</a>
+                    <a href="../sheets/sheet13.html">2013</a>
+                    <a href="../sheets/sheet14.html">2014</a>
+                    <a href="../sheets/sheet15.html">2015</a>
+                    <a href="../sheets/sheet16.html">2016</a>
+                    <a href="../sheets/sheet17.html">2017</a>
+                    <a href="../sheets/sheet18.html">2018</a>
+                    <a href="../sheets/sheet19.html">2019</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Charts</button>
                 <div class="dropdown-content">
-                    <a href="../charts/historical dot plot.html">Dot plot</a>
-                    <a href="../charts/kernel%20density.html">Kernel density</a>
-                    <a href="../charts/step%20chart.html">Cumulative rank</a>
-                    <a href="../charts/stat%20scatter.html">Points vs. draft pick</a>
-                    <a href="../charts/sankey.html">Draft pick vs. finish</a>
-                    <a href="../charts/stat%20choose%20scatter.html">Stats scatter</a>
-                    <a href="../charts/round%20dot%20plot.html">Points by round</a>
+                    <a href="historical dot plot.html">Dot plot</a>
+                    <a href="kernel%20density.html">Kernel density</a>
+                    <a href="step%20chart.html">Cumulative rank</a>
+                    <a href="stat%20scatter.html">Points vs. draft pick</a>
+                    <a href="sankey.html">Draft pick vs. finish</a>
+                    <a href="stat%20choose%20scatter.html">Stats scatter</a>
+                    <a href="round%20dot%20plot.html">Points by round</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -72,11 +73,24 @@
 
         <!-- The flexible grid (content) -->
         <div class="row"> 
+          <div class="side">
+            <h3>Data filter</h3>
+            <button class="button Adam" id="Adam" color="CORNFLOWERBLUE">Adam</button>
+            <button class="button Alex" id="Alex" color="TOMATO">Dr. Katz</button>
+            <button class="button Farach" id="Andrew F" color="DARKKHAKI">Farach</button>
+            <button class="button Lloyd" id="Andrew L" color="MEDIUMORCHID">Lloyd</button>
+            <button class="button Bryan" id="Bryan" color="FORESTGREEN">Bryan</button>
+            <button class="button James" id="James" color="DARKTURQUOISE">James</button>
+            <button class="button Josh" id="Josh" color="GOLDENROD">Josh</button>
+            <button class="button Rob" id="Rob" color="SLATEGRAY">Rob</button>
+          </div> 
           <div class="main">
-             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT6UozqNapVmVJiAeARWcVEYiOwKk1SGdBB5ydE5KMqTrULXZwYyBhGa0QLhTE3YgfqVsYaGMlDbfOc/pubhtml?widget=true&amp;headers=false" width="1200" height="2200"></iframe>
+            <h2>Points by round</h2>
+            <div class="chart"></div>
           </div>
         </div>
-
+        <script type="text/javascript" src="../scripts/round%20dot%20plot.js"></script>
+        
         <!-- Footer -->
         <div class="footer">
           <h2>Footer</h2>
