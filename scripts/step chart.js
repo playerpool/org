@@ -35,7 +35,18 @@ var data = d3.csv("../data/cumrank.csv", function(d) {
             .scale(x);
 
         var yaxis = d3.axisLeft()
-            .scale(y);
+            .scale(y)
+            .ticks(9);
+    
+        var gridlines = d3.axisLeft()
+                    .tickFormat("")
+                    .ticks(9)
+                    .tickSize(-width)
+                    .scale(y);
+
+        svg.append("g")
+           .attr("class", "grid")
+           .call(gridlines);
 
         var line = d3.line()
             .x(function(d) { return x(d.year); })
@@ -73,10 +84,10 @@ var data = d3.csv("../data/cumrank.csv", function(d) {
                 .attr("transform", "translate(0," + (height) + ")")
                 .call(xaxis)
             .append("text")
-                .attr("x", margin.left/2)
+                .attr("x", width/2)
                 .attr("y", -20)
                 .attr("fill", "#000")
-                .attr("text-anchor", "start")
+                .attr("text-anchor", "center")
                 .attr("font-family", "Gill Sans")
                 .attr("font-size", "16px")
                 .text("Cumulative points rank");

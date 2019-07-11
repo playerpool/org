@@ -191,4 +191,4 @@ var labs = svg.selectAll("text")
     .attr("x", 100)
     .attr("y", 100)
     .text(d => d.name)
-    .attr("fill", "black");
+    .attr("fill", "gray");

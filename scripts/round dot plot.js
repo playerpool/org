@@ -6,9 +6,9 @@ var margin = {top: 30, right: 50, bottom: 20, left: 50},
     h = 500 - margin.top - margin.bottom,
     pad = 10;
 
-var div = d3.select(".chart")
+var div = d3.select(".main")
     .append("div")
-    .attr("class", "tooltip2")				
+    .attr("class", "tooltip2")
     .style("opacity", 0);
 
 var data = d3.csv("../data/pp3.csv", function(d) {
