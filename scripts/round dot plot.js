@@ -1,9 +1,9 @@
 
 var dataset;
 
-var margin = {top: 30, right: 50, bottom: 20, left: 50},
-    w = 750 - margin.left - margin.right,
-    h = 500 - margin.top - margin.bottom,
+var margin = {top: 30, right: 50, bottom: 60, left: 150},
+    w = 850 - margin.left - margin.right,
+    h = 540 - margin.top - margin.bottom,
     pad = 10;
 
 var div = d3.select(".main")
@@ -38,9 +38,10 @@ var data = d3.csv("../data/pp3.csv", function(d) {
         .domain([0.5, d3.max(dataset, function(d) {
             return d.round;
         })])
-        .rangeRound([pad, w-2*pad]);
+        .rangeRound([0, w-2*pad]);
 
     var xaxis = d3.axisBottom()
+        .ticks(6)
         .scale(xscale);
 
     var yaxis = d3.axisLeft()
@@ -48,9 +49,27 @@ var data = d3.csv("../data/pp3.csv", function(d) {
 
     var svg = d3.select(".chart")
         .append("svg")
-        .attr("width", w + margin.top + margin.bottom)
+        .attr("width", w + margin.left + margin.right)
         .attr("height", h + margin.top + margin.bottom);
 
+    svg.append("text")
+        .attr("class", "xlabel")
+        .attr("x", (w + margin.right + margin.left)/2)
+        .attr("y", h + margin.top + margin.bottom - pad)
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Tournament round");
+
+    svg.append("text")
+        .attr("class", "ylabel")
+        .attr("x", 0)
+        .attr("y", (h + margin.top + margin.bottom)/2)
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Total points");
+    
     var circles = svg.selectAll("circle")
         .data(dataset)
         .enter()

@@ -1,8 +1,8 @@
             var dataset;
 
-var margin = {top: 30, right: 50, bottom: 20, left: 50},
-    w = 800 - margin.left - margin.right,
-    h = 500 - margin.top - margin.bottom,
+var margin = {top: 30, right: 50, bottom: 40, left: 150},
+    w = 900 - margin.left - margin.right,
+    h = 520 - margin.top - margin.bottom,
     pad = 10;
 
 var div = d3.select("body")
@@ -48,14 +48,32 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
     var svg = d3.select(".chart")
         .append("svg")
-        .attr("width", w + margin.top + margin.bottom)
-        .attr("height", h + margin.top + margin.bottom);
+        .attr("width", w + margin.left + margin.right)
+        .attr("height", h + margin.top + margin.bottom + 50);
+
+    svg.append("text")
+        .attr("class", "xlabel")
+        .attr("x", (w + margin.left + margin.right + pad*2)/2)
+        .attr("y", h + margin.top + margin.bottom + pad)
+        .style("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Overall pick");
+
+    svg.append("text")
+        .attr("class", "ylabel")
+        .attr("x", 0)
+        .attr("y", (h+ margin.top + margin.bottom) / 2)
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Total points");
 
     var circles = svg.selectAll("circle")
         .data(dataset)
         .enter()
         .append("circle")
-        .attr("r", h/120)
+        .attr("r", h/90)
         .attr("cx", function(d) { 
             return xscale(d.pick) + margin.left;
         })

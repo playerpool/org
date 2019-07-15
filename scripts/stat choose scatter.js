@@ -10,9 +10,9 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var margin = {top: 30, right: 50, bottom: 20, left: 50},
-    w = 800 - margin.left - margin.right,
-    h = 500 - margin.top - margin.bottom,
+var margin = {top: 30, right: 50, bottom: 40, left: 150},
+    w = 900 - margin.left - margin.right,
+    h = 520 - margin.top - margin.bottom,
     pad = 10;
 
 var yvar = ["Total points", "Games", "Overall pick", "Seed", "Year"];
@@ -54,30 +54,35 @@ var data = d3.csv("../data/pp.csv", function(d) {
         .rangeRound([pad, w-2*pad]);
 
     var xaxis = d3.axisBottom()
-        .scale(xscale);
+        .scale(xscale)
+        .ticks(14);
 
     var yaxis = d3.axisLeft()
-        .scale(yscale);
+        .scale(yscale)
+        .ticks(14);
 
     var svg = d3.select(".chart")
         .append("svg")
-            .attr("width", w + margin.top + margin.bottom)
+            .attr("width", w + margin.left + margin.right)
             .attr("height", h + margin.top + margin.bottom + 50);
 
     svg.append("text")
         .attr("class", "xlabel")
-        .attr("x", w/2)
+        .attr("x", (w + margin.left + margin.right + pad*2)/2)
         .attr("y", h + margin.top + margin.bottom + pad*2)
-        .style("text-anchor", "middle")
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
         .text("Overall pick");
 
     svg.append("text")
         .attr("class", "ylabel")
-        .attr("transform", "rotate(-90)")
-        .attr("x", 0-margin.left)
-        .attr("y", h/3)
-        .style("text-anchor", "middle")
-        .text("Overall pick");
+        .attr("x", 0)
+        .attr("y", (h + margin.top + margin.bottom + pad*2) / 2)
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Total points");
 
     var select_y = d3.select('.statpicky')
       .append('select')
@@ -165,6 +170,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
         var circ = svg.selectAll("circle")
                 .data(dataset);
 
+        yaxis.ticks(14);
+        
         yscale.domain([0, d3.max(dataset, function(d) {
                     return d.totalpoints;
             })]);
@@ -179,6 +186,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(yaxis);
+        
+        svg.select(".ylabel")
+            .text("Total points");
     };
 
     function changey_games () {
@@ -187,6 +197,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
         var circ = svg.selectAll("circle")
                 .data(dataset);
 
+        yaxis.ticks(6);
+        
         yscale.domain([0, d3.max(dataset, function(d) {
                     return d.gamesplayed;
             })+1]);
@@ -202,6 +214,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(yaxis);
+        
+        svg.select(".ylabel")
+            .text("Games played");
     }; 
 
     function changey_pick () {
@@ -210,6 +225,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
         var circ = svg.selectAll("circle")
                 .data(dataset);
 
+        yaxis.ticks(14);
+        
         yscale.domain([0, d3.max(dataset, function(d) {
                     return d.pick;
             })+5]);
@@ -224,6 +241,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(yaxis);
+        
+        svg.select(".ylabel")
+            .text("Overall pick");
     };
 
     function changey_seed () {
@@ -232,6 +252,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
         var circ = svg.selectAll("circle")
                 .data(dataset);
 
+        yaxis.ticks(10);
+        
         yscale.domain([0, d3.max(dataset, function(d) {
                     return d.seed;
             })+1]);
@@ -246,6 +268,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(yaxis);
+        
+        svg.select(".ylabel")
+            .text("Seed");
     };
 
     function changey_year () {
@@ -253,6 +278,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        yaxis.ticks(10);
 
         yscale.domain([d3.min(dataset, function(d) {
                     return d.year;
@@ -270,6 +297,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(yaxis);
+        
+        svg.select(".ylabel")
+            .text("Year");
     }; 
 
     function inputChange_x() {
@@ -287,6 +317,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        xaxis.ticks(14);
 
         xscale.domain([0, d3.max(dataset, function(d) {
                     return d.totalpoints;
@@ -302,6 +334,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(xaxis);
+        
+        svg.select(".xlabel")
+            .text("Total points");
     };
 
     function changex_games () {
@@ -309,6 +344,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        xaxis.ticks(6);
 
         xscale.domain([0, d3.max(dataset, function(d) {
                     return d.gamesplayed;
@@ -325,6 +362,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(xaxis);
+        
+        svg.select(".xlabel")
+            .text("Games played");
     }; 
 
     function changex_pick () {
@@ -332,6 +372,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        xaxis.ticks(14);
 
         xscale.domain([0, d3.max(dataset, function(d) {
                     return d.pick;
@@ -347,6 +389,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(xaxis);
+        
+        svg.select(".xlabel")
+            .text("Overall pick");
     };
 
     function changex_seed () {
@@ -354,6 +399,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        xaxis.ticks(10);
 
         xscale.domain([0, d3.max(dataset, function(d) {
                     return d.seed;
@@ -369,6 +416,9 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(xaxis);
+        
+        svg.select(".xlabel")
+            .text("Seed");
     };
 
     function changex_year () {
@@ -376,6 +426,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
         var circ = svg.selectAll("circle")
                 .data(dataset);
+        
+        xaxis.ticks(10);
 
         xscale.domain([d3.min(dataset, function(d) {
                     return d.year;
@@ -393,5 +445,8 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .call(xaxis);
+        
+        svg.select(".xlabel")
+            .text("Year");
     }; 
 });

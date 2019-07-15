@@ -357,4 +357,319 @@ var data = d3.csv("../data/pp2.csv", function(d) {
             }
           }
      });
+    
+    d3.selectAll("button")
+            .on("click", function() {
+
+                var person = d3.select(this).attr("id");
+
+                var color = d3.select(this).attr("color");
+
+                dataset = data.filter(function(d) { 
+                    return d.person == person; 
+                    });
+
+                d3.select("table").remove();
+
+                tabulate(dataset,columns);
+        headers
+    .on("click", function(d) {
+        if (d == "Person") {
+            clicks.person++;
+            // even number of clicks
+            if (clicks.person % 2 == 0) {
+              // sort ascending: alphabetically
+              row.sort(function(a,b) { 
+                if (a.person.toUpperCase() < b.person.toUpperCase()) { 
+                  return -1; 
+                } else if (a.person.toUpperCase() > b.person.toUpperCase()) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              });
+            // odd number of clicks  
+            } else if (clicks.person % 2 != 0) { 
+              // sort descending: alphabetically
+              row.sort(function(a,b) { 
+                if (a.person.toUpperCase() < b.person.toUpperCase()) { 
+                  return 1; 
+                } else if (a.person.toUpperCase() > b.person.toUpperCase()) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+        }
+        if (d == "Year") {
+            clicks.year++;
+            // even number of clicks
+            if (clicks.year % 2 == 0) {
+              // sort ascending: numerically
+              row.sort(function(a,b) { 
+                if (+a.year < +b.year) { 
+                  return -1; 
+                } else if (+a.year > +b.year) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              });
+            // odd number of clicks  
+            } else if (clicks.year % 2 != 0) { 
+              // sort descending: numerically
+              row.sort(function(a,b) { 
+                if (+a.year < +b.year) { 
+                  return 1; 
+                } else if (+a.year > +b.year) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+        if (d == "Round 1") {
+            clicks.round1++;
+            if (clicks.round1 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round1 < +b.round1) { 
+                  return -1; 
+                } else if (+a.round1 > +b.round1) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round1 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round1 < +b.round1) { 
+                  return 1; 
+                } else if (+a.round1 > +b.round1) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+          if (d == "Round 2") {
+            clicks.round2++;
+            if (clicks.round2 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round2 < +b.round2) { 
+                  return -1; 
+                } else if (+a.round2 > +b.round2) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round2 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round2 < +b.round2) { 
+                  return 1; 
+                } else if (+a.round2 > +b.round2) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+         if (d == "Round 3") {
+            clicks.round3++;
+            if (clicks.round3 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round3 < +b.round3) { 
+                  return -1; 
+                } else if (+a.round3 > +b.round3) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round3 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round3 < +b.round3) { 
+                  return 1; 
+                } else if (+a.round3 > +b.round3) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+         if (d == "Round 4") {
+            clicks.round4++;
+            if (clicks.round4 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round4 < +b.round4) { 
+                  return -1; 
+                } else if (+a.round4 > +b.round4) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round4 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round4 < +b.round4) { 
+                  return 1; 
+                } else if (+a.round4 > +b.round4) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+         if (d == "Round 5") {
+            clicks.round5++;
+            if (clicks.round5 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round5 < +b.round5) { 
+                  return -1; 
+                } else if (+a.round5 > +b.round5) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round5 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round5 < +b.round5) { 
+                  return 1; 
+                } else if (+a.round5 > +b.round5) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+         if (d == "Round 6") {
+            clicks.round6++;
+            if (clicks.round6 % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.round6 < +b.round6) { 
+                  return -1; 
+                } else if (+a.round6 > +b.round6) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.round6 % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.round6 < +b.round6) { 
+                  return 1; 
+                } else if (+a.round6 > +b.round6) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+        if (d == "Points") {
+            clicks.totalpoints++;
+            if (clicks.totalpoints % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.totalpoints < +b.totalpoints) { 
+                  return -1; 
+                } else if (+a.totalpoints > +b.totalpoints) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.totalpoints % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.totalpoints < +b.totalpoints) { 
+                  return 1; 
+                } else if (+a.totalpoints > +b.totalpoints) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+        if (d == "Games") {
+            clicks.gamesplayed++;
+            if (clicks.gamesplayed % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.gamesplayed < +b.gamesplayed) { 
+                  return -1; 
+                } else if (+a.gamesplayed > +b.gamesplayed) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.gamesplayed % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.gamesplayed < +b.gamesplayed) { 
+                  return 1; 
+                } else if (+a.gamesplayed > +b.gamesplayed) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+        if (d == "PPG") {
+            clicks.ppg++;
+            if (clicks.ppg % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.ppg < +b.ppg) { 
+                  return -1; 
+                } else if (+a.ppg > +b.ppg) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.ppg % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.ppg < +b.ppg) { 
+                  return 1; 
+                } else if (+a.ppg > +b.ppg) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+         if (d == "Draft Slot") {
+            clicks.draft++;
+            if (clicks.draft % 2 == 0) {
+              row.sort(function(a,b) { 
+                if (+a.draft < +b.draft) { 
+                  return -1; 
+                } else if (+a.draft > +b.draft) { 
+                  return 1; 
+                } else {
+                  return 0;
+                }
+              }); 
+            } else if (clicks.draft % 2 != 0) { 
+              row.sort(function(a,b) { 
+                if (+a.draft < +b.draft) { 
+                  return 1; 
+                } else if (+a.draft > +b.draft) { 
+                  return -1; 
+                } else {
+                  return 0;
+                }
+              });
+            }
+          }
+     });
+});
 });

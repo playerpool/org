@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
-        <script>
-        $(document).ready(function(){
-
-           $('#top').load("../top%20childchart.html");
-           $('#bottom').load("../bottom.html");
-
-        });
-        </script>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
         <link rel="stylesheet" href="../stylesheet.css">
         <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
     </head>
     <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.github.io/org/index.html'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+        
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="button">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="button" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="button" align="right">Cheat Sheet</button>
+        </div>
+        
         <div id="top"></div>
-
+        <script>
+            $(function(){
+              $("#top").load("../top%20childchart.html");
+            });
+        </script>
+        
         <!-- The flexible grid (content) -->
         <div class="row"> 
           <div class="side">
@@ -40,8 +49,11 @@
         <script type="text/javascript" src="../scripts/step%20chart.js"></script>
         
         <!-- Footer -->
-        <div class="footer">
-          <h2>Footer</h2>
-        </div>
+        <div id="bottom"></div>
+        <script>
+            $(function(){
+              $("#bottom").load("../bottom.html");
+            });
+        </script>
     </body>
 </html>

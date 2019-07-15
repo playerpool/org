@@ -172,7 +172,7 @@ h3 {
 
 /* Main column */
 .main {
-  flex: 75%;
+  flex: 85%;
   background-color: white;
   font-family: 'Forum', cursive;
   padding-left: 50px;
@@ -180,11 +180,10 @@ h3 {
   color: darkblue;
 }
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.axis text {
+    font-family: "Gill Sans";
+    font-size: 16px;
+    color: darkblue;
 }
 
 /* Footer */

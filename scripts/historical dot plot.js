@@ -1,8 +1,8 @@
 var dataset;
 
-var margin = {top: 30, right: 50, bottom: 20, left: 50},
-    w = 900 - margin.left - margin.right,
-    h = 400 - margin.top - margin.bottom,
+var margin = {top: 30, right: 50, bottom: 50, left: 150},
+    w = 1000 - margin.left - margin.right,
+    h = 500 - margin.top - margin.bottom,
     pad = 10;
 
 var div = d3.select(".main")
@@ -25,7 +25,6 @@ var data = d3.csv("../data/pp.csv", function(d) {
     dataset = data.filter(function(d) { 
         return d.person == "Adam"; 
     });
-    console.log(dataset);
 
     var yscale = d3.scaleLinear()
         .domain([0, d3.max(dataset, function(d) {
@@ -50,9 +49,27 @@ var data = d3.csv("../data/pp.csv", function(d) {
 
     var svg = d3.select(".chart")
         .append("svg")
-        .attr("width", w + margin.top + margin.bottom)
+        .attr("width", w + margin.left + margin.right)
         .attr("height", h + margin.top + margin.bottom);
 
+    svg.append("text")
+        .attr("class", "xlabel")
+        .attr("x", (w + margin.left)/2)
+        .attr("y", h + margin.top + margin.bottom + pad*2)
+        .style("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Overall pick");
+
+    svg.append("text")
+        .attr("class", "ylabel")
+        .attr("x", 0)
+        .attr("y", (h + margin.top + margin.bottom)/2)
+        .style("text-anchor", "left")
+        .style("font-size", "20px")
+        .style("stroke", "darkblue")
+        .text("Total points");
+    
     var circles = svg.selectAll("circle")
         .data(dataset)
         .enter()
@@ -80,12 +97,12 @@ var data = d3.csv("../data/pp.csv", function(d) {
         });
 
     svg.append("g")
-        .attr("class", "x axis") // assigning an axis attribute (optional)
+        .attr("class", "axis") // assigning an axis attribute (optional)
         .attr("transform", "translate(" + margin.left + "," + (h + margin.top) + ")")
         .call(xaxis);
 
     svg.append("g")
-        .attr("class", "y axis") // assigning an axis attribute (optional)
+        .attr("class", "axis") // assigning an axis attribute (optional)
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(yaxis);
 
@@ -111,7 +128,7 @@ var data = d3.csv("../data/pp.csv", function(d) {
                 return d.year;
             })])
 
-            var duration = 700;
+            var duration = 500;
 
             svg.selectAll("circle")
                 .data(dataset)
