@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
+        <link rel="stylesheet" href="../stylesheet.css">
         <link rel="shortcut icon" href="../images/favicon.jpg"/>
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../stylesheet.css">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-    <title>Player Pool dot org</title>
     <body>
         <!-- Header -->
         <div class="header">
@@ -21,7 +20,7 @@
             <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="button" align="right">Draft Sheet</button>
             <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="button" align="right">Cheat Sheet</button>
         </div>
-         
+        
         <div id="top"></div>
         
         <script>
@@ -31,12 +30,14 @@
         </script>
 
         <!-- The flexible grid (content) -->
-        <div class="row"> 
           <div class="main">
-             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQObecIcvKBrkKRKOB5DK22j4qk5S_AG-bi-B63_DkPjNne02NQ0V8wuTIVl10MxEAbmUEF0SCJYBVd/pubhtml?widget=true&amp;headers=false" width="1200" height="2600"></iframe>
+            <h2>Table 3 - Best of the Rest</h2>
+            <p>Click column headers to sort</p>
+            <div class="chart"></div>
           </div>
         </div>
-
+        <script type="text/javascript" src="../scripts/Table%203.js"></script>
+        
         <!-- Footer -->
         <div class="footer">
           <h2>Footer</h2>
