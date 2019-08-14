@@ -283,8 +283,8 @@ $("#sheet19").click(function(){
 /* ---------------------------------------- PREVIEWS ---------------------------------------- */    
 
 $("#preview14menu").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
@@ -295,8 +295,8 @@ $("#preview14menu").click(function(){
 });
     
 $("#preview14").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
@@ -307,8 +307,8 @@ $("#preview14").click(function(){
 });
 
 $("#preview15").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
@@ -319,8 +319,8 @@ $("#preview15").click(function(){
 });
     
 $("#preview16").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
@@ -331,8 +331,8 @@ $("#preview16").click(function(){
 });
 
 $("#preview17").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
@@ -345,8 +345,8 @@ $("#preview17").click(function(){
 /* ---------------------------------------- Features ---------------------------------------- */      
     
 $("#feature18menu").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").show();
@@ -357,8 +357,8 @@ $("#feature18menu").click(function(){
 });
     
 $("#feature18").click(function(){
-    $("#iframe").hide();
     $(".chart").empty();
+    $("#iframe").hide();
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").show();
