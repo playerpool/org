@@ -283,6 +283,7 @@ $("#sheet19").click(function(){
 /* ---------------------------------------- PREVIEWS ---------------------------------------- */    
 
 $("#preview14menu").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -295,6 +296,7 @@ $("#preview14menu").click(function(){
 });
     
 $("#preview14").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -307,6 +309,7 @@ $("#preview14").click(function(){
 });
 
 $("#preview15").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -319,6 +322,7 @@ $("#preview15").click(function(){
 });
     
 $("#preview16").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -331,6 +335,7 @@ $("#preview16").click(function(){
 });
 
 $("#preview17").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -345,6 +350,7 @@ $("#preview17").click(function(){
 /* ---------------------------------------- Features ---------------------------------------- */      
     
 $("#feature18menu").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -357,6 +363,7 @@ $("#feature18menu").click(function(){
 });
     
 $("#feature18").click(function(){
+    $("#iframe").empty();
     $(".chart").empty();
     $("#iframe").hide();
     $("#alt_side").hide();
@@ -369,6 +376,7 @@ $("#feature18").click(function(){
 });    
 
 $("#feature19").click(function(){
+    $("#iframe").empty();
     $("#iframe").hide();
     $(".chart").empty();
     $("#alt_side").hide();
