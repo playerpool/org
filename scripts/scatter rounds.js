@@ -23,7 +23,7 @@ var div = d3.select("body")
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
-var data = d3.csv("../data/pp2.csv", function(d) {
+var data = d3.csv("data/pp2.csv", function(d) {
     return {
         person: d.person,
         year: +d.year,

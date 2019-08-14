@@ -37,7 +37,7 @@ var tabulate = function (data,columns) {
 return table;
 };
 
-var data = d3.csv("../data/pp.csv", function(d) {
+var data = d3.csv("data/pp.csv", function(d) {
     return {
         year: +d.year,
         person: d.person,

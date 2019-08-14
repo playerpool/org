@@ -10,7 +10,7 @@ var div = d3.select("body")
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
-var data = d3.csv("../data/pp.csv", function(d) {
+var data = d3.csv("data/pp.csv", function(d) {
     return {
         year: +d.year,
         person: d.person,
@@ -23,7 +23,6 @@ var data = d3.csv("../data/pp.csv", function(d) {
     };
 }).then(function(data) {
     dataset = data;
-    console.log(dataset);
 
     var yscale = d3.scaleLinear()
         .domain([0, d3.max(dataset, function(d) {

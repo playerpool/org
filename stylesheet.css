@@ -105,6 +105,7 @@ h3 {
     font-family: 'Forum', cursive;
     display: block;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .dropdown-content a:hover {
@@ -142,6 +143,7 @@ h3 {
   text-align: center;
   border-right: 0px solid darkblue;
   font-family: 'Forum', cursive;
+  display: none;
 }
 
 .side h3 {
@@ -150,6 +152,24 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 24px;
+    text-decoration: none;
+}
+
+.side #yaxisp {
+    font-family: "Forum", cursive;
+    color: cornflowerblue;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.side #xaxisp {
+    font-family: "Forum", cursive;
+    color: tomato;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -177,6 +197,26 @@ h3 {
   font-family: 'Forum', cursive;
   padding-left: 50px;
   padding-right: 150px;
+  color: darkblue;
+}
+
+.main .chart_title {
+  background-color: white;
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  padding-left: 0px;
+  padding-right: 150px;
+  color: darkblue;
+  margin-top: 10px;
+}
+
+.main .chart_desc {
+  background-color: white;
+  font-family: 'Forum', cursive;
+  font-size: 16px;
+  padding-left: 0px;
+  padding-right: 15px;
+  padding-top: 10px;
   color: darkblue;
 }
 
@@ -217,13 +257,11 @@ div .side .button {
       font-family: 'PT Serif', serif;
       font-size: 16px;
       margin-right: 1px;
-      margin-top: 20px;
+      margin-top: 15px;
       cursor: pointer;
       border-radius: 2px;
       width: 110px;
     }
-
-
 
 hr { 
     display: block;
@@ -249,10 +287,42 @@ hr {
 .Josh {background-color: GOLDENROD;}
 .Rob {background-color: SLATEGRAY;}
 
+#selecty, #selectx {
+      background-color: cornflowerblue; 
+      border: none;
+      color: white;
+      padding: 4px 20px;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      margin-right: 1px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 110px;
+      border-radius: 2px;
+    }
+
+.side #selectx {
+    background-color: tomato;
+}
+
 .side .button:hover {
     background-color: black;
     opacity: 0.5;
     }
+
+.side #selecty:hover, #selectx:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+#feature_side {
+    flex: 10%;
+}
+
+#feature_side .button {
+    width: 160px;
+    font-style: italic;
+}
 
 div.tooltip {	
     position: absolute;			

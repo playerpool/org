@@ -23,7 +23,7 @@ var div = d3.select("body")
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
-var data = d3.csv("../data/pp.csv", function(d) {
+var data = d3.csv("data/pp.csv", function(d) {
     return {
         year: +d.year,
         person: d.person,
@@ -36,7 +36,6 @@ var data = d3.csv("../data/pp.csv", function(d) {
     };
 }).then(function(data) {
     dataset = data;
-    console.log(dataset);
 
     var yscale = d3.scaleLinear()
         .domain([0, d3.max(dataset, function(d) {
@@ -84,7 +83,7 @@ var data = d3.csv("../data/pp.csv", function(d) {
         .style("stroke", "darkblue")
         .text("Total points");
 
-    var select_y = d3.select('.statpicky')
+ /*   var select_y = d3.select('.statpicky')
       .append('select')
         .attr('class','select')
         .attr("id", "selecty");
@@ -104,10 +103,10 @@ var data = d3.csv("../data/pp.csv", function(d) {
       .selectAll('option')
         .data(xvar).enter()
         .append('option')
-            .text(function (d) { return d; });
+            .text(function (d) { return d; }); 
 
     select_y.append("span")
-        .text("Y variable");
+        .text("Y variable"); */
 
     var circles = svg.selectAll("circle")
         .data(dataset)
@@ -148,14 +147,14 @@ var data = d3.csv("../data/pp.csv", function(d) {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(yaxis);
 
-    var inputElems_y = d3.select("#selecty");
-    var inputElems_x = d3.select("#selectx");
+    var inputElems_y = d3.selectAll("#selecty");
+    var inputElems_x = d3.selectAll("#selectx");
 
-    inputElems_y.on("change", inputChange_y);
-    inputElems_x.on("change", inputChange_x);
+    inputElems_y.on("click", inputChange_y);
+    inputElems_x.on("click", inputChange_x);
 
     function inputChange_y() {
-        var inputValue = this.value;
+        var inputValue = d3.select(this).attr("class");
 
         if      (inputValue === "Total points" ) { changey_points();  }
         else if (inputValue === "Games") { changey_games(); }
@@ -303,7 +302,7 @@ var data = d3.csv("../data/pp.csv", function(d) {
     }; 
 
     function inputChange_x() {
-        var inputValue = this.value;
+        var inputValue = d3.select(this).attr("class");
 
         if      (inputValue === "Total points" ) { changex_points();  }
         else if (inputValue === "Games") { changex_games(); }

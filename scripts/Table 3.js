@@ -37,7 +37,7 @@ var tabulate = function (data,columns) {
   return table;
 };
 
-var data = d3.csv("../data/rest.csv", function(d) {
+var data = d3.csv("data/rest.csv", function(d) {
     return {
         year: +d.year,
         player: d.player,
@@ -56,7 +56,6 @@ var data = d3.csv("../data/rest.csv", function(d) {
     };
 }).then(function (data) {
     dataset = data
-    console.log(dataset)
     var columns = ["year","player","school","seed","seasonppg","round1","round2","round3","round4","round5","round6","totalpoints","gamesplayed","tourneyppg"]
     tabulate(data,columns)
 

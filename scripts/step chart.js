@@ -9,7 +9,7 @@ var svg = d3.select(".chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom);
 
-var data = d3.csv("../data/cumrank.csv", function(d) {
+var data = d3.csv("data/cumrank.csv", function(d) {
     return {
             year: +d.year,
             person: d.person,

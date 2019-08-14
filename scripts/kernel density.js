@@ -14,7 +14,7 @@ var svg = d3.select(".chart")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-var data = d3.csv("../data/pp.csv", function(d) {
+var data = d3.csv("data/pp.csv", function(d) {
 
   return {
             year: +d.year,
@@ -30,7 +30,6 @@ var data = d3.csv("../data/pp.csv", function(d) {
         dataset = data.filter(function(d) { 
             return d.person == "Adam"; 
         });
-        console.log(dataset);
 
   var x = d3.scaleLinear()
     .domain([0, 141])

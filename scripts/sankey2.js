@@ -4,7 +4,7 @@ var div = d3.select("body")
         .style("opacity", 0);
 
         var dataset,
-            margin = {top: 30, right: 80, bottom: 30, left: 80},
+            margin = {top: 50, right: 80, bottom: 30, left: 80},
             width = 700 - margin.left - margin.right,
             height = 700 - margin.top - margin.bottom,
             pad = 4;
@@ -145,7 +145,7 @@ var div = d3.select("body")
             { source: "A8", target: "B8", value: 1, name1: "Rob"}
             ]
         };
-        const sankey = d3.sankey()
+        var sankey = d3.sankey()
                 .size([width, height])
                 .nodeId(d => d.id)
                 .nodeWidth(30)
@@ -153,14 +153,14 @@ var div = d3.select("body")
                 .nodeAlign(d3.sankeyCenter)
                 .nodeSort(null);
     
-        let graph = sankey(data);
+        var graph = sankey(data);
             
         graph.nodes.forEach(node => {
             node.width = node.x1 - node.x0;
             node.height = node.y1 - node.y0;
         });
 
-        let links = svg.append("g")
+        var links = svg.append("g")
            .classed("links", true)
            .selectAll("path")
            .data(graph.links)
@@ -186,7 +186,7 @@ var div = d3.select("body")
                     .style("opacity", 0);	
             });
             
-        let nodes = svg.append("g")
+        var nodes = svg.append("g")
            .classed("nodes", true)
            .selectAll("rect")
            .data(graph.nodes)

@@ -11,7 +11,7 @@ var div = d3.select(".main")
     .attr("class", "tooltip2")
     .style("opacity", 0);
 
-var data = d3.csv("../data/pp3.csv", function(d) {
+var data = d3.csv("data/pp3.csv", function(d) {
     return {
         person: d.person,
         year: +d.year,

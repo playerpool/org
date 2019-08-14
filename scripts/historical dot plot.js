@@ -10,7 +10,7 @@ var div = d3.select(".main")
     .attr("class","tooltip")				
     .style("opacity", 0);
 
-var data = d3.csv("../data/pp.csv", function(d) {
+var data = d3.csv("data/pp.csv", function(d) {
     return {
         year: +d.year,
         person: d.person,
