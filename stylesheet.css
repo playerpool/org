@@ -195,8 +195,8 @@ h3 {
   flex: 85%;
   background-color: white;
   font-family: 'Forum', cursive;
-  padding-left: 50px;
-  padding-right: 150px;
+  padding-left: 5%;
+  padding-right: 15%;
   color: darkblue;
 }
 
@@ -204,8 +204,8 @@ h3 {
   background-color: white;
   font-family: 'Forum', cursive;
   font-size: 30px;
-  padding-left: 0px;
-  padding-right: 150px;
+  padding-left: 0%;
+  padding-right: 15%;
   color: darkblue;
   margin-top: 10px;
 }
@@ -214,8 +214,8 @@ h3 {
   background-color: white;
   font-family: 'Forum', cursive;
   font-size: 16px;
-  padding-left: 0px;
-  padding-right: 15px;
+  padding-left: 0%;
+  padding-right: 15%;
   padding-top: 10px;
   color: darkblue;
 }
@@ -352,6 +352,7 @@ div.tooltip2 {
 
 table {
     border: 1px solid black;
+    padding-left: flex-end;
 }
 
 th {
@@ -380,4 +381,8 @@ td:first-child {
 
 .grid {
     color: lightgray;
+}
+
+#round {
+    padding-left: 5%;
 }

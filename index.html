@@ -18,7 +18,7 @@
     <body>
         <!-- Header -->
         <div class="header">
-          <img src="images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.github.io/org/index.html'">
+          <img src="images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
           <h1>NCAA Player Pool</h1>
         </div>
 
@@ -50,13 +50,14 @@
             <div class="dropdown">
                 <button class="dropbtn">Charts</button>
                 <div class="dropdown-content">
-                    <a id="dotplot">Dot plot</a>
-                    <a id="kernel">Kernel density</a>
+                    <a id="dotplot">Individual scoring</a>
+                    <a id="kernel">Scoring density</a>
                     <a id="cumrank">Cumulative rank</a>
                     <a id="statscatter">Points vs. draft pick</a>
                     <a id="sankey">Draft pick vs. finish</a>
                     <a id="statchoose">Stats scatter</a>
                     <a id="pointsbyround">Points by round</a>
+                    <a id="seedspicked">Picks by seed</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -74,7 +75,14 @@
                     <a id="feature18menu">Features</a>
                 </div>
             </div>
+            <div class="dropdown">
+                <button class="dropbtn">In situ</button>
+                <div class="dropdown-content">
+                    <a id="columbia">Columbia, SC</a>
+                </div>
+            </div>
         </div>
+        
         <!-- The flexible grid (content) -->
         <div class="row"> 
             <div id="side" class="side">
