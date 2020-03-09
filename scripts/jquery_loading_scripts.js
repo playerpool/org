@@ -31,8 +31,8 @@ $("#kernel").click(function(){
     $("#preview_side").hide();
     $("#feature_side").hide();
     $("#side").show();
-    $(".chart_title").empty().text("Density plot - individual scoring");
-    $(".chart_desc").empty().text("Distribution of your tournament scoring by individual, spanning the spreadsheet era. An interesting mix of bimodal and right-skewed.");
+    $(".chart_title").empty().text("Density plot - player scoring");
+    $(".chart_desc").empty().text("Distribution of your tournament scoring by player, spanning the spreadsheet era. An interesting mix of bimodal and right-skewed. Y axis is linear, useless to display but can't figure out how to hide the line because I'm in way over my head here.");
     $.getScript("scripts/kernel density.js");
 });
 
@@ -56,7 +56,7 @@ $("#statscatter").click(function(){
     $("#feature_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Tournament points vs. draft pick");
-    $(".chart_desc").empty().text("Tournament scoring by individual players as a function of draft pick, spanning the spreadsheet era. You could nearly use Farach to set your watch. Hover over data points for additional information.");
+    $(".chart_desc").empty().text("Tournament scoring by individual players as a function of draft pick, spanning the spreadsheet era. Hover over data points for additional information.");
     $.getScript("scripts/stat scatter.js");
 });
     
@@ -68,7 +68,7 @@ $("#sankey").click(function(){
     $("#feature_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Draft slot vs. finish");
-    $(".chart_desc").empty().text("A modified Sankey diagram to visualize the effect of draft position. As if battling the Stay Puft Marshmallow Man, we crossed our streams. Hover over lines for redundant information.");
+    $(".chart_desc").empty().text("A modified Sankey diagram to visualize the effect of draft position. Hover over lines for redundant information.");
     $.getScript("scripts/sankey2.js");
 });
     
@@ -92,8 +92,20 @@ $("#pointsbyround").click(function(){
     $("#feature_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Points scored by round");
-    $(".chart_desc").empty().text("Spreadsheet era. My second rounds are hit or miss. Hover over data points for additional information.");
+    $(".chart_desc").empty().text("Spreadsheet era. Hover over data points for additional information.");
     $.getScript("scripts/round dot plot.js");
+});
+    
+$("#seedspicked").click(function(){
+    $("#iframe").hide();
+    $(".chart").empty();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#side").show();
+    $(".chart_title").empty().text("Picks by seed");
+    $(".chart_desc").empty().text("Spreadsheet era. Hover over bars for exact total.");
+    $.getScript("scripts/seed bar.js");
 });
     
 /* ---------------------------------------- TABLES ---------------------------------------- */
@@ -387,5 +399,19 @@ $("#feature19").click(function(){
     $(".chart_desc").empty();
     $('.chart').load("words/feature19.html");
 });    
+
+/* ---------------------------------------- IN SITU ---------------------------------------- */    
+
+$("#columbia").click(function(){    
+    $("#iframe").hide();
+    $(".chart").empty();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#side").hide();
+    $(".chart_title").empty().text("Player pool travel phlog");
+    $(".chart_desc").empty();
+    $('.chart').load("travel/columbia.html");    
+});
     
 });

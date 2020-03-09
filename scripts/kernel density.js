@@ -1,8 +1,9 @@
 var dataset;
 // set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 30, left: 50},
-    width = 860 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 30, right: 50, bottom: 60, left: 100},
+    width = 900 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom,
+    pad = 10;
 
 // append the svg object to the body of the page
 var svg = d3.select(".chart")
@@ -43,7 +44,8 @@ var data = d3.csv("data/pp.csv", function(d) {
             .scale(x);
 
     var yaxis = d3.axisLeft()
-            .scale(y);
+            .scale(y)
+            .ticks(0);
 
   // Compute kernel density estimation for the first group
   var kde = kernelDensityEstimator(kernelEpanechnikov(15), x.ticks(140))
@@ -74,18 +76,19 @@ var data = d3.csv("data/pp.csv", function(d) {
             .attr("transform", "translate(0," + (height) + ")")
             .call(xaxis)
     .append("text")
-            .attr("x", margin.left/2)
-            .attr("y", -20)
+            .attr("class", "xlabel")
+            .attr("x", width/2)
+            .attr("y", +50)
             .attr("fill", "#000")
-            .attr("text-anchor", "start")
-            .attr("font-family", "Gill Sans")
-            .attr("font-size", "16px")
+            .attr("text-anchor", "center")
+            .style("font-size", "20px")
+            .style("stroke", "darkblue")
             .text("Player tournament points");
 
-        svg.append("g")
-            .attr("class", "y axis") // assigning an axis attribute (optional)
-            .attr("transform", "translate(0,0)")
-            .call(yaxis);
+    svg.append("g")
+        .attr("class", "y axis") // assigning an axis attribute (optional)
+        .attr("transform", "translate(0,0)")
+        .call(yaxis);
 
   d3.selectAll("button")
             .on("click", function() {
