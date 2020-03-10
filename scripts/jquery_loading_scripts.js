@@ -18,6 +18,7 @@ $("#dotplot").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Player scoring by year");
     $(".chart_desc").empty().text("Hover over data points for additional information.");
@@ -30,6 +31,7 @@ $("#kernel").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Density plot - player scoring");
     $(".chart_desc").empty().text("Distribution of your tournament scoring by player, spanning the spreadsheet era. An interesting mix of bimodal and right-skewed. Y axis is linear, useless to display but can't figure out how to hide the line because I'm in way over my head here.");
@@ -42,6 +44,7 @@ $("#cumrank").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").text("Cumulative points ranking");
     $(".chart_desc").empty().text("Your rank in total points scored over time. Steps are shown as occuring mid-year for display purposes.");
@@ -54,6 +57,7 @@ $("#statscatter").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Tournament points vs. draft pick");
     $(".chart_desc").empty().text("Tournament scoring by individual players as a function of draft pick, spanning the spreadsheet era. Hover over data points for additional information.");
@@ -66,6 +70,7 @@ $("#sankey").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Draft slot vs. finish");
     $(".chart_desc").empty().text("A modified Sankey diagram to visualize the effect of draft position. Hover over lines for redundant information.");
@@ -79,6 +84,7 @@ $("#statchoose").click(function(){
     $("#alt_side").show();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $(".chart_title").empty().text("Choose your own scatter");
     $(".chart_desc").empty().text("Our data as a group. Use the data filter to select variables for comparison. Hover over data points for additional information. Note: for display purposes, a jitter has been applied to all variables except points.");
     $.getScript("scripts/stat choose scatter.js");
@@ -90,6 +96,7 @@ $("#pointsbyround").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Points scored by round");
     $(".chart_desc").empty().text("Spreadsheet era. Hover over data points for additional information.");
@@ -102,6 +109,7 @@ $("#seedspicked").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Picks by seed");
     $(".chart_desc").empty().text("Spreadsheet era. Hover over bars for exact total.");
@@ -116,6 +124,7 @@ $("#table1").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Table 1 - Tournament level stats");
     $(".chart_desc").empty().text("Click column headers to sort.");
@@ -128,6 +137,7 @@ $("#table2").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Table 2 - Round level stats");
     $(".chart_desc").empty().text("Click column headers to sort.");
@@ -140,6 +150,7 @@ $("#table3").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty().text("Table 3 - Best of the rest");
     $(".chart_desc").empty().text("Click column headers to sort.");
@@ -154,6 +165,7 @@ $("#record_book").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -166,6 +178,7 @@ $("#sheet09").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -178,6 +191,7 @@ $("#sheet10").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -190,6 +204,7 @@ $("#sheet11").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -202,6 +217,7 @@ $("#sheet12").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -214,6 +230,7 @@ $("#sheet13").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -226,6 +243,7 @@ $("#sheet14").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -238,6 +256,7 @@ $("#sheet15").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -250,6 +269,7 @@ $("#sheet16").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -262,6 +282,7 @@ $("#sheet17").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -274,6 +295,7 @@ $("#sheet18").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -286,6 +308,7 @@ $("#sheet19").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").hide();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -301,6 +324,7 @@ $("#preview14menu").click(function(){
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -314,6 +338,7 @@ $("#preview14").click(function(){
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -327,6 +352,7 @@ $("#preview15").click(function(){
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -340,6 +366,7 @@ $("#preview16").click(function(){
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -353,6 +380,7 @@ $("#preview17").click(function(){
     $("#alt_side").hide();
     $("#feature_side").hide();
     $("#preview_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -368,6 +396,7 @@ $("#feature18menu").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -381,6 +410,7 @@ $("#feature18").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
@@ -394,12 +424,43 @@ $("#feature19").click(function(){
     $("#alt_side").hide();
     $("#preview_side").hide();
     $("#feature_side").show();
+    $("#shaq_side").hide();
     $("#side").hide();
     $(".chart_title").empty();
     $(".chart_desc").empty();
     $('.chart').load("words/feature19.html");
 });    
 
+/* ---------------------------------------- Stat Shaq ---------------------------------------- */      
+    
+$("#statshaqmenu").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").show();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/bestdrafter.html");
+});
+    
+$("#drafter1").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").show();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/bestdrafter.html");
+});
+    
 /* ---------------------------------------- IN SITU ---------------------------------------- */    
 
 $("#columbia").click(function(){    
