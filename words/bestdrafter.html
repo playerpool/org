@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <h1>Who's the best drafter?</h1>
+        <h2>Part I - Draft Skill</h2>
+        
+        <h4><img src="images/shaq.jpg" alt="Steel" style="width:75px;heigh99px;">by Shaquille 'Shaq' O'Neal</h4>
+        <p>March 2020</p>
+        <hr>
+        <p>An interesting tidbit about Josh's dominance in the Player Pool thus far is that he's yet to draft from the first position. Does this suggest the first pick doesn't offer any advantage, or worse, handicaps the contestant? I suspect that draft position indeed influences our final standings in some way. If so, our skill of selecting players isn't necessarily reflected when the orchestra strikes up "One Shining Moment." </p>
+        <p>We have eleven years of spreadsheet data, so let's take a look. Below are the point totals for picks 1-64 in the spreadsheet era. Not surprisingly, there's a drop in point output as players are taken off the board. We can use this data to calculate an expected point total for each draft pick via locally estimated scatterplot smoothing:</p>
+        <img src="images/stat%20shack%201.jpg" alt="Points vs Pick - Loess" style="width:700px;height:500px;">
+        <p>We now have scoring outputs (red fit line) for all 64 draft picks and can use these to predict scoring for each of the eight draft slots:</p>
+                <table>
+                  <tr>
+                    <th>Draft slot</th>
+                    <th>Expected pts</th>
+                  </tr>
+                  <tr>
+                    <td id="centered">1</td>
+                    <td>361</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">2</td>
+                    <td>351</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">3</td>
+                    <td>344</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">4</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">5</td>
+                    <td>341</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">6</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">7</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">8</td>
+                    <td>343</td>
+                  </tr>
+        </table>
+        <p>Drafting first has provided about a 10 point edge over slot two, which in turn has a 7-10 point advantage over slots 3-8. I wondered whether this result fits with other horseshoe/snake draft results. A quick search came up with <a href="https://www.reddit.com/r/fantasyfootball/comments/93i8uz/which_draft_pick_is_best_a_numerical_analysis/">a single analysis</a>. In a given fantasy football league, each lineup is guaranteed to play in the same number of games, so I'd argue more draft skill is required in the Player Pool, as we need to gauge team success much more stringently. This difference may explain why player pool slots 3-8 are essentially equal, whereas football slots continue to degrade as the good running backs are picked.</p>
+        <p>We're all familiar with our respective player pool cumulative points ranking, but how does our performance compare to the expected point total based on our draft position?</p>
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>Points rank</th>
+                    <th>Expected</th>
+                    <th>Actual</th>
+                    <th>Difference</th>
+                    <th>Diff % (skill)</th>
+                    <th>Skill rank</th>
+                  </tr>
+                  <tr>
+                    <td>Adam</td>
+                    <td>5</td>
+                    <td>3794</td>
+                    <td>3780</td>
+                    <td>-14</td>
+                    <td>-0.37</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Alex</td>
+                    <td>4</td>
+                    <td>3810</td>
+                    <td>3834</td>
+                    <td>24</td>
+                    <td>0.63</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Farach</td>
+                    <td>2</td>
+                    <td>3818</td>
+                    <td>3864</td>
+                    <td>46</td>
+                    <td>1.20</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Lloyd</td>
+                    <td>1</td>
+                    <td>3809</td>
+                    <td>3893</td>
+                    <td>84</td>
+                    <td>2.21</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Bryan</td>
+                    <td>6</td>
+                    <td>3785</td>
+                    <td>3732</td>
+                    <td>-53</td>
+                    <td>-1.40</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>James</td>
+                    <td>7</td>
+                    <td>3793</td>
+                    <td>3674</td>
+                    <td>-119</td>
+                    <td>-3.14</td>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td>Josh</td>
+                    <td>2</td>
+                    <td>3784</td>
+                    <td>3864</td>
+                    <td>80</td>
+                    <td>2.11</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Rob</td>
+                    <td>8</td>
+                    <td>3835</td>
+                    <td>3658</td>
+                    <td>-177</td>
+                    <td>-4.62</td>
+                    <td>8</td>
+                  </tr>
+        </table>
+        <p>I’ve scaled the gross difference by the original expectation to define skill. As you can see, draft skill rankings track nearly perfectly with our cumulative points rankings. Eleven years of Lloyd’s hat draws have produced a well-balanced distribution of draft slots, so draft position hasn’t drastically affected our cumulative point totals. The more years we play, the closer we’ll get to equivalent point expectations.
+        <p>For now, we can say that Josh has drafted better than Farach, despite identical point totals.</p>
+    </body>
+</html>
