@@ -3,17 +3,22 @@
         <style></style>
     </head>
     <body>
+        
         <h1>Who's the best drafter?</h1>
+        
         <h2>Part I - Draft Skill</h2>
         
-        <h4><img src="images/shaq.jpg" alt="Steel" style="width:75px;heigh99px;">by Shaquille 'Shaq' O'Neal</h4>
+        <h4><img src="images/shaq.jpg" alt="Steel" style="width:75px;heigh99px;">&nbsp by Shaquille 'Shaq' O'Neal</h4>
         <p>March 2020</p>
         <hr>
-        <p>An interesting tidbit about Josh's dominance in the Player Pool thus far is that he's yet to draft from the first position. Does this suggest the first pick doesn't offer any advantage, or worse, handicaps the contestant? I suspect that draft position indeed influences our final standings in some way. If so, our skill of selecting players isn't necessarily reflected when the orchestra strikes up "One Shining Moment." </p>
-        <p>We have eleven years of spreadsheet data, so let's take a look. Below are the point totals for picks 1-64 in the spreadsheet era. Not surprisingly, there's a drop in point output as players are taken off the board. We can use this data to calculate an expected point total for each draft pick via locally estimated scatterplot smoothing:</p>
+        <p>An interesting tidbit about Josh's dominance in the Player Pool thus far is that he's yet to draft from the first position. Does this suggest the first pick doesn't offer any advantage, or worse, handicaps the contestant? I suspect that draft position indeed influences our final standings in some way. If so, our skill of selecting players isn't necessarily reflected when the orchestra strikes up "One Shining Moment." We have eleven years of spreadsheet data, so let's take a look.</p>
+        
+        <p>Below are the point totals for picks 1-64 in the spreadsheet era. Not surprisingly, there's a drop in point output as players are taken off the board. We can use this data to calculate an expected point total for each draft pick via locally estimated scatterplot smoothing:</p>
         <img src="images/statshack1.jpg" alt="Points vs Pick - Loess" style="width:700px;height:500px;">
+        
         <p>We now have scoring outputs (red fit line) for all 64 draft picks and can use these to predict scoring for each of the eight draft slots:</p>
-                <table>
+                
+        <table>
                   <tr>
                     <th>Draft slot</th>
                     <th>Expected pts</th>
@@ -51,9 +56,11 @@
                     <td>343</td>
                   </tr>
         </table>
-        <p>Drafting first has provided about a 10 point edge over slot two, which in turn has a 7-10 point advantage over slots 3-8. I wondered whether this result fits with other horseshoe/snake draft results. A quick search came up with <a href="https://www.reddit.com/r/fantasyfootball/comments/93i8uz/which_draft_pick_is_best_a_numerical_analysis/">a single analysis</a>. In a given fantasy football league, each lineup is guaranteed to play in the same number of games, so I'd argue more draft skill is required in the Player Pool, as we need to gauge team success much more stringently. This difference may explain why player pool slots 3-8 are essentially equal, whereas football slots continue to degrade as the good running backs are picked.</p>
-        <p>We're all familiar with our respective player pool cumulative points ranking, but how does our performance compare to the expected point total based on our draft position?</p>
-                <table>
+        <p>Drafting first has provided about a 10 point edge over slot two, which in turn has a 7-10 point advantage over slots 3-8. I wondered whether this result fits with other horseshoe/snake draft results. A quick search came up with <a href="https://www.reddit.com/r/fantasyfootball/comments/93i8uz/which_draft_pick_is_best_a_numerical_analysis/">a single analysis</a>. In a given fantasy football league, each lineup is guaranteed to play in the same number of games, so I'd argue more draft skill is required in the Player Pool, as we need to gauge team success much more stringently. This difference may explain why Player Pool slots 3-8 are essentially equal, whereas football slots continue to degrade as the good running backs are picked.</p>
+        
+        <p>We're all familiar with our respective Player Pool cumulative points ranking, but how does our performance compare to the expected point total based on our draft position?</p>
+                
+        <table>
                   <tr>
                     <th></th>
                     <th>Points rank</th>
@@ -137,6 +144,8 @@
                   </tr>
         </table>
         <p>I’ve scaled the gross difference by the original expectation to define skill. As you can see, draft skill rankings track nearly perfectly with our cumulative points rankings. Eleven years of Lloyd’s hat draws have produced a well-balanced distribution of draft slots, so draft position hasn’t drastically affected our cumulative point totals. The more years we play, the closer we’ll get to equivalent point expectations.
+        
         <p>For now, we can say that Josh has drafted better than Farach, despite identical point totals.</p>
+    
     </body>
 </html>
