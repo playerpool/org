@@ -1,0 +1,106 @@
+<html lang="en">
+    <head>
+        <style>
+            /* The grid: Four equal columns that floats next to each other */
+            .columnz {
+              float: left;
+              width: 20%;
+              padding: 10px;
+            }
+
+            /* Style the images inside the grid */
+            .columnz img {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+
+            .columnz img:hover {
+              opacity: 1;
+            }
+
+            /* Clear floats after the columns */
+            .rowz:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            /* The expanding image container (positioning is needed to position the close button and the text) */
+            .containerz {
+              position: relative;
+              display: none;
+            }
+
+            /* Expanding image text */
+            #imgtext {
+              position: absolute;
+              top: 15px;
+              left: 62%;
+              color: darkblue;
+              font-size: 20px;
+            }
+
+            /* Closable button inside the image */
+            .closebtn {
+              position: absolute;
+              top: 5px;
+              left: 15px;
+              color: aliceblue;
+              font-size: 85px;
+              cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h3><strike>2020 - Tampa, Florida</strike></h3>
+            
+            <!-- The grid: four columns -->
+            <div class="rowz">
+              <div class="columnz">
+                <img src="images/tampa/covid.png" alt="Docking simulation predicts a root mean square deviation of just 0.7 angstrom between the 2019-nCoV S-protein receptor binding domain and human ACE2" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="columnz">
+                <img src="images/tampa/ship.jpg" alt="Alternative destinations are chosen: Iran and South Korea from the safety of the open ocean" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="columnz">
+                <img src="images/tampa/Lloyd.jpg" alt="The Comptroller travels prepared" style="width:60%" onclick="myFunction(this);">
+              </div>
+              <div class="columnz">
+                <img src="images/tampa/escort.jpg" alt="The boys' escort along the Iranian coast"  style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="columnz">
+                <img src="images/tampa/korea.jpg" alt="Ashore at Gangneung" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+
+            <!-- The expanding image container -->
+            <div class="containerz">
+              <!-- Close the image -->
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+              <!-- Expanded image -->
+              <img id="expandedImg" style="width:60%">
+
+              <!-- Image text -->
+              <div id="imgtext"></div>
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript">
+            function myFunction(imgs) {
+              // Get the expanded image
+              var expandImg = document.getElementById("expandedImg");
+              // Get the image text
+              var imgText = document.getElementById("imgtext");
+              // Use the same src in the expanded image as the image being clicked on from the grid
+              expandImg.src = imgs.src;
+              // Use the value of the alt attribute of the clickable image as text inside the expanded image
+              imgText.innerHTML = imgs.alt;
+              // Show the container element (hidden with CSS)
+              expandImg.parentElement.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
