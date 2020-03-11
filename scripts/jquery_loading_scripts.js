@@ -489,5 +489,18 @@ $("#columbia").click(function(){
     $(".chart_desc").empty();
     $('.chart').load("travel/columbia.html");    
 });
+
+$("#tampa").click(function(){    
+    $("#iframe").hide();
+    $(".chart").empty();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").hide();
+    $("#side").hide();
+    $(".chart_title").empty().text("Player pool travel phlog");
+    $(".chart_desc").empty();
+    $('.chart').load("travel/tampa.html");    
+});
     
 });
