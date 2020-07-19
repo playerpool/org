@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <div class="header">
+          <h1>Laysan Albatross</h1>
+          <h3>PRC Geolocation data</h3>
+          <h4>Select bird using the buttons. Drag and zoom the map to change view. Mouse over individual points for date info.</h4>
+        </div>
+        
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+          <div class="side">
+            <h3>GeoBand #</h3>
+            <button class="button_band" id="841" color="white">841</button>
+            <button class="button_band" id="843" color="Tomato">843</button>
+            <button class="button_band" id="844" color="Khaki">844</button>
+            <button class="button_band" id="845" color="Lime">845</button>
+            <button class="button_band" id="846" color="Gold">846</button>
+            <button class="button_band" id="853" color="HotPink">853</button>
+            <button class="button_band" id="857" color="Linen">857</button>   
+          </div> 
+          <div class="main">
+            <div class="chart"></div>
+          </div>
+        </div>
+        
+        <!-- D3 -->
+        <script>
+            var margin = {top: 30, right: 50, bottom: 60, left: 150},
+            w = 800 - margin.left - margin.right,
+            h = 800 - margin.top - margin.bottom,
+            pad = 10;
+            
+            var dataset;
+            
+            var div = d3.select("body")
+                        .append("div")
+                        .attr("class","tooltip")				
+                        .style("opacity", 0);
+            
+            var svg = d3.select(".chart")
+                        .append("svg")
+                        .attr("width", w + margin.left + margin.right)
+                        .attr("height", h + margin.top + margin.bottom);
+            
+            svg.append("rect")
+                .attr("width", w + margin.left + margin.right)
+                .attr("height", h + margin.top + margin.bottom)
+                .attr("fill", "black");
+          
+            //Define the projection of lon/lat onto x/y
+            var projection = d3.geoOrthographic()
+                            .translate([(w + margin.left + margin.right)/2, (h + margin.top + margin.bottom)/2])
+                            .center([0, 0])
+                            .rotate([180, 0, 0])
+                            .scale(300);
+            
+            const initialScale = projection.scale();
+            
+            var globe = svg.append("circle")
+                  .attr("fill", "MediumBlue")
+                  .attr("stroke", "#000")
+                  .attr("stroke-width", "0.2")
+                  .attr("cx", (w + margin.left + margin.right)/2)
+                  .attr("cy", (h + margin.top + margin.bottom)/2)
+                  .attr("r", initialScale);
+            
+            
+            //Define the path generator
+            var path = d3.geoPath()
+                         .projection(projection);
+            
+            //Define what to do when dragging
+            var dragging = function(d) {
+                
+                const rotate = projection.rotate()
+                const k = 75 / projection.scale()
+                projection.rotate([
+                  rotate[0] + d3.event.dx * k,
+                  rotate[1] - d3.event.dy * k
+                ])
+                
+                map.selectAll("path")
+                    .attr("d", path);
+                
+                map.selectAll("circle")
+                    .attr("cx", function(d) {
+                        return projection([d.lon, d.lat])[0]
+                    })
+                    .attr("cy", function(d) {
+                        return projection([d.lon, d.lat])[1]
+                    });
+            }
+            
+            //Define what to do when zooming
+            var zooming = function(d) {
+                
+                var currentScale = projection.scale();
+                
+                const k = 500 / currentScale;
+                
+                projection.scale(initialScale * d3.event.transform.k);
+                
+                path = d3.geoPath().projection(projection);
+               
+                map.selectAll("path")
+                    .attr("d", path);
+                
+                map.selectAll("circle")
+                    .attr("cx", function(d) {
+                        return projection([d.lon, d.lat])[0]
+                    })
+                    .attr("cy", function(d) {
+                        return projection([d.lon, d.lat])[1]
+                    })
+                    .attr("r", projection.scale()/200);
+                
+                globe
+                    .attr("r", projection.scale());
+                
+            };
+            
+            var drag = d3.drag()
+                         .on("drag", dragging);
+            
+            var zoom = d3.zoom()
+                         .on("zoom", zooming);
+            
+            //Create a container for "draggable" items 
+            var map = svg.append("g")
+                         .attr("id", "map")
+                         .call(drag)
+                         .call(zoom);
+            
+            map.append("rect")
+                .attr("x", 0)
+                .attr("y", 0)
+                .attr("width", w + margin.left + margin.right)
+                .attr("height", h + margin.top + margin.bottom)
+                .attr("opacity", 0);
+            
+            //Load the GeoJSON
+            d3.json("world50m.json")
+                .then(function(json) {
+                
+                //Bind data and create one path per GeoJSON feature
+                map.selectAll("path.feature")
+                    .data(json.features)
+                    .enter()
+                    .append("path")
+                    .attr("class", "feature")
+                    .attr("d", path)
+                    .attr("fill", "Olive")
+                    .attr("stroke", "darkolivegreen");
+            });
+            
+            //load the data
+            d3.csv("bands.csv", function(d) {
+                return {
+                    lon: +d.lon,
+                    lat: +d.lat,
+                    band: +d.band,
+                    date: d.date,
+                    interval: +d.interval
+                };
+            })
+                .then(function(data) {
+                    
+                // Filter the data by an initial band
+                dataset = data.filter(function(d) { 
+                    return d.band == 841; 
+                });
+                
+                //Bind the filtered data and create one circle per lon/lat
+                map.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function(d) {
+                        return projection([d.lon, d.lat])[0]
+                    })
+                    .attr("cy", function(d) {
+                        return projection([d.lon, d.lat])[1]
+                    })
+                    .attr("r", projection.scale()/200)
+                    .style("fill", "white")
+                    .style("opacity", 0.75)
+                    .on("mouseover", function(d) {		
+                        div.transition()		
+                            .duration(200)		
+                            .style("opacity", .9);		
+                        div	.html(d.date + " (Day " + d.interval + ")")	
+                            .style("left", (d3.event.pageX) + "px")		
+                            .style("top", (d3.event.pageY - 28) + "px");	
+                        })					
+                    .on("mouseout", function(d) {		
+                        div.transition()		
+                            .duration(500)		
+                            .style("opacity", 0);
+                });
+            
+               // Update the circles based on the selected bird
+                d3.selectAll("button")
+                    .on("click", function() {
+
+                        var band = d3.select(this).attr("id")
+
+                        var color = d3.select(this).attr("color")
+
+                        dataset = data.filter(function(d) { 
+                        return d.band == band; 
+                        });
+
+                        var duration = 500;
+
+                      var circ = map.selectAll("circle")
+                            .data(dataset);
+
+                        circ.exit()
+                            .transition()
+                            .duration(duration)
+                            .style("fill-opacity", 1e-6)
+                            .remove();
+                    
+                        circ.enter()
+                            .append("circle")
+                            .attr("r", projection.scale()/200)
+                            .attr("cx", function(d) { 
+                                return projection([d.lon, d.lat])[0];
+                            })
+                            .attr("cy", function(d) {
+                                return projection([d.lon, d.lat])[1];
+                            })
+                            .style("fill", color)
+                            .style("opacity", 1e-6)
+                            .merge(circ)
+                     .on("mouseover", function(d) {		
+                                div.transition()		
+                                    .duration(200)		
+                                    .style("opacity", .9);		
+                                div	.html(d.date + " (Day " + d.interval + ")")	
+                                    .style("left", (d3.event.pageX) + "px")		
+                                    .style("top", (d3.event.pageY - 28) + "px");	
+                                })					
+                            .on("mouseout", function(d) {		
+                                div.transition()		
+                                    .duration(500)		
+                                    .style("opacity", 0);;
+
+                })
+                            .transition()
+                            .duration(duration)
+                            .attr("cx", function(d) { 
+                                return projection([d.lon, d.lat])[0];
+                            })
+                            .attr("cy", function(d) {
+                                return projection([d.lon, d.lat])[1];
+                            })
+                            .style("fill", color)
+                            .style("opacity", .75);
+                    
+                           
+                
+                });
+});
+        </script>
+    <body>
+<html>

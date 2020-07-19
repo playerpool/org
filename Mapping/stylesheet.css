@@ -1,0 +1,66 @@
+div.tooltip {	
+            position: absolute;			
+            text-align: center;			
+            width: 90px;					
+            height: 28px;					
+            padding: 2px;				
+            font: 12px sans-serif;		
+            background: lightsteelblue;	
+            border: 0px;		
+            border-radius: 8px;			
+            pointer-events: none;
+            } 
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 5%;
+  background-color: whitesmoke;
+  padding: 2px;
+  text-align: center;
+  border-right: 0px solid darkblue;
+  font-family: 'Forum', cursive;
+}
+
+/* Main column */
+.main {
+  display: flex;
+  flex: 80%;
+  background-color: white;
+  font-family: 'Forum', cursive;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: darkblue;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, {   
+    flex-direction: column;
+  }
+}
+
+.button_band {
+      background-color: darkblue; 
+      border: none;
+      color: white;
+      padding: 2px 25px;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      width: 75px;
+      border-radius: 2px;
+    }
+
+.button_band:hover {
+    background-color: beige;
+    color: red;
+}
