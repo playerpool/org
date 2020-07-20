@@ -27,6 +27,7 @@
             <button class="button_band" id="853" color="HotPink">853</button>
             <button class="button_band" id="857" color="Linen">857</button>
             <button class="button_band" id="863" color="NavajoWhite">863</button>
+            <button class="button_band" id="871" color="Yellow">871</button>  
           </div> 
           <div class="main">
             <div class="chart"></div>
@@ -247,14 +248,14 @@
                                 div.transition()		
                                     .duration(200)		
                                     .style("opacity", .9);		
-                                div	.html(d.date + " (Day " + d.interval + ")")	
+                                div	.html(d.date + " (Day " + d.interval/2 + ")")	
                                     .style("left", (d3.event.pageX) + "px")		
                                     .style("top", (d3.event.pageY - 28) + "px");	
                                 })					
                             .on("mouseout", function(d) {		
                                 div.transition()		
                                     .duration(duration)		
-                                    .style("opacity", 0);;
+                                    .style("opacity", 0);         
 
                 })
                             .transition()
