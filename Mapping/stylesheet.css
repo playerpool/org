@@ -21,7 +21,7 @@ div.tooltip {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 5%;
+  flex: 15%;
   background-color: whitesmoke;
   padding: 2px;
   text-align: center;
@@ -48,7 +48,7 @@ div.tooltip {
 }
 
 .button_band {
-      background-color: darkblue; 
+      background-color: gray;
       border: none;
       color: white;
       padding: 2px 25px;
