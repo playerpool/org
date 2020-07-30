@@ -206,7 +206,7 @@
 
                         checkbox();
                     
-                        genelabel.text("Gene: " + newdataset[0].gene);
+                        genelabel.text("Model: Fah-/-;   Gene: " + newdataset[0].gene);
                         
                         yscale.domain([0, d3.max(newdataset, function(d) {
                             return d.tpm;
@@ -368,7 +368,7 @@
                         
                         newdataset_ph = dataset_ph;
                     
-                        genelabel_ph.text("Gene: " + newdataset_ph[0].sym);
+                        genelabel_ph.text("Model: PH;   Gene: " + newdataset_ph[0].sym);
                         
                         yscale_ph.domain([0, d3.max(newdataset_ph, function(d) {
                             return d.fpkm;
