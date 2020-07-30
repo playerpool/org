@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="header">
+          <h1>Wang, Wangensteen et al. TRAP-Seq</h1>
+          <h3>Fah-/- mouse liver</h3>
+          <h4>TRAP-seq identifies cystine/glutamate antiporter as a driver of recovery from liver injury</h4>
+        </div>
+        
+        <div class="main">
+            <form>
+              <div>
+                <label for="mySearch">Search for gene:</label>
+                <input type="text" id="mySearch" name="q" placeholder="enter mouse gene symbol (e.g. Myc)" style="width:300px">
+                <button id="searchButton">Search</button>
+                <input type="checkbox" id="myCheckbox"> Exclude 4 week severe group
+              </div>
+            </form>
+            <div class="chart"></div>
+        </div>
+        
+        <script>
+           
+            var margin = {top: 50, right: 50, bottom: 60, left: 150},
+            w = 800 - margin.left - margin.right,
+            h = 500 - margin.top - margin.bottom,
+            pad = 50;
+            
+            var dataset, newdataset;
+            
+            var ticks3 = [1, 2, 3];
+            var ticks4 = [1, 2, 3, 4];
+            var xticks;
+            var yticks = 5;
+            
+            var xlabels;
+            var labels3 = ["Quiescent", "1 wk", "4 wk"];
+            var labels4 = ["Quiescent", "1 wk", "4 wk", "4 wk severe"];
+            
+            var duration = 250;
+            
+            d3.csv("long.csv", function(d) {
+                return {
+                    tpm: +d.tpm,
+                    treatment: +d.treatment,
+                    gene: d.gene,
+                    transcript: d.transcript 
+                };
+            })
+            .then(function(data) {  
+
+                dataset = data.filter(function(d) { 
+                            return d.gene == "Myc"; 
+                        });;
+
+                var svg = d3.selectAll(".chart")
+                    .append("svg")
+                    .attr("width", w + margin.left + margin.right)
+                    .attr("height", h + margin.top + margin.bottom);
+                
+                var genelabel = svg.append("text")
+                    .attr("id", "genelabel")
+                    .attr("text-anchor", "mid")
+                    .attr("x", margin.left + (pad*2))
+                    .attr("y", margin.top + (pad/5))
+                    .text("Gene: " + dataset[0].gene);
+
+                var yscale = d3.scaleLinear()
+                    .domain([0, d3.max(dataset, function(d) {
+                        return d.tpm;
+                    })])
+                    .rangeRound([h, 0]);
+
+                var xscale = d3.scaleLinear()
+                    .domain([1, 4])
+                    .rangeRound([pad, w-2*pad]);
+                
+                xticks = ticks4;
+                xlabels = labels4;
+                
+                var xaxis = d3.axisBottom()
+                    .scale(xscale)
+                    .tickValues(xticks)
+                    .tickFormat(function(d, i) {
+                        return xlabels[i];
+                    });
+                    
+                var yaxis = d3.axisLeft()
+                    .scale(yscale)
+                    .ticks(yticks);
+
+                svg.append("g")
+                    .attr("class", "x axis") // assigning an axis attribute (optional)
+                    .attr("transform", "translate(" + margin.left + "," + (h + margin.top) + ")")
+                    .call(xaxis);
+                
+                svg.append("text")
+                    .attr("class", "x label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", (w+ margin.left + margin.right)/2)
+                    .attr("y", h + margin.top + margin.bottom - 12)
+                    .text("Group");
+
+                svg.append("g")
+                    .attr("class", "y axis") // assigning an axis attribute (optional)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                    .call(yaxis);
+                
+                svg.append("text")
+                    .attr("class", "y label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", pad)
+                    .attr("y", h/2 + margin.top)
+                    .text("TPM");
+                
+                svg.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle")
+                    .attr("r", 5)
+                    .attr("cx", function(d) { 
+                        return xscale(d.treatment) + margin.left;
+                    })
+                    .attr("cy", function(d) {
+                        return yscale(d.tpm) + margin.top;
+                    })
+                    .style("fill", "gray")
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .style("stroke-width", 2);
+
+                document.getElementById("searchButton")
+                    .addEventListener("click", function(event){
+                    
+                    event.preventDefault();
+   
+                    var submission = document.getElementById("mySearch").value;
+                    
+                        dataset = data.filter(function(d) { 
+                            return d.gene == submission; 
+                        });
+                        
+                        newdataset = dataset;
+
+                        checkbox();
+                    
+                        genelabel.text("Gene: " + newdataset[0].gene);
+                        
+                        yscale.domain([0, d3.max(newdataset, function(d) {
+                            return d.tpm;
+                            })])
+                            .rangeRound([h, 0]);
+                    
+                        xscale.domain([1, d3.max(newdataset, function(d) {
+                            return d.treatment;
+                            })])
+                            .rangeRound([pad, w-2*pad]);
+
+                        var circ = d3.select("svg").selectAll("circle")
+                            .data(newdataset);
+                            
+                        circ.exit()
+                            .style("fill-opacity", 1e-6)
+                            .remove();
+                    
+                        circ.enter()
+                            .append("circle")
+                            .attr("r", 5)
+                            .attr("cx", function(d) { 
+                                return xscale(d.treatment) + margin.left;
+                            })
+                            .attr("cy", function(d) {
+                                return yscale(d.tpm) + margin.top;
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 1e-6)
+                            .style("stroke-width", 2)
+                            .merge(circ) 
+                            .transition()
+                            .duration(duration)
+                            .attr("cx", function(d) { 
+                                return xscale(d.treatment) + margin.left;
+                            })
+                            .attr("cy", function(d) {
+                                return yscale(d.tpm) + margin.top;
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 0.5)
+                            .style("stroke", "black")
+                            .style("stroke-width", 2);
+
+                        svg.select(".x.axis")
+                            .transition()
+                            .duration(duration)
+                            .call(xaxis);
+
+                        svg.select(".y.axis")
+                            .transition()
+                            .duration(duration)
+                            .call(yaxis);
+                   }); 
+            });
+            
+            function checkbox() {
+                if(d3.select("#myCheckbox").property("checked")){
+                    newdataset = newdataset.filter(function(d) {
+                        return d.treatment < 4;
+                    })
+                    xticks = ticks3;
+                    xlabels = labels3;
+                } else {
+                    newdataset = newdataset.filter(function(d) {
+                        return d.treatment < 5;
+                    })
+                    xticks = ticks4;
+                    xlabels = labels4;
+                }
+            }
+            
+        </script>
+    </body>
+    
+</html>

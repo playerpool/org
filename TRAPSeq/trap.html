@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Mouse liver regeneration models</h1>
+            <h3>Sources:</h3>
+            <h4 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5983312/">Fah-/- TRAP-Seq: "TRAP-seq identifies cystine/glutamate antiporter as a driver of recovery from liver injury
+            "</h4>
+            <h4 href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125007">Wild-type PH RNA-Seq: "Genome-wide expression profiling of Uhrf1hepKO mouse livers at baseline and following PHx"</h4>
+        </div>
+        <br>
+        <div class="main">
+            <form>
+                <div>
+                    <label for="mySearch">Search for gene:</label>
+                    <input type="text" id="mySearch" name="q" placeholder="enter mouse gene symbol (e.g. Myc)" style="width:300px">
+                    <button id="searchButton">Search</button>
+                    <input type="checkbox" id="myCheckbox"> Exclude 4 week severe group
+                </div>
+            </form>
+            <div id="chart1"></div>
+        </div>
+        
+        <div class="main">
+            <div id="chart2"></div>
+        </div>
+        
+        <script>
+            /////////////////////////////////////////////////////////
+            
+            var margin = {top: 50, right: 50, bottom: 50, left: 100};
+            var xpad = 30;
+            var ypad = 0;
+            
+            var totalwidth = 460;
+            var totalheight = 500;
+            
+            var xticknumber = 4;
+            var yticknumber = 5;
+            
+            var ticks3 = [1, 2, 3];
+            var ticks4 = [1, 2, 3, 4];
+            var xticks;
+            
+            var xlabels;
+            var labels3 = ["Quiescent", "1 wk", "4 wk"];
+            var labels4 = ["Quiescent", "1 wk", "4 wk", "4 wk severe"];
+            var xlabels_ph = [0, 24, 30, 40, 48, 96, 168, 672];
+            
+            var duration = 250;
+            
+            /////////////////////////////////////////////////////////
+            
+            
+            ////////////////////////// Don't need to touch /////////////////////////////////
+            
+            var dataset, newdataset, datset_ph, newdataset_ph;
+            
+            var width = totalwidth - margin.left - margin.right;
+            var height = totalheight - margin.top - margin.bottom;
+            var width_ph = 2*totalwidth - 2*margin.left - 2*margin.right;
+            
+            var tooltip = d3.select("body")
+                .append("div")
+                .attr("class","tooltip")				
+                .style("opacity", 0);
+            
+            var svg = d3.select("#chart1")
+                .append("svg")
+                    .attr("width", totalwidth)
+                    .attr("height", totalheight);
+            
+            var gsvg = svg
+                .append("g")
+                    .attr("id", "gsvg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            
+            var svg_ph = d3.select("#chart2")
+                .append("svg")
+                    .attr("width", totalwidth*2)
+                    .attr("height", totalheight)
+                    .style("position", "relative")
+                    .style("left", "400px")
+                    .style("bottom", "504px");
+            
+            var gsvg_ph = svg_ph
+                .append("g")
+                    .attr("id", "gsvg_ph")
+                    .attr("width", width_ph)
+                    .attr("height", height)
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            
+            ////////////////////////////////////////////////////////////////////////////////
+            
+            
+            d3.csv("long.csv", function(d) {           
+                return {
+                    tpm: +d.tpm,                          
+                    treatment: +d.treatment,
+                    gene: d.gene,
+                    transcript: d.transcript           
+                };
+            })
+            .then(function(data) {  
+
+                dataset = data.filter(function(d) {
+                    return d.gene == "Myc";     
+                });
+                
+                var xscale = d3.scaleLinear()
+                    .domain([1,4]) 
+                    .rangeRound([xpad, width-2*xpad]);
+                
+                var yscale = d3.scaleLinear()
+                    .domain([0, d3.max(dataset, function(d) {
+                        return d.tpm;
+                    })])
+                    .rangeRound([height, ypad]);
+                
+                // Defining the axis generators
+                xticks = ticks4;
+                xlabels = labels4;
+                
+                var xaxis = d3.axisBottom()
+                    .scale(xscale)
+                    .tickValues(xticks)
+                    .tickFormat(function(d, i) {
+                        return xlabels[i];
+                    });
+                    
+                var yaxis = d3.axisLeft()
+                    .scale(yscale)
+                    .ticks(yticknumber);
+                
+                // Adding axes to svg
+                gsvg.append("g")
+                    .attr("class", "axis")
+                    .attr("id", "xaxis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(xaxis);
+                
+                gsvg.append("g")
+                    .attr("class", "axis")
+                    .attr("id", "yaxis")
+                    .call(yaxis);
+                
+                // Adding labels to axes
+                svg.append("text")
+                    .attr("class", "x label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", (width + margin.left + margin.right)/2)
+                    .attr("y", height + margin.top + margin.bottom - 12)
+                    .text("Group");
+                
+                svg.append("text")
+                    .attr("class", "y label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", xpad/2)
+                    .attr("y", height/2 + margin.top)
+                    .text("FPKM");
+                
+                // Adding a gene symbol label to chart body
+                var genelabel = svg.append("text")
+                    .attr("id", "genelabel")
+                    .attr("text-anchor", "mid")
+                    .attr("x", margin.left )
+                    .attr("y", xpad)
+                    .text("Model: Fah-/-;   Gene: " + dataset[0].gene);
+                
+                // Add circles to the chart
+                gsvg.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle")
+                    .attr("r", 5)
+                    .attr("cx", function(d) { 
+                        return xscale(d.treatment);
+                    })
+                    .attr("cy", function(d) {
+                        return yscale(d.tpm);
+                    })
+                    .style("fill", "gray")
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .style("stroke-width", 2);
+                
+                document.getElementById("searchButton")
+                    .addEventListener("click", function(event){
+                    
+                    event.preventDefault();
+   
+                    var submission = document.getElementById("mySearch").value;
+                    
+                        dataset = data.filter(function(d) { 
+                            return d.gene == submission; 
+                        });
+                        
+                        newdataset = dataset;
+
+                        checkbox();
+                    
+                        genelabel.text("Gene: " + newdataset[0].gene);
+                        
+                        yscale.domain([0, d3.max(newdataset, function(d) {
+                            return d.tpm;
+                            })])
+                            .rangeRound([height, 0]);
+                    
+                        xscale.domain([1, d3.max(newdataset, function(d) {
+                            return d.treatment;
+                            })])
+                            .rangeRound([xpad, width-2*xpad]);
+
+                        var circ = d3.select("#gsvg").selectAll("circle")
+                            .data(newdataset);
+                            
+                        circ.exit()
+                            .style("fill-opacity", 1e-6)
+                            .remove();
+                    
+                        circ.enter()
+                            .append("circle")
+                            .attr("r", 5)
+                            .attr("cx", function(d) { 
+                                return xscale(d.treatment);
+                            })
+                            .attr("cy", function(d) {
+                                return yscale(d.tpm);
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 1e-6)
+                            .style("stroke-width", 2)
+                            .merge(circ) 
+                            .transition()
+                            .duration(duration)
+                            .attr("cx", function(d) { 
+                                return xscale(d.treatment);
+                            })
+                            .attr("cy", function(d) {
+                                return yscale(d.tpm);
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 0.5)
+                            .style("stroke", "black")
+                            .style("stroke-width", 2);
+
+                        gsvg.select("#xaxis")
+                            .transition()
+                            .duration(duration)
+                            .call(xaxis);
+
+                        gsvg.select("#yaxis")
+                            .transition()
+                            .duration(duration)
+                            .call(yaxis);
+                   }); 
+            });
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            d3.csv("ph.csv", function(d) {           
+                return {
+                    fpkm: +d.fpkm,                          
+                    group: +d.group,
+                    sym: d.sym,
+                    mouse: +d.mouse           
+                };
+            })
+            .then(function(data) {  
+
+                dataset_ph = data.filter(function(d) {
+                    return d.sym == "Myc";     
+                });
+               
+                var xscale_ph = d3.scaleLinear()
+                    .domain([1,8]) 
+                    .rangeRound([xpad, width_ph-2*xpad]);
+                
+                var yscale_ph = d3.scaleLinear()
+                    .domain([0, d3.max(dataset_ph, function(d) {
+                        return d.fpkm;
+                    })])
+                    .rangeRound([height, ypad]);
+                
+                // Defining the axis generators
+                xticks = ticks4;
+                xlabels = labels4;
+                
+                var xaxis_ph = d3.axisBottom()
+                    .scale(xscale_ph)
+                    .ticks(8)
+                    .tickFormat(function(d, i) {
+                        return xlabels_ph[i];
+                    });
+                    
+                var yaxis_ph = d3.axisLeft()
+                    .scale(yscale_ph)
+                    .ticks(yticknumber);
+                
+                // Adding axes to svg
+                gsvg_ph.append("g")
+                    .attr("class", "axis")
+                    .attr("id", "xaxis_ph")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(xaxis_ph);
+                
+                gsvg_ph.append("g")
+                    .attr("class", "axis")
+                    .attr("id", "yaxis_ph")
+                    .call(yaxis_ph);
+                
+                // Adding labels to axes
+                svg_ph.append("text")
+                    .attr("class", "x label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", (width_ph + margin.left)/2)
+                    .attr("y", height + margin.top + margin.bottom - 12)
+                    .text("Hours post-PH");
+                
+                svg_ph.append("text")
+                    .attr("class", "y label")
+                    .attr("text-anchor", "mid")
+                    .attr("x", xpad/2)
+                    .attr("y", height/2 + margin.top)
+                    .text("FPKM");
+                
+                // Adding a gene symbol label to chart body
+                var genelabel_ph = svg_ph.append("text")
+                    .attr("id", "genelabel_ph")
+                    .attr("text-anchor", "mid")
+                    .attr("x", margin.left )
+                    .attr("y", xpad)
+                    .text("Model: PH;   Gene: " + dataset_ph[0].sym);
+                
+                // Add circles to the chart
+                gsvg_ph.selectAll("circle")
+                    .data(dataset_ph)
+                    .enter()
+                    .append("circle")
+                    .attr("r", 5)
+                    .attr("cx", function(d) { 
+                        return xscale_ph(d.group);
+                    })
+                    .attr("cy", function(d) {
+                        return yscale_ph(d.fpkm);
+                    })
+                    .style("fill", "gray")
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .style("stroke-width", 2);
+                
+                document.getElementById("searchButton")
+                    .addEventListener("click", function(event){
+                    
+                    event.preventDefault();
+   
+                    var submission_ph = document.getElementById("mySearch").value;
+                    
+                        dataset_ph = data.filter(function(d) { 
+                            return d.sym == submission_ph; 
+                        });
+                        
+                        newdataset_ph = dataset_ph;
+                    
+                        genelabel_ph.text("Gene: " + newdataset_ph[0].sym);
+                        
+                        yscale_ph.domain([0, d3.max(newdataset_ph, function(d) {
+                            return d.fpkm;
+                            })])
+                            .rangeRound([height, 0]);
+                    
+                        xscale_ph.domain([1, d3.max(newdataset_ph, function(d) {
+                            return d.group;
+                            })])
+                            .rangeRound([xpad, width_ph-2*xpad]);
+
+                        var circ_ph = d3.select("#gsvg_ph").selectAll("circle")
+                            .data(newdataset_ph);
+                            
+                        circ_ph.exit()
+                            .style("fill-opacity", 1e-6)
+                            .remove();
+                    
+                        circ_ph.enter()
+                            .append("circle")
+                            .attr("r", 5)
+                            .attr("cx", function(d) { 
+                                return xscale_ph(d.group);
+                            })
+                            .attr("cy", function(d) {
+                                return yscale_ph(d.fpkm);
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 1e-6)
+                            .style("stroke-width", 2)
+                            .merge(circ_ph) 
+                            .transition()
+                            .duration(duration)
+                            .attr("cx", function(d) { 
+                                return xscale_ph(d.group);
+                            })
+                            .attr("cy", function(d) {
+                                return yscale_ph(d.fpkm);
+                            })
+                            .style("fill", "gray")
+                            .style("opacity", 0.5)
+                            .style("stroke", "black")
+                            .style("stroke-width", 2);
+
+                        gsvg_ph.select("#xaxis_ph")
+                            .transition()
+                            .duration(duration)
+                            .call(xaxis_ph);
+
+                        gsvg_ph.select("#yaxis_ph")
+                            .transition()
+                            .duration(duration)
+                            .call(yaxis_ph);
+                   }); 
+            });
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+            function checkbox() {
+                if(d3.select("#myCheckbox").property("checked")){
+                    newdataset = newdataset.filter(function(d) {
+                        return d.treatment < 4;
+                    })
+                    xticks = ticks3;
+                    xlabels = labels3;
+                } else {
+                    newdataset = newdataset.filter(function(d) {
+                        return d.treatment < 5;
+                    })
+                    xticks = ticks4;
+                    xlabels = labels4;
+                }
+            };
+            
+        </script>
+        
+    </body>
+    
+</html>
