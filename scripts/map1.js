@@ -2,7 +2,7 @@
 
 var duration = 750;
 
-var jitternum = 10;
+var jitternum = 1;
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -118,6 +118,7 @@ d3.json("data/states500k.json")
         .attr("class", "feature")
         .attr("d", path)
         .attr("fill", "whitesmoke")
+        .attr("opacity", 1)
         .attr("stroke", "darkblue")
         .attr("stroke-width", "0.25");
 });
@@ -153,7 +154,7 @@ var data = d3.csv("data/pp.csv", function(d) {
             return projection([d.lon, d.lat])[1]
         })
         .attr("r", projection.scale()/200)
-        .style("fill", "white")
+        .style("fill", "whitesmoke")
         .style("opacity", 0.75)
         .on("mouseover", function(d) {		
             div.transition()		
@@ -169,7 +170,7 @@ var data = d3.csv("data/pp.csv", function(d) {
                 .style("opacity", 0);
     });
 
-   // Update the circles based on the selected bird
+   // Update the circles based on the selected person
     d3.selectAll("button")
         .on("click", function() {
 
@@ -202,7 +203,7 @@ var data = d3.csv("data/pp.csv", function(d) {
                     return projection([d.lon, d.lat])[1];
                 })
                 .style("fill", color)
-                .style("opacity", 1e-6)
+                .style("opacity", 1)
                 .merge(circ)
                 .on("mouseover", function(d) {		
                     div.transition()		
