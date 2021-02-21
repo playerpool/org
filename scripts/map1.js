@@ -121,9 +121,12 @@ d3.json("data/states500k.json")
         .attr("opacity", .5)
         .attr("stroke", "darkblue")
         .attr("stroke-width", "0.25");
+    
+    hold();
 });
 
 //load the data
+function hold() {  // I'm putting all this code in a function so that it won't run before the JSON loads. Note how I call 'hold()' in the d3.json function
 var data = d3.csv("data/pp.csv", function(d) {
     return {
         year: +d.year,
@@ -231,3 +234,4 @@ var data = d3.csv("data/pp.csv", function(d) {
 
     });
 });
+};
