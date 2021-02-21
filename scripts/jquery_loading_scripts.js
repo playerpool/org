@@ -528,7 +528,7 @@ $("#map1").click(function(){
     $("#shaq_side").hide();
     $("#side").show();
     $(".chart_title").empty().text("Player homecourts");
-    $(".chart_desc").empty();
+    $(".chart_desc").empty().text("Drag and zoom at your leisure.");
     $.getScript("scripts/map1.js");
 });
     
