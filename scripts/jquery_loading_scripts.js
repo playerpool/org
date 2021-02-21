@@ -386,6 +386,20 @@ $("#preview17").click(function(){
     $(".chart_desc").empty();
     $('.chart').load("words/preview17.html");
 });
+    
+$("#preview19").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#feature_side").hide();
+    $("#preview_side").show();
+    $("#shaq_side").hide();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/preview19.html");
+});
    
 /* ---------------------------------------- Features ---------------------------------------- */      
     
@@ -501,6 +515,21 @@ $("#tampa").click(function(){
     $(".chart_title").empty().text("Player pool travel phlog");
     $(".chart_desc").empty();
     $('.chart').load("travel/tampa.html");    
+});
+
+/* ---------------------------------------- MAPS ---------------------------------------- */    
+
+$("#map1").click(function(){    
+    $("#iframe").hide();
+    $(".chart").empty();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").hide();
+    $("#side").show();
+    $(".chart_title").empty().text("Player homecourts");
+    $(".chart_desc").empty();
+    $.getScript("scripts/map1.js");
 });
     
 });
