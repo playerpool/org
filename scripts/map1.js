@@ -2,13 +2,13 @@
 
 var duration = 750;
 
-var jitternum = 1;
+/*var jitternum = 1;
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+} */
 
 var margin = {top: 30, right: 50, bottom: 40, left: 150},
     w = 900 - margin.left - margin.right,
@@ -118,7 +118,7 @@ d3.json("data/states500k.json")
         .attr("class", "feature")
         .attr("d", path)
         .attr("fill", "whitesmoke")
-        .attr("opacity", 1)
+        .attr("opacity", .5)
         .attr("stroke", "darkblue")
         .attr("stroke-width", "0.25");
 });
