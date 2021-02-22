@@ -2,13 +2,13 @@
 
 var duration = 750;
 
-/*var jitternum = 1;
+var jitternum = 2;
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-} */
+} 
 
 var margin = {top: 30, right: 50, bottom: 40, left: 150},
     w = 900 - margin.left - margin.right,
@@ -55,10 +55,10 @@ var dragging = function(d) {
 
     map.selectAll("circle")
         .attr("cx", function(d) {
-            return projection([d.lon, d.lat])[0]
+            return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0]
         })
         .attr("cy", function(d) {
-            return projection([d.lon, d.lat])[1]
+            return projection([d.lon, d.lat - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum)))])[1]
         });
 };
 
@@ -78,10 +78,10 @@ var zooming = function(d) {
 
     map.selectAll("circle")
         .attr("cx", function(d) {
-            return projection([d.lon, d.lat])[0]
+            return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0]
         })
         .attr("cy", function(d) {
-            return projection([d.lon, d.lat])[1]
+            return projection([d.lon, d.lat - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum)))])[1]
         })
         .attr("r", projection.scale()/200);
 
@@ -118,7 +118,7 @@ d3.json("data/states500k.json")
         .attr("class", "feature")
         .attr("d", path)
         .attr("fill", "whitesmoke")
-        .attr("opacity", .5)
+        .attr("opacity", 1)
         .attr("stroke", "darkblue")
         .attr("stroke-width", "0.25");
     
@@ -151,13 +151,13 @@ var data = d3.csv("data/pp.csv", function(d) {
         .enter()
         .append("circle")
         .attr("cx", function(d) {
-            return projection([d.lon, d.lat])[0]
+            return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0]
         })
         .attr("cy", function(d) {
-            return projection([d.lon, d.lat])[1]
+            return projection([d.lon, d.lat- (0.1*(getRandomIntInclusive(-1*jitternum,jitternum)))])[1]
         })
         .attr("r", projection.scale()/200)
-        .style("fill", "whitesmoke")
+        .style("fill", "CORNFLOWERBLUE")
         .style("opacity", 0.75)
         .on("mouseover", function(d) {		
             div.transition()		
@@ -200,10 +200,10 @@ var data = d3.csv("data/pp.csv", function(d) {
                 .append("circle")
                 .attr("r", projection.scale()/200)
                 .attr("cx", function(d) { 
-                    return projection([d.lon, d.lat])[0];
+                    return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0];
                 })
                 .attr("cy", function(d) {
-                    return projection([d.lon, d.lat])[1];
+                    return projection([d.lon, d.lat - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum)))])[1];
                 })
                 .style("fill", color)
                 .style("opacity", 1)
@@ -224,10 +224,10 @@ var data = d3.csv("data/pp.csv", function(d) {
                 .transition()
                 .duration(duration)
                 .attr("cx", function(d) { 
-                    return projection([d.lon, d.lat])[0];
+                    return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0];
                 })
                 .attr("cy", function(d) {
-                    return projection([d.lon, d.lat])[1];
+                    return projection([d.lon, d.lat - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum)))])[1];
                 })
                 .style("fill", color)
                 .style("opacity", .75);
