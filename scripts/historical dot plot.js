@@ -1,7 +1,7 @@
 var dataset;
 
 var margin = {top: 30, right: 50, bottom: 50, left: 150},
-    w = 1000 - margin.left - margin.right,
+    w = 900 - margin.left - margin.right,
     h = 500 - margin.top - margin.bottom,
     pad = 10;
 
@@ -86,7 +86,7 @@ var data = d3.csv("data/pp.csv", function(d) {
             div.transition()		
                 .duration(200)		
                 .style("opacity", .9);		
-            div	.html(d.player + "<br/>" + d.school + " - " + d.seed + "<br/>" + "Pts: " + d.totalpoints + ", Gms: " + d.gamesplayed+ "<br/>" + "Pick #" + d.pick)	
+            div.html(d.player + "<br/>" + d.school + " - " + d.seed + "<br/>" + "Pts: " + d.totalpoints + ", Gms: " + d.gamesplayed+ "<br/>" + "Pick #" + d.pick)	
                 .style("left", (d3.event.pageX) + "px")		
                 .style("top", (d3.event.pageY - 28) + "px");	
             })					

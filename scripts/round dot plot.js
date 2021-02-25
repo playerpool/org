@@ -1,7 +1,7 @@
 
 var dataset;
 
-var margin = {top: 30, right: 50, bottom: 60, left: 85},
+var margin = {top: 30, right: 50, bottom: 60, left: 150},
     w = 850 - margin.left - margin.right,
     h = 540 - margin.top - margin.bottom,
     pad = 10;
