@@ -1,7 +1,7 @@
 
 var dataset;
 
-var margin = {top: 30, right: 50, bottom: 60, left: 150},
+var margin = {top: 30, right: 50, bottom: 60, left: 85},
     w = 850 - margin.left - margin.right,
     h = 540 - margin.top - margin.bottom,
     pad = 10;
@@ -26,7 +26,6 @@ var data = d3.csv("data/pp3.csv", function(d) {
     dataset = data.filter(function(d) { 
         return d.person == "Adam"; 
     });
-    console.log(dataset);
 
     var yscale = d3.scaleLinear()
         .domain([0, d3.max(dataset, function(d) {

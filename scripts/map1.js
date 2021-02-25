@@ -28,9 +28,9 @@ var svg = d3.select(".chart")
 //Define the projection of lon/lat onto x/y
 var projection = d3.geoAlbersUsa()
                 .translate([(w + margin.left + margin.right)/2, (h + margin.top + margin.bottom)/2])
-                .scale(700);
+                .scale(900);
 
-console.log(projection([-110.22,40.44]));
+// console.log(projection([-110.22,40.44]));
 
 var initialScale = projection.scale();
 
@@ -222,6 +222,9 @@ var data = d3.csv("data/pp.csv", function(d) {
                         .style("opacity", 0);
                 })
                 .transition()
+                .delay(function(d,i) {
+                    return i*dataset.length/15;
+                })
                 .duration(duration)
                 .attr("cx", function(d) { 
                     return projection([d.lon - (0.1*(getRandomIntInclusive(-1*jitternum,jitternum))), d.lat])[0];
