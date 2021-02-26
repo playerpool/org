@@ -1,1 +1,705 @@
-year,person,player,school,seed,totalpoints,gamesplayed,overallpick,longitude,latitude2009,Rob,Tyler Hansbrough,North Carolina,1,105,6,1,-79.04,35.92009,Rob,Sherron Collins,Kansas,3,77,3,16,-95.25,38.952009,Rob,James Harden,Arizona State,6,19,2,17,-111.93,33.422009,Rob,Antonio Anderson,Memphis,2,33,3,32,-90.05058,35.138122009,Rob,DeMarre Carroll,Missouri,3,57,4,33,-92.33,38.932009,Rob,Luke Nevill,Utah,5,12,1,48,-111.84,40.762009,Rob,Darren Collison,UCLA,6,25,2,49,-118.45,34.072009,Rob,James Anderson,Oklahoma State,8,25,2,64,-97.07,36.122009,Alex,Wayne Ellington,North Carolina,1,112,6,2,-79.04,35.92009,Alex,Hasheem Thabeet,Connecticut,1,63,5,15,-72.67619,41.768262009,Alex,Deon Thompson,North Carolina,1,42,6,18,-79.04,35.92009,Alex,Toney Douglas,Florida State,5,26,1,31,-84.29,30.442009,Alex,Eric Devendorf,Syracuse,3,39,3,34,-76.14,43.042009,Alex,Al-Farouq Aminu,Wake Forest,4,17,1,47,-80.26,36.132009,Alex,Alex Ruoff,West Virginia,6,9,1,50,-79.98,39.652009,Alex,Wesley Mathews,Marquette,6,35,2,63,-87.92,43.042009,Bryan,Sam Young,Pittsburgh,1,93,4,3,-79.96228,40.443822009,Bryan,Danny Green,North Carolina,1,75,6,14,-79.04,35.92009,Bryan,Kalin Lucas,Michigan State,2,86,6,19,-84.49,42.732009,Bryan,James Johnson,Wake Forest,4,22,1,30,-80.26,36.132009,Bryan,Goran Suton,Michigan State,2,81,6,35,-84.49,42.732009,Bryan,Taylor Griffin,Oklahoma,2,38,4,46,-97.44,35.192009,Bryan,E'Twaun Moore,Purdue,5,38,3,51,-86.92,40.432009,Bryan,Matt Bouldin,Gonzaga,4,39,3,62,-117.4,47.672009,Adam,Blake Griffin,Oklahoma,2,114,4,4,-97.44,35.192009,Adam,Terrence Williams,Louisville,1,56,4,13,-85.75,38.262009,Adam,Scottie Reynolds,Villanova,3,67,5,20,-75.17,39.92009,Adam,Jon Scheyer,Duke,2,41,3,29,-78.94,362009,Adam,Cole Aldrich,Kansas,3,53,3,36,-95.25,38.952009,Adam,Andy Rautins,Syracuse,3,29,3,45,-76.14,43.042009,Adam,Kemba Walker,Connecticut,1,51,5,52,-72.67619,41.768262009,Adam,Austin Daye,Gonzaga,4,30,3,61,-117.4,47.672009,Andrew L,DeJuan Blair,Pittsburgh,1,67,4,5,-79.96228,40.443822009,Andrew L,Earl Clark,Louisville,1,62,4,12,-85.75,38.262009,Andrew L,Kyle Singler,Duke,2,42,3,21,-78.94,362009,Andrew L,Dante Cunningham,Villanova,3,83,5,28,-75.17,39.92009,Andrew L,Raymar Morgan,Michigan State,2,45,6,37,-84.49,42.732009,Andrew L,Josh Heytvelt,Gonzaga,4,46,3,44,-117.4,47.672009,Andrew L,BJ Raymond,Xavier,4,43,3,53,-84.47,39.152009,Andrew L,Jon Brockman,Washington,4,30,2,60,-122.3,47.652009,Josh,Tyreke Evans,Memphis,2,67,3,6,-90.05058,35.138122009,Josh,Gerald Henderson,Duke,2,44,3,11,-78.94,362009,Josh,Jeff Teague,Wake Forest,4,10,1,22,-80.26,36.132009,Josh,Willie Warren,Oklahoma,2,56,4,27,-97.44,35.192009,Josh,Da'Sean Butler,West Virginia,6,12,1,38,-79.98,39.652009,Josh,Isaiah Thomas,Washington,4,33,2,43,-122.3,47.652009,Josh,Derrick Brown,Xavier,4,37,3,54,-84.47,39.152009,Josh,Chris Allen,Michigan State,2,32,6,59,-84.49,42.732009,James,AJ Price,Connecticut,1,95,5,7,-72.67619,41.768262009,James,Jeff Adrien,Connecticut,1,69,5,10,-72.67619,41.768262009,James,Jonny Flynn,Syracuse,3,49,3,23,-76.14,43.042009,James,LeVance Fields,Pittsburgh,1,43,4,26,-79.96228,40.443822009,James,Jerel McNeal,Marquette,6,44,2,39,-87.92,43.042009,James,Jermaine Dixon,Pittsburgh,1,15,4,42,-79.96228,40.443822009,James,Corey Fisher,Villanova,3,52,5,55,-75.17,39.92009,James,Stanley Robinson,Connecticut,1,74,5,58,-72.67619,41.768262009,Andrew F,Ty Lawson,North Carolina,1,104,6,8,-79.04,35.92009,Andrew F,Robert Dozier,Memphis,2,42,3,9,-90.05058,35.138122009,Andrew F,Shawn Taggert,Memphis,2,31,3,24,-90.05058,35.138122009,Andrew F,Samardo Samuels,Louisville,1,42,4,25,-85.75,38.262009,Andrew F,Leo Lyons,Missouri,3,69,4,40,-92.33,38.932009,Andrew F,Doneal Mack,Memphis,2,18,3,41,-90.05058,35.138122009,Andrew F,Paul Harris,Syracuse,3,16,3,56,-76.14,43.042009,Andrew F,Jerry Smith,Louisville,1,35,4,57,-85.75,38.262010,Andrew F,Sherron Collins,Kansas,1,28,2,1,-95.25,38.952010,Andrew F,Denis Clemente,Kansas State,2,79,4,16,-96.59,39.22010,Andrew F,Marcus Morris,Kansas,1,42,2,17,-95.25,38.952010,Andrew F,Ekpe Udoh,Baylor,3,54,4,32,-97.11,31.552010,Andrew F,Chris Wright,Georgetown,3,28,1,33,-77.02,38.92010,Andrew F,James Anderson,Oklahoma State,7,11,1,48,-97.07,36.122010,Andrew F,Jon Leuer,Wisconsin,4,43,2,49,-89.4,43.072010,Andrew F,Markieff Morris,Kansas,1,12,2,64,-95.25,38.952010,Alex,John Wall,Kentucky,1,58,4,2,-84.5,38.052010,Alex,Cole Aldrich,Kansas,2,24,2,15,-95.25,38.952010,Alex,Andy Rautins,Syracuse,1,50,3,18,-76.14,43.042010,Alex,Devin Ebanks,West Virginia,2,65,5,31,-79.98,39.652010,Alex,Jon Diebler,Ohio State,2,46,3,34,-83.02,40.012010,Alex,Jason Clark,Georgetown,3,7,1,47,-77.02,38.92010,Alex,Jimmer Fredette,Brigham Young,7,58,2,50,-111.65,40.252010,Alex,Arinze Onuaku,Syracuse,1,0,0,63,-76.14,43.042010,Andrew L,Jon Scheyer,Duke,1,96,6,3,-78.94,362010,Andrew L,Nolan Smith,Duke,1,106,6,14,-78.94,362010,Andrew L,Austin Freeman,Georgetown,3,9,1,19,-77.02,38.92010,Andrew L,Darington Hobson,New Mexico,3,22,2,30,-106.63,35.072010,Andrew L,Greivis Vasquez,Maryland,4,42,2,35,-76.94,392010,Andrew L,Lazar Hayward,Marquette,6,20,1,46,-87.92,43.042010,Andrew L,Brad Wanamaker,Pittsburgh,3,29,2,51,-79.96228,40.443822010,Andrew L,Damion James,Texas,8,16,1,62,-97.73,30.282010,Bryan,DeMarcus Cousins,Kentucky,1,55,4,4,-84.5,38.052010,Bryan,LaceDarius Dunn,Baylor,3,84,4,13,-97.11,31.552010,Bryan,William Buford,Ohio State,2,40,3,20,-83.02,40.012010,Bryan,Tweety Carter,Baylor,3,40,4,29,-97.11,31.552010,Bryan,David Lighty,Ohio State,2,36,3,36,-83.02,40.012010,Bryan,Jordan Crawford,Xavier,6,87,3,45,-84.47,39.152010,Bryan,Corey Stokes,Villanova,2,21,2,52,-75.17,39.92010,Bryan,Jermaine Dixon,Pittsburgh,3,19,2,61,-79.96228,40.443822010,James,Scottie Reynolds,Villanova,2,28,2,5,-75.17,39.92010,James,Jacob Pullen,Kansas State,2,91,4,12,-96.59,39.22010,James,Donald Sloan,Texas A&M,5,21,2,21,-96.35,30.612010,James,Eric Bledsoe,Kentucky,1,61,4,28,-84.5,38.052010,James,Antonio Pena,Villanova,2,9,2,37,-75.17,39.92010,James,Rick Jackson,Syracuse,1,21,3,44,-76.14,43.042010,James,Curtis Kelly,Kansas State,2,60,4,53,-96.59,39.22010,James,Samardo Samuels,Louisville,9,16,1,60,-85.75,38.262010,Adam,Evan Turner,Ohio State,2,64,3,6,-83.02,40.012010,Adam,Patrick Patterson,Kentucky,1,41,4,11,-84.5,38.052010,Adam,Greg Monroe,Georgetown,3,19,1,22,-77.02,38.92010,Adam,Aston Gibbs,Pittsburgh,3,26,2,27,-79.96228,40.443822010,Adam,Scoop Jardine,Syracuse,1,37,3,38,-76.14,43.042010,Adam,Tyshawn Taylor,Kansas,1,8,2,43,-95.25,38.952010,Adam,Darryl Bryant,West Virginia,2,8,2,54,-79.98,39.652010,Adam,Dairese Gary,New Mexico,3,40,2,59,-106.63,35.072010,Rob,Da'Sean Butler,West Virginia,2,79,5,7,-79.98,39.652010,Rob,Xavier Henry,Kansas,1,19,2,10,-95.25,38.952010,Rob,Corey Fisher,Villanova,2,15,2,23,-75.17,39.92010,Rob,Jamar Samuels,Kansas State,2,17,4,26,-96.59,39.22010,Rob,Luke Harangody,Notre Dame,6,4,1,39,-86.23,41.72010,Rob,Jermaine Beal,Vanderbilt,4,12,1,42,-86.81,36.142010,Rob,JaJuan Johnson,Purdue,4,57,3,55,-86.92,40.432010,Rob,Ryan Brooks,Temple,5,14,1,58,-75.15856,39.979872010,Josh,Wes Johnson,Syracuse,1,66,3,8,-76.14,43.042010,Josh,Kyle Singler,Duke,1,108,6,9,-78.94,362010,Josh,Kevin Jones,West Virginia,2,67,5,24,-79.98,39.652010,Josh,Kris Joseph,Syracuse,1,19,3,25,-76.14,43.042010,Josh,Trevon Hughes,Wisconsin,4,29,2,40,-89.4,43.072010,Josh,E'Twaun Moore,Purdue,4,45,3,41,-86.92,40.432010,Josh,Raymar Morgan,Michigan State,5,52,5,56,-84.49,42.732010,Josh,Isaih Thomas,Washington,11,47,3,57,-122.3,47.652011,Adam,Jimmer Fredette,Brigham Young,3,98,3,1,-111.65,40.252011,Adam,Kenny Boynton,Florida,2,59,4,16,-82.35,29.652011,Adam,Scoop Jardine,Syracuse,3,15,2,17,-76.14,43.042011,Adam,Tyrel Reed,Kansas,1,29,4,32,-95.25,38.952011,Adam,Jordan Taylor,Wisconsin,4,55,3,33,-89.4,43.072011,Adam,Tu Holloway,Xavier,6,5,1,48,-84.47,39.152011,Adam,DJ Gay,San Diego State,2,30,3,49,-117.07,32.772011,Adam,Malcom Thomas,San Diego State,2,30,3,64,-117.07,32.772011,Alex,Marcus Morris,Kansas,1,66,4,2,-95.25,38.952011,Alex,David Lighty,Ohio State,1,45,3,15,-83.02,40.012011,Alex,Dwight Hardy,St. Johns,6,26,1,18,-73.79464,40.724122011,Alex,Jacob Pullen,Kansas State,5,60,2,31,-96.59,39.22011,Alex,Rick Jackson,Syracuse,3,30,2,34,-76.14,43.042011,Alex,Kyle Kuric,Louisville,4,9,1,47,-85.75,38.262011,Alex,Brandon Triche,Syracuse,3,16,2,50,-76.14,43.042011,Alex,Mason Plumlee,Duke,1,24,3,63,-78.94,362011,Rob,Harrison Barnes,North Carolina,2,84,4,3,-79.04,35.92011,Rob,Jordan Hamilton,Texas,4,37,2,14,-97.73,30.282011,Rob,Tyler Zeller,North Carolina,2,103,4,19,-79.04,35.92011,Rob,Brandon Knight,Kentucky,4,80,5,30,-84.5,38.052011,Rob,John Jenkins,Vanderbilt,5,21,1,35,-86.81,36.142011,Rob,Carleton Scott,Notre Dame,2,12,2,46,-86.23,41.72011,Rob,Vernon Macklin,Florida,2,54,4,51,-82.35,29.652011,Rob,Rodney McGruder,Kansas State,5,13,2,62,-96.59,39.22011,Josh,Nolan Smith,Duke,1,41,3,4,-78.94,362011,Josh,JaJuan Johnson,Purdue,3,41,2,13,-86.92,40.432011,Josh,Erving Walker,Florida,2,63,4,20,-82.35,29.652011,Josh,Kawhi Leonard,San Diego State,2,47,3,29,-117.07,32.772011,Josh,Kyrie Irving,Duke,1,53,3,36,-78.94,362011,Josh,Doron Lamb,Kentucky,4,40,5,45,-84.5,38.052011,Josh,John Henson,North Carolina,2,56,4,52,-79.04,35.92011,Josh,Corey Fisher,Villanova,9,20,1,61,-75.17,39.92011,Andrew F,Jared Sullinger,Ohio State,1,50,3,5,-83.02,40.012011,Andrew F,Kyle Singler,Duke,1,42,3,12,-78.94,362011,Andrew F,Tim Abromatis,Notre Dame,2,35,2,21,-86.23,41.72011,Andrew F,Jon Leuer,Wisconsin,4,44,3,28,-89.4,43.072011,Andrew F,Terrance Jones,Kentucky,4,52,5,37,-84.5,38.052011,Andrew F,Chandler Parsons,Florida,2,38,4,44,-82.35,29.652011,Andrew F,Gary Johnson,Texas,4,22,2,53,-97.73,30.282011,Andrew F,Jeffery Taylor,Vanderbilt,5,4,1,60,-86.81,36.142011,Andrew L,Ashton Gibbs,Pittsburgh,1,37,2,6,-79.96228,40.443822011,Andrew L,Ben Hansbrough,Notre Dame,2,33,2,11,-86.23,41.72011,Andrew L,E'Twuan Moore,Purdue,3,29,2,22,-86.92,40.432011,Andrew L,Kris Joseph,Syracuse,3,24,2,27,-76.14,43.042011,Andrew L,Derrick Williams,Arizona,5,91,4,38,-110.95,32.232011,Andrew L,Seth Curry,Duke,1,11,3,43,-78.94,362011,Andrew L,Casey Mitchell,West Virginia,5,15,2,54,-79.98,39.652011,Andrew L,Alex Oriakhi,Connecticut,3,44,6,59,-72.67619,41.768262011,Bryan,Kemba Walker,Connecticut,3,141,6,7,-72.67619,41.768262011,Bryan,Jon Diebler,Ohio State,1,43,3,10,-83.02,40.012011,Bryan,Brad Wanamaker,Pittsburgh,1,14,2,23,-79.96228,40.443822011,Bryan,Preston Knowles,Louisville,4,9,1,26,-85.75,38.262011,Bryan,Tyshawn Taylor,Kansas,1,41,4,39,-95.25,38.952011,Bryan,Jeremy Lamb,Connecticut,3,97,6,42,-72.67619,41.768262011,Bryan,Nasir Robinson,Pittsburgh,1,28,2,55,-79.96228,40.443822011,Bryan,Austin Freeman,Georgetown,6,10,1,58,-77.02,38.92011,James,Markieff Morris,Kansas,1,57,4,8,-95.25,38.952011,James,William Buford,Ohio State,1,45,3,9,-83.02,40.012011,James,Gilbert Brown,Pittsburgh,1,33,2,24,-79.96228,40.443822011,James,Tristan Thompson,Texas,4,20,2,25,-97.73,30.282011,James,Deshaun Thomas,Ohio State,1,20,3,40,-83.02,40.012011,James,Aaron Craft,Ohio State,1,8,3,41,-83.02,40.012011,James,Isaiah Thomas,Washington,7,31,2,56,-122.3,47.652011,James,Scotty Hopson,Tennessee,9,4,1,57,-83.92506,35.951142012,James,Harrison Barnes,North Carolina,1,56,4,1,-79.04,35.92012,James,Michael Kidd Gilchrist,Kentucky,1,74,6,16,-84.5,38.052012,James,Ricardo Ratcliff,Missouri,2,14,1,17,-92.33,38.932012,James,Marquis Teague,Kentucky,1,80,6,32,-84.5,38.052012,James,Bernard James,Florida State,3,31,2,33,-84.29,30.442012,James,Isiah Canaan,Murray State,6,31,2,48,-88.32,36.622012,James,Ian Miller,Florida State,3,8,2,49,-84.29,30.442012,James,Brady Heslip,Baylor,3,59,4,64,-97.11,31.552012,Josh,Marcus Denmon,Missouri,2,20,1,2,-92.33,38.932012,Josh,Kim English,Missouri,2,2,1,15,-92.33,38.932012,Josh,William Buford,Ohio State,2,66,5,18,-83.02,40.012012,Josh,Jason Clark,Georgetown,3,31,2,31,-77.02,38.92012,Josh,Tim Hardaway Jr.,Michigan,4,14,1,34,-83.75,42.262012,Josh,Quincy Acy,Baylor,3,53,4,47,-97.11,31.552012,Josh,Tu Holloway,Xavier,10,68,3,50,-84.47,39.152012,Josh,Phil Pressey,Missouri,2,20,1,63,-92.33,38.932012,Bryan,Jared Sullinger,Ohio State,2,85,5,3,-83.02,40.012012,Bryan,Doron Lamb,Kentucky,1,99,6,14,-84.5,38.052012,Bryan,Austin Rivers,Duke,2,19,1,19,-78.94,362012,Bryan,Jordan Taylor,Wisconsin,4,48,3,30,-89.4,43.072012,Bryan,Elijah Johnson,Kansas,2,80,6,35,-95.25,38.952012,Bryan,Drew Gordon,New Mexico,5,39,2,46,-106.63,35.072012,Bryan,Mason Plumlee,Duke,2,21,1,51,-78.94,362012,Bryan,Kendall Marshall,North Carolina,1,29,4,62,-79.04,35.92012,Andrew F,Tyshawn Taylor,Kansas,2,77,6,4,-95.25,38.952012,Andrew F,Darius Johnson-Odom,Marquette,3,51,3,13,-87.92,43.042012,Andrew F,Jae Crowder,Marquette,3,57,3,20,-87.92,43.042012,Andrew F,John Jenkins,Vanderbilt,5,40,2,29,-86.81,36.142012,Andrew F,Ramone Moore,Temple,5,5,1,36,-75.15856,39.979872012,Andrew F,Joe Ragland,Wichita State,5,15,1,45,-97.3,37.722012,Andrew F,Brandon Wood,Michigan State,1,31,3,52,-84.49,42.732012,Andrew F,J'Covan Brown,Texas,11,19,1,61,-97.73,30.282012,Andrew L,Anthony Davis,Kentucky,1,82,6,5,-84.5,38.052012,Andrew L,Deshaun Thomas,Ohio State,2,98,5,12,-83.02,40.012012,Andrew L,Perry Jones III,Baylor,3,40,4,21,-97.11,31.552012,Andrew L,Dion Waiters,Syracuse,1,52,4,28,-76.14,43.042012,Andrew L,Kyle Kuric,Louisville,4,45,5,37,-85.75,38.262012,Andrew L,Khalif Wyatt,Temple,5,19,1,44,-75.15856,39.979872012,Andrew L,Will Barton,Memphis,8,16,1,53,-90.05058,35.138122012,Andrew L,Sean Kilpatrick,Cincinatti,6,41,3,60,-84.46,39.032012,Alex,Draymond Green,Michigan State,1,53,3,6,-84.49,42.732012,Alex,Thomas Robinson,Kansas,1,100,6,11,-95.25,38.952012,Alex,Keith Appling,Michigan State,1,35,3,22,-84.49,42.732012,Alex,Trey Burke,Michigan,4,16,1,27,-83.75,42.262012,Alex,Ryan Kelly,Duke,2,0,0,38,-78.94,362012,Alex,Darius Miller,Kentucky,1,70,6,43,-84.5,38.052012,Alex,Kevin Jones,West Virginia,10,13,1,54,-79.98,39.652012,Alex,Mike Scott,Virginia,10,15,1,59,-78.51,38.052012,Adam,Tyler Zeller,North Carolina,1,60,4,7,-79.04,35.92012,Adam,Terrence Jones,Kentucky,1,69,6,10,-84.5,38.052012,Adam,Michael Snaer,Florida State,3,11,2,23,-84.29,30.442012,Adam,Pierre Jackson,Baylor,3,70,4,26,-97.11,31.552012,Adam,Cody Zeller,Indiana,4,50,3,39,-86.52,39.182012,Adam,Brandon Triche,Syracuse,1,39,4,42,-76.14,43.042012,Adam,Donte Poole,Murray State,6,20,2,55,-88.32,36.622012,Adam,Kendall Williams,New Mexico,5,27,2,58,-106.63,35.072012,Rob,John Henson,North Carolina,1,37,4,8,-79.04,35.92012,Rob,Kris Joseph,Syracuse,1,40,4,9,-76.14,43.042012,Rob,Michael Dixon,Missouri,2,22,1,24,-92.33,38.932012,Rob,Seth Curry,Duke,2,7,1,25,-78.94,362012,Rob,Jeffrey Taylor,Vanderbilt,5,24,2,40,-86.81,36.142012,Rob,Hollis Thompson,Georgetown,3,29,2,41,-77.02,38.92012,Rob,Russ Smith,Louisville,4,62,5,56,-85.75,38.262012,Rob,Jeremy Lamb,Connecticut,9,19,1,57,-72.67619,41.768262013,Rob,Russ Smith,Louisville,1,134,6,1,-85.75,38.262013,Rob,Kenny Kadji,Miami,2,27,3,16,-80.28,25.722013,Rob,Markel Starks,Georgetown,2,23,1,17,-77.02,38.92013,Rob,Doug McDermott,Creighton,7,48,2,32,-95.93,41.262013,Rob,PJ Hairston,North Carolina,8,38,2,33,-79.04,35.92013,Rob,Lenzelle Smith,Ohio State,2,29,4,48,-83.02,40.012013,Rob,Anthony Bennett,UNLV,5,13,1,49,-115.15,36.12013,Rob,Markel Brown,Oklahoma State,5,16,1,64,-97.07,36.122013,James,Cody Zeller,Indiana,1,36,3,2,-86.52,39.182013,James,Christian Watford,Indiana,1,31,3,15,-86.52,39.182013,James,Jordan Hulls,Indiana,1,15,3,18,-86.52,39.182013,James,Will Sheehey,Indiana,1,34,3,31,-86.52,39.182013,James,Rodney McGruder,Kansas State,4,13,1,34,-96.59,39.22013,James,Angel Rodriguez,Kansas State,4,2,1,47,-96.59,39.22013,James,Nik Stauskas,Michigan,4,52,6,50,-83.75,42.262013,James,Yogi Ferrell,Indiana,1,16,3,63,-86.52,39.182013,Josh,Kelly Olynyk,Gonzaga,1,47,2,3,-117.4,47.672013,Josh,Trey Burke,Michigan,4,93,6,14,-83.75,42.262013,Josh,Kevin Pangos,Gonzaga,1,35,2,19,-117.4,47.672013,Josh,Durand Scott,Miami,2,37,3,30,-80.28,25.722013,Josh,James Southerland,Syracuse,4,49,5,35,-76.14,43.042013,Josh,Marcus Smart,Oklahoma State,5,14,1,46,-97.07,36.122013,Josh,Brandon Triche,Syracuse,4,62,5,51,-76.14,43.042013,Josh,Glenn Robinson III,Michigan,4,76,6,62,-83.75,42.262013,Andrew F,Ben McLemore,Kansas,1,33,3,4,-95.25,38.952013,Andrew F,Jeff Withey,Kansas,1,45,3,13,-95.25,38.952013,Andrew F,Keith Appling,Michigan State,3,33,3,20,-84.49,42.732013,Andrew F,Gary Harris,Michigan State,3,39,3,29,-84.49,42.732013,Andrew F,Dwayne Evans,Saint Louis,4,40,2,36,-90.23,38.632013,Andrew F,C.J. Fair,Syracuse,4,77,5,45,-76.14,43.042013,Andrew F,Adreian Payne,Michigan State,3,35,3,52,-84.49,42.732013,Andrew F,Rotnei Clarke,Butler,6,40,2,61,-86.17,39.842013,Bryan,Elias Harris,Gonzaga,1,17,2,5,-117.4,47.672013,Bryan,Shane Larkin,Miami,2,41,3,12,-80.28,25.722013,Bryan,Peyton Siva,Louisville,1,61,6,21,-85.75,38.262013,Bryan,Erik Murphy,Florida,3,37,4,28,-82.35,29.652013,Bryan,Tony Snell,New Mexico,3,9,1,37,-106.63,35.072013,Bryan,Treveon Graham,VCU,5,17,2,44,-77.45299,37.552862013,Bryan,Gary Bell Jr.,Gonzaga,1,11,2,53,-117.4,47.672013,Bryan,Alex Kirk,New Mexico,3,22,1,60,-106.63,35.072013,Adam,Mason Plumlee,Duke,2,64,4,6,-78.94,362013,Adam,Ryan Kelly,Duke,2,25,4,11,-78.94,362013,Adam,Kenny Boynton,Florida,3,38,4,22,-82.35,29.652013,Adam,Elijah Johnson,Kansas,1,23,3,27,-95.25,38.952013,Adam,Travis Releford,Kansas,1,49,3,38,-95.25,38.952013,Adam,Mike Rosario,Florida,3,57,4,43,-82.35,29.652013,Adam,Michael Carter-Williams,Syracuse,4,54,5,54,-76.14,43.042013,Adam,Trey McKinney Jones,Miami,2,20,3,59,-80.28,25.722013,Andrew L,Deshaun Thomas,Ohio State,2,89,4,7,-83.02,40.012013,Andrew L,Otto Porter,Georgetown,2,13,1,10,-77.02,38.92013,Andrew L,Vander Blue,Marquette,3,73,4,23,-87.92,43.042013,Andrew L,Gorgui Dieng,Louisville,1,52,6,26,-85.75,38.262013,Andrew L,Quinn Cook,Duke,2,23,4,39,-78.94,362013,Andrew L,Kendall Williams,New Mexico,3,8,1,42,-106.63,35.072013,Andrew L,Patric Young,Florida,3,33,4,55,-82.35,29.652013,Andrew L,Rasheed Sulaimon,Duke,2,47,4,58,-78.94,362013,Alex,Victor Oladipo,Indiana,1,43,3,8,-86.52,39.182013,Alex,Seth Curry,Duke,2,84,4,9,-78.94,362013,Alex,Aaron Craft,Ohio State,2,44,4,24,-83.02,40.012013,Alex,Tim Hardaway Jr.,Michigan,4,79,6,25,-83.75,42.262013,Alex,Chane Behanan,Louisville,1,53,6,40,-85.75,38.262013,Alex,Davante Gardner,Marquette,3,45,4,41,-87.92,43.042013,Alex,Ben Brust,Wisconsin,5,6,1,56,-89.4,43.072013,Alex,DÕVauntes Smith-Rivera,Georgetown,2,6,1,57,-77.02,38.92014,Andrew F,Doug McDermott,Creighton,3,45,2,1,-95.93,41.262014,Andrew F,DeAndre Kane,Iowa State,3,53,3,16,-93.64,42.022014,Andrew F,Georges Niang,Iowa State,3,24,1,17,-93.64,42.022014,Andrew F,Jordan Adams,UCLA,4,57,3,32,-118.45,34.072014,Andrew F,Kyle Anderson,UCLA,4,34,3,33,-118.45,34.072014,Andrew F,Chris Jones,Louisville,4,28,3,48,-85.75,38.262014,Andrew F,Cameron Bairstow,New Mexico,7,24,1,49,-106.63,35.072014,Andrew F,Rasheed Sulaimon,Duke,3,20,1,64,-78.94,362014,Andrew L,Nick Johnson,Arizona,1,66,4,2,-110.95,32.232014,Andrew L,Nik Stauskas,Michigan,2,70,4,15,-83.75,42.262014,Andrew L,Adreian Payne,Michigan State,4,82,4,18,-84.49,42.732014,Andrew L,Tyler Ennis,Syracuse,3,35,2,31,-76.14,43.042014,Andrew L,Sam Dekker,Wisconsin,2,52,5,34,-89.4,43.072014,Andrew L,Brandon Dawson,Michigan State,4,65,4,47,-84.49,42.732014,Andrew L,Wayne Selden,Kansas,2,4,2,50,-95.25,38.952014,Andrew L,Dwayne Evans,Saint Louis,5,27,2,63,-90.23,38.632014,Bryan,Cleanthony Early,Wichita State,1,54,2,3,-97.3,37.722014,Bryan,Malcolm Brogdon,Virginia,1,39,3,14,-78.51,38.052014,Bryan,Ron Baker,Wichita State,1,27,2,19,-97.3,37.722014,Bryan,Joe Harris,Virginia,1,44,3,30,-78.51,38.052014,Bryan,Darrun Hilliard,Villanova,2,29,2,35,-75.17,39.92014,Bryan,Treveon Graham,VCU,5,19,1,46,-77.45299,37.552862014,Bryan,LaQuinton Ross,Ohio State,6,10,1,51,-83.02,40.012014,Bryan,Anthony Gill,Virginia,1,33,3,62,-78.51,38.052014,Rob,Andrew Wiggins,Kansas,2,23,2,4,-95.25,38.952014,Rob,Melvin Ejim,Iowa State,3,43,3,13,-93.64,42.022014,Rob,Rodney Hood,Duke,3,6,1,20,-78.94,362014,Rob,Frank Kaminski,Wisconsin,2,82,5,29,-89.4,43.072014,Rob,Marcus Paige,North Carolina,6,38,2,36,-79.04,35.92014,Rob,Fred VanVleet,Wichita State,1,8,2,45,-97.3,37.722014,Rob,Buddy Hield,Oklahoma,5,9,1,52,-97.44,35.192014,Rob,Julius Randle,Kentucky,8,89,6,61,-84.5,38.052014,James,Casey Prather,Florida,1,57,5,5,-82.35,29.652014,James,Gary Harris,Michigan State,4,56,4,12,-84.49,42.732014,James,Patric Young,Florida,1,52,5,21,-82.35,29.652014,James,Keith Appling,Michigan State,4,10,4,28,-84.49,42.732014,James,Caris Lavert,Michigan,2,39,4,37,-83.75,42.262014,James,Ben Brust,Wisconsin,2,63,5,44,-89.4,43.072014,James,Traevon Jackson,Wisconsin,2,63,5,53,-89.4,43.072014,James,Ryan Arcidiacono,Villanova,2,20,2,60,-75.17,39.92014,Josh,Russ Smith,Louisville,4,52,3,6,-85.75,38.262014,Josh,CJ Fair,Syracuse,3,28,2,11,-76.14,43.042014,Josh,James Bell,Villanova,2,26,2,22,-75.17,39.92014,Josh,Xavier Thames,San Diego State,4,78,3,27,-117.07,32.772014,Josh,Luke Hancock,Louisville,4,56,3,38,-85.75,38.262014,Josh,Trevor Cooney,Syracuse,3,20,2,43,-76.14,43.042014,Josh,James Michael McAdoo,North Carolina,6,30,2,54,-79.04,35.92014,Josh,Ethan Wragge,Creighton,3,19,2,59,-95.93,41.262014,Adam,Jabari Parker,Duke,3,14,1,7,-78.94,362014,Adam,Aaron Gordon,Arizona,1,57,4,10,-110.95,32.232014,Adam,Perry Ellis,Kansas,2,23,2,23,-95.25,38.952014,Adam,JayVaughn Pinkston,Villanova,2,26,2,26,-75.17,39.92014,Adam,Jerami Grant,Syracuse,3,20,2,39,-76.14,43.042014,Adam,Tekele Cotton,Wichita State,1,5,2,42,-97.3,37.722014,Adam,Shabazz Napier,Connecticut,7,127,6,55,-72.67619,41.768262014,Adam,T.J. McConnell,Arizona,1,32,4,58,-110.95,32.232014,Alex,Scottie Wilbekin,Florida,1,71,5,8,-82.35,29.652014,Alex,Michael Frazier II,Florida,1,45,5,9,-82.35,29.652014,Alex,Montrezl Harrel,Louisville,4,37,3,24,-85.75,38.262014,Alex,Kaleb Tarczewski ,Arizona,1,35,4,25,-110.95,32.232014,Alex,Sean Kilpatrick,Cincinnati,5,18,1,40,-84.46,39.032014,Alex,Glenn Robinson III,Michigan,2,55,4,41,-83.75,42.262014,Alex,Quinn Cook,Duke,3,23,1,56,-78.94,362014,Alex,Joseph Young,Oregon,7,48,2,57,-123.07,44.052015,Andrew L,Frank Kaminsky,Wisconsin,1,132,6,1,-89.4,43.072015,Andrew L,Willie Cauley-Stein,Kentucky,1,32,5,16,-84.5,38.052015,Andrew L,Justise Winslow,Duke,1,86,6,17,-78.94,362015,Andrew L,Montrezl Harrell,Louisville,4,62,4,32,-85.75,38.262015,Andrew L,Pat Connaughton,Notre Dame,3,40,4,33,-86.23,41.72015,Andrew L,Kevin Pangos,Gonzaga,2,48,4,48,-117.4,47.672015,Andrew L,Juwan Staten,West Virginia,5,35,3,49,-79.98,39.652015,Andrew L,D'Angelo Russell,Ohio State,10,37,2,64,-83.02,40.012015,Josh,Jahlil Okafor,Duke,1,90,6,2,-78.94,362015,Josh,Buddy Hield,Oklahoma,3,51,3,15,-97.44,35.192015,Josh,Andrew Harrison,Kentucky,1,52,5,18,-84.5,38.052015,Josh,Justin Anderson,Virginia,2,23,2,31,-78.51,38.052015,Josh,Brice Johnson,North Carolina,4,29,3,34,-79.04,35.92015,Josh,D'Vauntes Smith-Rivera,Georgetown,4,37,2,47,-77.02,38.92015,Josh,Wayne Blackshear,Louisville,4,67,4,50,-85.75,38.262015,Josh,Nic Moore,Southern Methodist,6,24,1,63,-96.78,32.842015,Andrew F,Karl Anthony Towns,Kentucky,1,71,5,3,-84.5,38.052015,Andrew F,Nigel Hayes,Wisconsin,1,74,6,14,-89.4,43.072015,Andrew F,Jerian Grant,Notre Dame,3,57,4,19,-86.23,41.72015,Andrew F,Rondae Hollis-Jefferson,Arizona,2,56,4,30,-110.95,32.232015,Andrew F,Melo Trimble,Maryland,4,29,2,35,-76.94,392015,Andrew F,Delon Wright,Utah,5,35,3,46,-111.84,40.762015,Andrew F,Bobby Portis,Arkansas,5,33,2,51,-94.18,36.062015,Andrew F,Denzel Valentine,Michigan State,7,75,5,62,-84.49,42.732015,Bryan,Aaron Harrison,Kentucky,1,46,5,4,-84.5,38.052015,Bryan,Devin Booker,Kentucky,1,36,5,13,-84.5,38.052015,Bryan,Josh Hart,Villanova,1,12,2,20,-75.17,39.92015,Bryan,Monte Morris,Iowa State,3,15,1,29,-93.64,42.022015,Bryan,Seth Tuttle,Northern Iowa,5,28,2,36,-92.46734,42.514262015,Bryan,Isaiah Cousins,Oklahoma,3,20,3,45,-97.44,35.192015,Bryan,Przemek Karnowski,Gonzaga,2,42,4,52,-117.4,47.672015,Bryan,Jameel McKay,Iowa State,3,10,1,61,-93.64,42.022015,Alex,Malcom Brogdon,Virginia,2,28,2,5,-78.51,38.052015,Alex,Sam Dekker,Wisconsin,1,115,6,12,-89.4,43.072015,Alex,Georges Niang,Iowa State,3,11,1,21,-93.64,42.022015,Alex,Taurean Prince,Baylor,3,18,1,28,-97.11,31.552015,Alex,Anthony Gill,Virginia,2,27,2,37,-78.51,38.052015,Alex,Frank Mason,Kansas,2,33,2,44,-95.25,38.952015,Alex,Zach Auguste,Notre Dame,3,68,4,53,-86.23,41.72015,Alex,Kellen Dunham,Butler,6,28,2,60,-86.17,39.842015,Rob,Quinn Cook,Duke,1,80,6,6,-78.94,362015,Rob,Perry Ellis,Kansas,2,26,2,11,-95.25,38.952015,Rob,Terry Rozier,Louisville,4,67,4,22,-85.75,38.262015,Rob,Marcus Paige,North Carolina,4,46,3,27,-79.04,35.92015,Rob,Dez Wells,Maryland,4,23,2,38,-76.94,392015,Rob,Rico Gathers,Baylor,3,9,1,43,-97.11,31.552015,Rob,LaDontae Henton,Providence,6,18,1,54,-71.44,41.852015,Rob,Michael Qualls,Arkansas,5,47,2,59,-94.18,36.062015,James,Stanley Johnson,Arizona,2,44,4,7,-110.95,32.232015,James,Brandon Ashley,Arizona,2,46,4,10,-110.95,32.232015,James,Tyus Jones,Duke,1,78,6,23,-78.94,362015,James,Ryan Arcidiacono,Villanova,1,17,2,26,-75.17,39.92015,James,JayVaughn Pinkston,Villanova,1,25,2,39,-75.17,39.92015,James,Demetrius Jackson,Notre Dame,3,44,4,42,-86.23,41.72015,James,TJ McConnell,Arizona,2,62,4,55,-110.95,32.232015,James,Daniel Ochefu,Villanova,2,18,2,58,-75.17,39.92015,Adam,Darrun Hilliard,Villanova,1,39,2,8,-75.17,39.92015,Adam,Kyle Wiltjer,Gonzaga,2,71,4,9,-117.4,47.672015,Adam,Bronson Koenig,Wisconsin,1,57,6,24,-89.4,43.072015,Adam,Trey Lyles,Kentucky,1,53,5,25,-84.5,38.052015,Adam,Travis Trice,Michigan State,7,95,5,40,-84.49,42.732015,Adam,Joseph Young,Oregon,8,57,2,41,-123.07,44.052015,Adam,Ron Baker,Wichita State,7,36,3,56,-97.3,37.722015,Adam,Dylan Ennis,Villanova,1,22,2,57,-84.49,42.732016,Andrew L,Denzel Valentine,Michigan State,2,13,1,1,-75.17,39.92016,Andrew L,Josh Hart,Villanova,2,90,6,16,-93.64,42.022016,Andrew L,Georges Niang,Iowa State,4,86,3,17,-84.47,39.152016,Andrew L,Myles Davis,Xavier,2,11,2,32,-122.2622,37.869382016,Andrew L,Jaylen Brown,California,4,4,1,33,-76.94,392016,Andrew L,Diamond Stone,Maryland,5,23,3,48,-78.94,362016,Andrew L,Luke Kennard,Duke,4,31,3,49,-79.04,35.92016,Andrew L,Kennedy Meeks,North Carolina,1,50,6,64,-97.44,35.192016,Bryan,Buddy Hield,Oklahoma,2,126,5,2,-84.47,39.152016,Bryan,Trevon Bluiett,Xavier,2,17,2,15,-80.28,25.722016,Bryan,Sheldon McClellan,Miami,3,64,3,18,-79.98,39.652016,Bryan,Devin Williams,West Virginia,3,12,1,31,-78.94,362016,Bryan,Brandon Ingram,Duke,4,69,3,34,-86.92,40.432016,Bryan,A.J. Hammons,Purdue,5,16,1,47,-117.4,47.672016,Bryan,Kyle Wiltjer,Gonzaga,11,53,3,50,-91.55495,41.663472016,Bryan,Jarrod Uthoff,Iowa,7,39,2,63,-78.51,38.052016,Rob,Malcom Brogdon,Virginia,1,57,4,3,-79.04,35.92016,Rob,Marcus Paige,North Carolina,1,90,6,14,-75.17,39.92016,Rob,Kris Jenkins,Villanova,2,93,6,19,-79.04,35.92016,Rob,Justin Jackson,North Carolina,1,77,6,30,-123.07,44.052016,Rob,Chris Boucher,Oregon,1,45,4,35,-97.11,31.552016,Rob,Taurean Prince,Baylor,5,28,1,46,-110.95,32.232016,Rob,Ryan Anderson,Arizona,6,8,1,51,-111.84,40.762016,Rob,Jordan Loveridge,Utah,3,16,2,62,-95.25,38.952016,Alex,Perry Ellis,Kansas,1,73,4,4,-111.84,40.762016,Alex,Jacob Poeltl,Utah,3,21,2,13,-78.51,38.052016,Alex,Anthony Gill,Virginia,1,71,4,20,-78.51,38.052016,Alex,London Perrantes,Virginia,1,44,4,29,-80.28,25.722016,Alex,Angel Rodriguez,Miami,3,65,3,36,-86.52,39.182016,Alex,Yogi Ferrell,Indiana,5,63,3,45,-96.35,30.612016,Alex,Tyler Davis,Texas A&M,3,39,3,52,-77.45299,37.552862016,Alex,Melvin Johnson,VCU,10,35,2,61,-123.07,44.052016,Josh,Dillon Brooks,Oregon,1,65,4,5,-95.25,38.952016,Josh,Frank Mason III,Kansas,1,42,4,12,-79.98,39.652016,Josh,Jayseon Paige,West Virginia,3,9,1,21,-84.49,42.732016,Josh,Matt Costello,Michigan State,2,22,1,28,-96.35,30.612016,Josh,Jalen Jones,Texas A&M,3,38,3,37,-84.49,42.732016,Josh,Eron Harris,Michigan State,2,9,1,44,-74.17,40.732016,Josh,Isaiah Whitehead,Seton Hall,6,10,1,53,-123.2807,44.561182016,Josh,Gary Payton II,Oregon State,7,19,1,60,-79.04,35.92016,Andrew F,Brice Johnson,North Carolina,1,114,6,6,-84.5,38.052016,Andrew F,Tyler Ulis,Kentucky,4,37,2,11,-123.07,44.052016,Andrew F,Elgin Cook,Oregon,1,69,4,22,-79.04,35.92016,Andrew F,Joel Berry II,North Carolina,1,82,6,27,-76.94,392016,Andrew F,Melo Trimble,Maryland,5,60,3,38,-110.95,32.232016,Andrew F,Gabe York,Arizona,6,10,1,43,-86.92,40.432016,Andrew F,Vince Edwards,Purdue,5,24,1,54,-122.2622,37.869382016,Andrew F,Jordan Mathews,California,4,23,1,59,-84.5,38.052016,Adam,Jamal Murray,Kentucky,4,35,2,7,-78.94,362016,Adam,Grayson Allen,Duke,4,67,3,10,-95.25,38.952016,Adam,Devonte' Graham,Kansas,1,32,4,23,-123.07,44.052016,Adam,Tyler Dorsey,Oregon,1,41,4,26,-96.35,30.612016,Adam,Danuel House,Texas A&M,3,52,3,39,-84.47,39.152016,Adam,Edmond Sumner,Xavier,2,13,2,42,-93.64,42.022016,Adam,Monte Morris,Iowa State,4,38,3,55,-117.4,47.672016,Adam,Domantas Sabonis,Gonzaga,11,59,3,58,-95.25,38.952016,James,Wayne Selden,Kansas,1,71,4,8,-84.49,42.732016,James,Bryn Forbes,Michigan State,2,14,1,9,-97.44,35.192016,James,Isaiah Cousins,Oklahoma,2,52,5,24,-97.44,35.192016,James,Jordan Woodard,Oklahoma,2,79,5,25,-97.44,35.192016,James,Ryan Spangler,Oklahoma,2,31,5,40,-75.17,39.92016,James,Ryan Arcidiacano,Villanova,2,90,6,41,-71.44,41.852016,James,Ben Bentil,Providence,9,40,2,56,-75.17,39.92016,James,Daniel Ochefu,Villanova,2,69,6,57,-75.17,39.92017,Alex,Frank Mason III,Kansas,1,89,4,1,-95.25,38.952017,Alex,Grayson Allen,Duke,2,41,2,16,-78.94,362017,Alex,Dwayne Bacon,Florida State,3,45,2,17,-84.29,30.442017,Alex,Bonzie Colson,Notre Dame,5,45,2,32,-86.23,41.72017,Alex,Tyler Dorsey,Oregon,3,118,5,33,-123.07,44.052017,Alex,Marcus Foster,Creighton,6,15,1,48,-95.93,41.262017,Alex,Aaron Holiday,UCLA,3,25,3,49,-118.45,34.072017,Alex,Nate Mason,Minnesota,5,5,1,64,-93.228,44.976812017,Rob,Justin Jackson,North Carolina,1,117,6,2,-79.04,35.92017,Rob,Donovan Mitchell,Louisville,2,28,2,15,-85.75,38.262017,Rob,Lauri Markannen,Arizona,2,45,3,18,-110.95,32.232017,Rob,Johnathan Motley,Baylor,3,52,3,31,-97.11,31.552017,Rob,Sindarius Thornwell,South Carolina,7,118,5,34,-81.04,33.992017,Rob,Kelan Martin,Butler,4,45,3,47,-86.17,39.842017,Rob,Melo Trimble,Maryland,6,13,1,50,-76.94,392017,Rob,Manu Lecomte,Baylor,3,30,3,63,-97.11,31.552017,Adam,Josh Hart,Villanova,1,30,2,3,-75.17,39.92017,Adam,Kris Jenkins,Villanova,1,13,2,14,-75.17,39.92017,Adam,Edrice Adebayo,Kentucky,2,43,4,19,-84.5,38.052017,Adam,Isaac Hamilton,UCLA,3,41,3,30,-118.45,34.072017,Adam,Semi Ojeleye,Southern Methodist,6,24,1,35,-96.78,32.842017,Adam,Jock Landale,Saint Mary's,7,37,2,46,-122.11,37.842017,Adam,Nazareth Mitrou-Long,Iowa State,5,18,2,51,-93.64,42.022017,Adam,Frank Jackson,Duke,2,29,2,62,-78.94,362017,Andrew F,Luke Kennard,Duke,2,19,2,4,-78.94,362017,Andrew F,De'Aaron Fox,Kentucky,2,85,4,13,-84.5,38.052017,Andrew F,Devonte' Graham,Kansas,1,63,4,20,-95.25,38.952017,Andrew F,Caleb Swanigan,Purdue,4,54,3,29,-86.92,40.432017,Andrew F,Deng Adel,Louisville,2,32,2,36,-85.75,38.262017,Andrew F,Kadeem Allen,Arizona,2,30,3,45,-110.95,32.232017,Andrew F,Matt Farrell,Notre Dame,5,24,2,52,-86.23,41.72017,Andrew F,Deonte Burton,Iowa State,5,39,2,61,-93.64,42.022017,Andrew L,Malik Monk,Kentucky,1,59,4,5,-84.5,38.052017,Andrew L,Przemek Karnowski,Gonzaga,1,59,6,12,-117.4,47.672017,Andrew L,Bryce Alford,UCLA,3,35,3,21,-118.45,34.072017,Andrew L,Kennedy Meeks,North Carolina,1,73,6,28,-79.04,35.92017,Andrew L,Rawle Alkins,Arizona,2,30,3,37,-110.95,32.232017,Andrew L,VJ Beachem,Notre Dame,5,11,2,44,-86.23,41.72017,Andrew L,Jonathan Isaac,Florida State,3,25,2,53,-84.29,30.442017,Andrew L,Vince Edwards,Purdue,4,50,3,60,-86.92,40.432017,James,Allonzo Trier,Arizona,2,51,3,6,-110.95,32.232017,James,Josh Jackson,Kansas,1,65,4,11,-95.25,38.952017,James,Lonzo Ball,UCLA,3,43,3,22,-118.45,34.072017,James,TJ Leaf,UCLA,3,51,3,27,-118.45,34.072017,James,MIkal Bridges,Villanova,1,13,2,38,-75.17,39.92017,James,Amile Jefferson,Duke,2,22,2,43,-78.94,362017,James,Isaiah Briscoe,Kentucky,2,34,4,54,-84.5,38.052017,James,Donte DiVincenzo,Villanova,1,36,2,59,-75.17,39.92017,Josh,Jayson Tatum,Duke,2,33,2,7,-78.94,362017,Josh,Joel Berry II,North Carolina,1,83,6,10,-79.04,35.92017,Josh,Dillon Brooks,Oregon,3,76,5,23,-123.07,44.052017,Josh,Jordan Mathews,Gonzaga,1,72,6,26,-117.4,47.672017,Josh,KeVaughn Allen,Florida,4,59,4,39,-82.35,29.652017,Josh,Monte Morris,Iowa State,5,37,2,42,-93.64,42.022017,Josh,Jawun Evans,Oklahoma State,10,23,1,55,-97.07,36.122017,Josh,Trevon Bluiett,Xavier,11,85,4,58,-84.47,39.152017,Bryan,Nigel Williams-Goss,Gonzaga,1,100,6,8,-117.4,47.672017,Bryan,Jalen Brunson,Villanova,1,25,2,9,-75.17,39.92017,Bryan,Quentin Snider,Louisville,2,16,2,24,-85.75,38.262017,Bryan,Isaiah Hicks,North Carolina,1,54,6,25,-79.04,35.92017,Bryan,Jevon Carter,West Virginia,4,56,3,40,-79.98,39.652017,Bryan,London Perrantes,Virginia,5,30,2,41,-78.51,38.052017,Bryan,Sterling Brown,Southern Methodist,6,17,1,56,-96.78,32.842017,Bryan,Derrick Walton Jr.,Michigan,7,57,3,57,-83.75,42.262018,Andrew F,Jalen Brunson,Villanova,1,97,6,1,-75.17,39.92018,Andrew F,Moritz Wagner,Michigan,3,90,6,16,-83.75,42.262018,Andrew F,Gary Trent Jr.,Duke,2,65,4,17,-78.94,362018,Andrew F,Vince Edwards,Purdue,2,47,3,32,-86.92,40.432018,Andrew F,Wendell Clark Jr.,Duke,2,46,4,33,-78.94,362018,Andrew F,Kenny Williams,North Carolina,2,23,2,48,-79.04,35.92018,Andrew F,Udoka Azubuike,Kansas,1,41,5,49,-95.25,38.952018,Andrew F,Daxter Miles,West Virginia,5,34,3,64,-79.98,39.652018,Adam,Mikal Bridges,Villanova,1,93,6,2,-75.17,39.92018,Adam,Isaac Haas,Purdue,2,9,3,15,-86.92,40.432018,Adam,Keita Bates-Diop,Ohio State,5,52,2,18,-83.02,40.012018,Adam,Malik Newman,Kansas,1,108,5,31,-95.25,38.952018,Adam,Admiral Schofield,Tennessee,3,29,2,34,-83.92506,35.951142018,Adam,Shai Gilgeous-Alexander,Kentucky,5,61,3,47,-84.5,38.052018,Adam,Theo Pinson,North Carolina,2,19,2,50,-79.04,35.92018,Adam,Bryce Brown,Auburn,4,22,2,63,-85.49251,32.602722018,Rob,Trevon Bluiett,Xavier,1,34,2,3,-84.47,39.152018,Rob,Sviatoslav Mykhailiuk,Kansas,1,57,5,14,-95.25,38.952018,Rob,Donte DiVincenzo,Villanova,1,90,6,19,-75.17,39.92018,Rob,Grant Williams,Tennessee,3,26,2,30,-83.92506,35.951142018,Rob,Cameron Johnson,North Carolina,2,19,2,35,-79.04,35.92018,Rob,Kevin Knox,Kentucky,5,46,3,46,-84.5,38.052018,Rob,Jaylen Barford,Arkansas,7,15,1,51,-94.18,36.062018,Rob,Marcus Foster,Creighton,8,5,1,62,-95.93,41.262018,Bryan,Kyle Guy,Virginia,1,15,1,4,-78.51,38.052018,Bryan,Devon Hall,Virginia,1,2,1,13,-78.51,38.052018,Bryan,J.P. Macura,Xavier,1,47,2,20,-84.47,39.152018,Bryan,Cassius Winston,Michigan State,3,26,2,29,-84.49,42.732018,Bryan,Johnathan Williams,Gonzaga,4,36,3,36,-117.4,47.672018,Bryan,Robert Gray Jr.,Houston,6,62,2,45,-95.34693,29.724682018,Bryan,Landry Shamet,Wichita State,4,11,1,52,-97.3,37.722018,Bryan,Kelan Martin,Butler,10,54,2,61,-86.17,39.842018,Andrew L,DeVonte Graham,Kansas,1,87,5,5,-95.25,38.952018,Andrew L,DeAndre Ayton,Arizona,4,14,1,12,-110.95,32.232018,Andrew L,Muhammad-Ali Abdur-Rahkman,Michigan,3,86,6,21,-83.75,42.262018,Andrew L,Jacob Evans,Cincinnati,2,29,2,28,-84.46,39.032018,Andrew L,Nick Ward,Michigan State,3,18,2,37,-84.49,42.732018,Andrew L,Mustapha Heron,Auburn,4,28,2,44,-85.49251,32.602722018,Andrew L,Shaquille Morris,Wichita State,4,12,1,53,-97.3,37.722018,Andrew L,Jae'Sean Tate,Ohio State,5,19,2,60,-83.02,40.012018,James,Marvin Bagley III,Duke,2,82,4,6,-78.94,362018,James,Miles Bridges,Michigan State,3,40,2,11,-84.49,42.732018,James,Allonzo Trier,Arizona,4,10,1,22,-110.95,32.232018,James,Rawle Alkins,Arizona,4,8,1,27,-110.95,32.232018,James,Phil Booth,Villanova,1,37,6,38,-75.17,39.92018,James,Jaren Jackson Jr.,Michigan State,3,8,2,43,-84.49,42.732018,James,Lagerald Vick,Kansas,1,62,5,54,-95.25,38.952018,James,Eric Paschall,Villanova,1,74,6,59,-75.17,39.92018,Alex,Joel Berry,North Carolina,2,35,2,7,-79.04,35.92018,Alex,Luke Maye,North Carolina,2,23,2,10,-79.04,35.92018,Alex,Ty Jerome,Virginia,1,15,1,23,-78.51,38.052018,Alex,Keenan Evans,Texas Tech,3,73,4,26,-101.8866,33.581322018,Alex,Jevon Carter,West Virginia,5,61,3,39,-79.98,39.652018,Alex,Marcquise Reed,Clemson,5,44,3,42,-82.84641,34.68042018,Alex,Zach Norvell Jr.,Gonzaga,4,57,3,55,-117.4,47.672018,Alex,Kerem Kanter,Xavier,1,39,2,58,-84.47,39.152018,Josh,Grayson Allen,Duke,2,53,4,8,-78.94,362018,Josh,Carsen Edwards,Purdue,2,58,3,9,-86.92,40.432018,Josh,Killian Tillie,Gonzaga,4,9,3,24,-117.4,47.672018,Josh,Gary Clark,Cincinnati,2,22,2,25,-84.46,39.032018,Josh,Trae Young,Oklahoma,10,28,1,40,-97.44,35.192018,Josh,Dakota Mathias,Purdue,2,22,3,41,-86.92,40.432018,Josh,Collin Sexton,Alabama,9,42,2,56,-87.5397,33.202972018,Josh,Josh Perkins,Gonzaga,4,35,3,57,-117.4,47.672019,Rob,Zion Williamson,Duke,1,104,4,1,-78.94,362019,Rob,Zach Norvell Jr,Gonzaga,1,44,4,16,-117.4,47.672019,Rob,Tyler Herro,Kentucky,2,49,4,17,-84.5,38.052019,Rob,Tremont Waters,LSU,3,50,3,32,-91.18462,30.414242019,Rob,Nassir Little,North Carolina,1,43,3,33,-79.04,35.92019,Rob,Jordan Bowden,Tennessee,2,38,3,48,-83.92506,35.951142019,Rob,Sam Merrill,Utah St.,8,10,1,49,-111.8129,41.748172019,Rob,Jordan Nwora,Louisville,7,10,1,64,-85.75,38.262019,Bryan,RJ Barrett,Duke,1,81,4,2,-78.94,362019,Bryan,PJ Washington,Kentucky,2,44,4,15,-84.5,38.052019,Bryan,Ignas Brazdeikis,Michigan,2,36,3,18,-83.75,42.262019,Bryan,Bryce Brown,Auburn,5,85,5,31,-85.49251,32.602722019,Bryan,Josh Perkins,Gonzaga,1,46,4,34,-117.4,47.672019,Bryan,Anthony Cowan Jr,Maryland,6,20,2,47,-76.94,392019,Bryan,Fletcher Magee,Wofford,7,32,2,50,-81.93362,34.963422019,Bryan,Payton Pritchard,Oregon,12,48,3,63,-123.07,44.052019,James,Grant Williams,Tennessee,2,49,3,3,-83.92506,35.951142019,James,Cam Reddish,Duke,1,33,4,14,-78.94,362019,James,Jarrett Culver,Texas Tech,3,111,6,19,-101.8866,33.581322019,James,Xavier Tillman,Michigan St.,2,68,5,30,-84.49,42.732019,James,Nickeil Alexander-Walker,Virginia Tech,4,35,3,35,-80.41953,37.223112019,James,CJ Massinburg,Buffalo,6,32,2,46,-78.78118,43.000112019,James,Ja Morant,Murray St.,12,45,2,51,-88.32,36.622019,James,Jordan Caroline,Nevada,7,7,1,62,-119.8183,39.545082019,Adam,Rui Hachimura,Gonzaga,1,66,4,4,-117.4,47.672019,Adam,Luke Maye,North Carolina,1,49,3,13,-79.04,35.92019,Adam,Ty Jerome,Virginia,1,99,6,20,-78.51,38.052019,Adam,Ethan Happ,Wisconsin,5,12,1,29,-89.4,43.072019,Adam,Kerry Blackshear Jr,Virginia Tech,4,52,3,36,-80.41953,37.223112019,Adam,Charles Matthews,Michigan,2,43,3,45,-83.75,42.262019,Adam,Reid Travis,Kentucky,2,47,4,52,-84.5,38.052019,Adam,Nick Ward,Michigan St.,2,32,5,61,-84.49,42.732019,Andrew L,Coby White,North Carolina,1,42,3,5,-79.04,35.92019,Andrew L,Admiral Schofield,Tennessee,2,59,3,12,-83.92506,35.951142019,Andrew L,Jordan Poole,Michigan,2,37,3,21,-83.75,42.262019,Andrew L,Markus Howard,Marquette,5,26,1,28,-87.92,43.042019,Andrew L,Mfiondu Kabengele,Florida St.,4,51,3,37,-84.29,30.442019,Andrew L,Armoni Brooks,Houston,3,33,3,44,-95.34693,29.724682019,Andrew L,Barry Brown Jr,Kansas St.,4,5,1,53,-96.59,39.22019,Andrew L,Ryan Cline,Purdue,3,51,4,60,-86.92,40.432019,Andrew F,Cameron Johnson,North Carolina,1,49,3,6,-79.04,35.92019,Andrew F,Cassius Winston,Michigan St.,2,92,5,11,-84.49,42.732019,Andrew F,Corey Davis Jr,Houston,3,61,3,22,-95.34693,29.724682019,Andrew F,Jordan Bone,Tennessee,2,40,3,27,-83.92506,35.951142019,Andrew F,Phil Booth,Villanova,6,35,2,38,-75.17,39.92019,Andrew F,Eric Paschall,Villanova,6,33,2,43,-75.17,39.92019,Andrew F,Dylan Windler,Belmont,11,35,1,54,-86.79465,36.132272019,Andrew F,Jarron Cumberland,Cincinnati,7,18,1,59,-84.46,39.032019,Alex,Kyle Guy,Virginia,1,86,6,7,-78.51,38.052019,Alex,De'Andre Hunter,Virginia,1,95,6,10,-78.51,38.052019,Alex,Keldon Johnson,Kentucky,2,55,4,23,-84.5,38.052019,Alex,Tre Jones,Duke,1,42,4,26,-78.94,362019,Alex,Matt McQuaid,Michigan St.,2,46,5,39,-84.49,42.732019,Alex,Davide Moretti,Texas Tech,3,68,6,42,-101.8866,33.581322019,Alex,Ahmed Hill,Virginia Tech,4,39,3,55,-80.41953,37.223112019,Alex,Zavier Simpson,Michigan,2,13,3,58,-83.75,42.262019,Josh,Brandon Clarke,Gonzaga,1,83,4,8,-117.4,47.672019,Josh,Carsen Edwards,Purdue,3,139,4,9,-86.92,40.432019,Josh,Quinndary Weatherspoon,Mississippi St.,5,27,1,24,-88.79404,33.461352019,Josh,Dedric Lawson,Kansas,4,50,2,25,-95.25,38.952019,Josh,Marial Shayok,Iowa St.,6,23,1,40,-93.64,42.022019,Josh,Naz Reid,LSU,3,37,3,41,-91.18462,30.414242019,Josh,Jared Harper,Auburn,5,81,5,56,-85.49251,32.602722019,Josh,Caleb Martin,Nevada,7,19,1,57,-119.8183,39.54508
+year,person,player,school,seed,totalpoints,gamesplayed,overallpick,longitude,latitude
+2009,"Rob","Tyler Hansbrough","North Carolina",1,105,6,1,-79.04,35.9
+2009,"Rob","Sherron Collins","Kansas",3,77,3,16,-95.25,38.95
+2009,"Rob","James Harden","Arizona State",6,19,2,17,-111.93,33.42
+2009,"Rob","Antonio Anderson","Memphis",2,33,3,32,-90.05058,35.13812
+2009,"Rob","DeMarre Carroll","Missouri",3,57,4,33,-92.33,38.93
+2009,"Rob","Luke Nevill","Utah",5,12,1,48,-111.84,40.76
+2009,"Rob","Darren Collison","UCLA",6,25,2,49,-118.45,34.07
+2009,"Rob","James Anderson","Oklahoma State",8,25,2,64,-97.07,36.12
+2009,"Alex","Wayne Ellington","North Carolina",1,112,6,2,-79.04,35.9
+2009,"Alex","Hasheem Thabeet","Connecticut",1,63,5,15,-72.67619,41.76826
+2009,"Alex","Deon Thompson","North Carolina",1,42,6,18,-79.04,35.9
+2009,"Alex","Toney Douglas","Florida State",5,26,1,31,-84.29,30.44
+2009,"Alex","Eric Devendorf","Syracuse",3,39,3,34,-76.14,43.04
+2009,"Alex","Al-Farouq Aminu","Wake Forest",4,17,1,47,-80.26,36.13
+2009,"Alex","Alex Ruoff","West Virginia",6,9,1,50,-79.98,39.65
+2009,"Alex","Wesley Mathews","Marquette",6,35,2,63,-87.92,43.04
+2009,"Bryan","Sam Young","Pittsburgh",1,93,4,3,-79.96228,40.44382
+2009,"Bryan","Danny Green","North Carolina",1,75,6,14,-79.04,35.9
+2009,"Bryan","Kalin Lucas","Michigan State",2,86,6,19,-84.49,42.73
+2009,"Bryan","James Johnson","Wake Forest",4,22,1,30,-80.26,36.13
+2009,"Bryan","Goran Suton","Michigan State",2,81,6,35,-84.49,42.73
+2009,"Bryan","Taylor Griffin","Oklahoma",2,38,4,46,-97.44,35.19
+2009,"Bryan","E'Twaun Moore","Purdue",5,38,3,51,-86.92,40.43
+2009,"Bryan","Matt Bouldin","Gonzaga",4,39,3,62,-117.4,47.67
+2009,"Adam","Blake Griffin","Oklahoma",2,114,4,4,-97.44,35.19
+2009,"Adam","Terrence Williams","Louisville",1,56,4,13,-85.75,38.26
+2009,"Adam","Scottie Reynolds","Villanova",3,67,5,20,-75.17,39.9
+2009,"Adam","Jon Scheyer","Duke",2,41,3,29,-78.94,36
+2009,"Adam","Cole Aldrich","Kansas",3,53,3,36,-95.25,38.95
+2009,"Adam","Andy Rautins","Syracuse",3,29,3,45,-76.14,43.04
+2009,"Adam","Kemba Walker","Connecticut",1,51,5,52,-72.67619,41.76826
+2009,"Adam","Austin Daye","Gonzaga",4,30,3,61,-117.4,47.67
+2009,"Andrew L","DeJuan Blair","Pittsburgh",1,67,4,5,-79.96228,40.44382
+2009,"Andrew L","Earl Clark","Louisville",1,62,4,12,-85.75,38.26
+2009,"Andrew L","Kyle Singler","Duke",2,42,3,21,-78.94,36
+2009,"Andrew L","Dante Cunningham","Villanova",3,83,5,28,-75.17,39.9
+2009,"Andrew L","Raymar Morgan","Michigan State",2,45,6,37,-84.49,42.73
+2009,"Andrew L","Josh Heytvelt","Gonzaga",4,46,3,44,-117.4,47.67
+2009,"Andrew L","BJ Raymond","Xavier",4,43,3,53,-84.47,39.15
+2009,"Andrew L","Jon Brockman","Washington",4,30,2,60,-122.3,47.65
+2009,"Josh","Tyreke Evans","Memphis",2,67,3,6,-90.05058,35.13812
+2009,"Josh","Gerald Henderson","Duke",2,44,3,11,-78.94,36
+2009,"Josh","Jeff Teague","Wake Forest",4,10,1,22,-80.26,36.13
+2009,"Josh","Willie Warren","Oklahoma",2,56,4,27,-97.44,35.19
+2009,"Josh","Da'Sean Butler","West Virginia",6,12,1,38,-79.98,39.65
+2009,"Josh","Isaiah Thomas","Washington",4,33,2,43,-122.3,47.65
+2009,"Josh","Derrick Brown","Xavier",4,37,3,54,-84.47,39.15
+2009,"Josh","Chris Allen","Michigan State",2,32,6,59,-84.49,42.73
+2009,"James","AJ Price","Connecticut",1,95,5,7,-72.67619,41.76826
+2009,"James","Jeff Adrien","Connecticut",1,69,5,10,-72.67619,41.76826
+2009,"James","Jonny Flynn","Syracuse",3,49,3,23,-76.14,43.04
+2009,"James","LeVance Fields","Pittsburgh",1,43,4,26,-79.96228,40.44382
+2009,"James","Jerel McNeal","Marquette",6,44,2,39,-87.92,43.04
+2009,"James","Jermaine Dixon","Pittsburgh",1,15,4,42,-79.96228,40.44382
+2009,"James","Corey Fisher","Villanova",3,52,5,55,-75.17,39.9
+2009,"James","Stanley Robinson","Connecticut",1,74,5,58,-72.67619,41.76826
+2009,"Andrew F","Ty Lawson","North Carolina",1,104,6,8,-79.04,35.9
+2009,"Andrew F","Robert Dozier","Memphis",2,42,3,9,-90.05058,35.13812
+2009,"Andrew F","Shawn Taggert","Memphis",2,31,3,24,-90.05058,35.13812
+2009,"Andrew F","Samardo Samuels","Louisville",1,42,4,25,-85.75,38.26
+2009,"Andrew F","Leo Lyons","Missouri",3,69,4,40,-92.33,38.93
+2009,"Andrew F","Doneal Mack","Memphis",2,18,3,41,-90.05058,35.13812
+2009,"Andrew F","Paul Harris","Syracuse",3,16,3,56,-76.14,43.04
+2009,"Andrew F","Jerry Smith","Louisville",1,35,4,57,-85.75,38.26
+2010,"Andrew F","Sherron Collins","Kansas",1,28,2,1,-95.25,38.95
+2010,"Andrew F","Denis Clemente","Kansas State",2,79,4,16,-96.59,39.2
+2010,"Andrew F","Marcus Morris","Kansas",1,42,2,17,-95.25,38.95
+2010,"Andrew F","Ekpe Udoh","Baylor",3,54,4,32,-97.11,31.55
+2010,"Andrew F","Chris Wright","Georgetown",3,28,1,33,-77.02,38.9
+2010,"Andrew F","James Anderson","Oklahoma State",7,11,1,48,-97.07,36.12
+2010,"Andrew F","Jon Leuer","Wisconsin",4,43,2,49,-89.4,43.07
+2010,"Andrew F","Markieff Morris","Kansas",1,12,2,64,-95.25,38.95
+2010,"Alex","John Wall","Kentucky",1,58,4,2,-84.5,38.05
+2010,"Alex","Cole Aldrich","Kansas",2,24,2,15,-95.25,38.95
+2010,"Alex","Andy Rautins","Syracuse",1,50,3,18,-76.14,43.04
+2010,"Alex","Devin Ebanks","West Virginia",2,65,5,31,-79.98,39.65
+2010,"Alex","Jon Diebler","Ohio State",2,46,3,34,-83.02,40.01
+2010,"Alex","Jason Clark","Georgetown",3,7,1,47,-77.02,38.9
+2010,"Alex","Jimmer Fredette","Brigham Young",7,58,2,50,-111.65,40.25
+2010,"Alex","Arinze Onuaku","Syracuse",1,0,0,63,-76.14,43.04
+2010,"Andrew L","Jon Scheyer","Duke",1,96,6,3,-78.94,36
+2010,"Andrew L","Nolan Smith","Duke",1,106,6,14,-78.94,36
+2010,"Andrew L","Austin Freeman","Georgetown",3,9,1,19,-77.02,38.9
+2010,"Andrew L","Darington Hobson","New Mexico",3,22,2,30,-106.63,35.07
+2010,"Andrew L","Greivis Vasquez","Maryland",4,42,2,35,-76.94,39
+2010,"Andrew L","Lazar Hayward","Marquette",6,20,1,46,-87.92,43.04
+2010,"Andrew L","Brad Wanamaker","Pittsburgh",3,29,2,51,-79.96228,40.44382
+2010,"Andrew L","Damion James","Texas",8,16,1,62,-97.73,30.28
+2010,"Bryan","DeMarcus Cousins","Kentucky",1,55,4,4,-84.5,38.05
+2010,"Bryan","LaceDarius Dunn","Baylor",3,84,4,13,-97.11,31.55
+2010,"Bryan","William Buford","Ohio State",2,40,3,20,-83.02,40.01
+2010,"Bryan","Tweety Carter","Baylor",3,40,4,29,-97.11,31.55
+2010,"Bryan","David Lighty","Ohio State",2,36,3,36,-83.02,40.01
+2010,"Bryan","Jordan Crawford","Xavier",6,87,3,45,-84.47,39.15
+2010,"Bryan","Corey Stokes","Villanova",2,21,2,52,-75.17,39.9
+2010,"Bryan","Jermaine Dixon","Pittsburgh",3,19,2,61,-79.96228,40.44382
+2010,"James","Scottie Reynolds","Villanova",2,28,2,5,-75.17,39.9
+2010,"James","Jacob Pullen","Kansas State",2,91,4,12,-96.59,39.2
+2010,"James","Donald Sloan","Texas A&M",5,21,2,21,-96.35,30.61
+2010,"James","Eric Bledsoe","Kentucky",1,61,4,28,-84.5,38.05
+2010,"James","Antonio Pena","Villanova",2,9,2,37,-75.17,39.9
+2010,"James","Rick Jackson","Syracuse",1,21,3,44,-76.14,43.04
+2010,"James","Curtis Kelly","Kansas State",2,60,4,53,-96.59,39.2
+2010,"James","Samardo Samuels","Louisville",9,16,1,60,-85.75,38.26
+2010,"Adam","Evan Turner","Ohio State",2,64,3,6,-83.02,40.01
+2010,"Adam","Patrick Patterson","Kentucky",1,41,4,11,-84.5,38.05
+2010,"Adam","Greg Monroe","Georgetown",3,19,1,22,-77.02,38.9
+2010,"Adam","Aston Gibbs","Pittsburgh",3,26,2,27,-79.96228,40.44382
+2010,"Adam","Scoop Jardine","Syracuse",1,37,3,38,-76.14,43.04
+2010,"Adam","Tyshawn Taylor","Kansas",1,8,2,43,-95.25,38.95
+2010,"Adam","Darryl Bryant","West Virginia",2,8,2,54,-79.98,39.65
+2010,"Adam","Dairese Gary","New Mexico",3,40,2,59,-106.63,35.07
+2010,"Rob","Da'Sean Butler","West Virginia",2,79,5,7,-79.98,39.65
+2010,"Rob","Xavier Henry","Kansas",1,19,2,10,-95.25,38.95
+2010,"Rob","Corey Fisher","Villanova",2,15,2,23,-75.17,39.9
+2010,"Rob","Jamar Samuels","Kansas State",2,17,4,26,-96.59,39.2
+2010,"Rob","Luke Harangody","Notre Dame",6,4,1,39,-86.23,41.7
+2010,"Rob","Jermaine Beal","Vanderbilt",4,12,1,42,-86.81,36.14
+2010,"Rob","JaJuan Johnson","Purdue",4,57,3,55,-86.92,40.43
+2010,"Rob","Ryan Brooks","Temple",5,14,1,58,-75.15856,39.97987
+2010,"Josh","Wes Johnson","Syracuse",1,66,3,8,-76.14,43.04
+2010,"Josh","Kyle Singler","Duke",1,108,6,9,-78.94,36
+2010,"Josh","Kevin Jones","West Virginia",2,67,5,24,-79.98,39.65
+2010,"Josh","Kris Joseph","Syracuse",1,19,3,25,-76.14,43.04
+2010,"Josh","Trevon Hughes","Wisconsin",4,29,2,40,-89.4,43.07
+2010,"Josh","E'Twaun Moore","Purdue",4,45,3,41,-86.92,40.43
+2010,"Josh","Raymar Morgan","Michigan State",5,52,5,56,-84.49,42.73
+2010,"Josh","Isaih Thomas","Washington",11,47,3,57,-122.3,47.65
+2011,"Adam","Jimmer Fredette","Brigham Young",3,98,3,1,-111.65,40.25
+2011,"Adam","Kenny Boynton","Florida",2,59,4,16,-82.35,29.65
+2011,"Adam","Scoop Jardine","Syracuse",3,15,2,17,-76.14,43.04
+2011,"Adam","Tyrel Reed","Kansas",1,29,4,32,-95.25,38.95
+2011,"Adam","Jordan Taylor","Wisconsin",4,55,3,33,-89.4,43.07
+2011,"Adam","Tu Holloway","Xavier",6,5,1,48,-84.47,39.15
+2011,"Adam","DJ Gay","San Diego State",2,30,3,49,-117.07,32.77
+2011,"Adam","Malcom Thomas","San Diego State",2,30,3,64,-117.07,32.77
+2011,"Alex","Marcus Morris","Kansas",1,66,4,2,-95.25,38.95
+2011,"Alex","David Lighty","Ohio State",1,45,3,15,-83.02,40.01
+2011,"Alex","Dwight Hardy","St. Johns",6,26,1,18,-73.79464,40.72412
+2011,"Alex","Jacob Pullen","Kansas State",5,60,2,31,-96.59,39.2
+2011,"Alex","Rick Jackson","Syracuse",3,30,2,34,-76.14,43.04
+2011,"Alex","Kyle Kuric","Louisville",4,9,1,47,-85.75,38.26
+2011,"Alex","Brandon Triche","Syracuse",3,16,2,50,-76.14,43.04
+2011,"Alex","Mason Plumlee","Duke",1,24,3,63,-78.94,36
+2011,"Rob","Harrison Barnes","North Carolina",2,84,4,3,-79.04,35.9
+2011,"Rob","Jordan Hamilton","Texas",4,37,2,14,-97.73,30.28
+2011,"Rob","Tyler Zeller","North Carolina",2,103,4,19,-79.04,35.9
+2011,"Rob","Brandon Knight","Kentucky",4,80,5,30,-84.5,38.05
+2011,"Rob","John Jenkins","Vanderbilt",5,21,1,35,-86.81,36.14
+2011,"Rob","Carleton Scott","Notre Dame",2,12,2,46,-86.23,41.7
+2011,"Rob","Vernon Macklin","Florida",2,54,4,51,-82.35,29.65
+2011,"Rob","Rodney McGruder","Kansas State",5,13,2,62,-96.59,39.2
+2011,"Josh","Nolan Smith","Duke",1,41,3,4,-78.94,36
+2011,"Josh","JaJuan Johnson","Purdue",3,41,2,13,-86.92,40.43
+2011,"Josh","Erving Walker","Florida",2,63,4,20,-82.35,29.65
+2011,"Josh","Kawhi Leonard","San Diego State",2,47,3,29,-117.07,32.77
+2011,"Josh","Kyrie Irving","Duke",1,53,3,36,-78.94,36
+2011,"Josh","Doron Lamb","Kentucky",4,40,5,45,-84.5,38.05
+2011,"Josh","John Henson","North Carolina",2,56,4,52,-79.04,35.9
+2011,"Josh","Corey Fisher","Villanova",9,20,1,61,-75.17,39.9
+2011,"Andrew F","Jared Sullinger","Ohio State",1,50,3,5,-83.02,40.01
+2011,"Andrew F","Kyle Singler","Duke",1,42,3,12,-78.94,36
+2011,"Andrew F","Tim Abromatis","Notre Dame",2,35,2,21,-86.23,41.7
+2011,"Andrew F","Jon Leuer","Wisconsin",4,44,3,28,-89.4,43.07
+2011,"Andrew F","Terrance Jones","Kentucky",4,52,5,37,-84.5,38.05
+2011,"Andrew F","Chandler Parsons","Florida",2,38,4,44,-82.35,29.65
+2011,"Andrew F","Gary Johnson","Texas",4,22,2,53,-97.73,30.28
+2011,"Andrew F","Jeffery Taylor","Vanderbilt",5,4,1,60,-86.81,36.14
+2011,"Andrew L","Ashton Gibbs","Pittsburgh",1,37,2,6,-79.96228,40.44382
+2011,"Andrew L","Ben Hansbrough","Notre Dame",2,33,2,11,-86.23,41.7
+2011,"Andrew L","E'Twuan Moore","Purdue",3,29,2,22,-86.92,40.43
+2011,"Andrew L","Kris Joseph","Syracuse",3,24,2,27,-76.14,43.04
+2011,"Andrew L","Derrick Williams","Arizona",5,91,4,38,-110.95,32.23
+2011,"Andrew L","Seth Curry","Duke",1,11,3,43,-78.94,36
+2011,"Andrew L","Casey Mitchell","West Virginia",5,15,2,54,-79.98,39.65
+2011,"Andrew L","Alex Oriakhi","Connecticut",3,44,6,59,-72.67619,41.76826
+2011,"Bryan","Kemba Walker","Connecticut",3,141,6,7,-72.67619,41.76826
+2011,"Bryan","Jon Diebler","Ohio State",1,43,3,10,-83.02,40.01
+2011,"Bryan","Brad Wanamaker","Pittsburgh",1,14,2,23,-79.96228,40.44382
+2011,"Bryan","Preston Knowles","Louisville",4,9,1,26,-85.75,38.26
+2011,"Bryan","Tyshawn Taylor","Kansas",1,41,4,39,-95.25,38.95
+2011,"Bryan","Jeremy Lamb","Connecticut",3,97,6,42,-72.67619,41.76826
+2011,"Bryan","Nasir Robinson","Pittsburgh",1,28,2,55,-79.96228,40.44382
+2011,"Bryan","Austin Freeman","Georgetown",6,10,1,58,-77.02,38.9
+2011,"James","Markieff Morris","Kansas",1,57,4,8,-95.25,38.95
+2011,"James","William Buford","Ohio State",1,45,3,9,-83.02,40.01
+2011,"James","Gilbert Brown","Pittsburgh",1,33,2,24,-79.96228,40.44382
+2011,"James","Tristan Thompson","Texas",4,20,2,25,-97.73,30.28
+2011,"James","Deshaun Thomas","Ohio State",1,20,3,40,-83.02,40.01
+2011,"James","Aaron Craft","Ohio State",1,8,3,41,-83.02,40.01
+2011,"James","Isaiah Thomas","Washington",7,31,2,56,-122.3,47.65
+2011,"James","Scotty Hopson","Tennessee",9,4,1,57,-83.92506,35.95114
+2012,"James","Harrison Barnes","North Carolina",1,56,4,1,-79.04,35.9
+2012,"James","Michael Kidd Gilchrist","Kentucky",1,74,6,16,-84.5,38.05
+2012,"James","Ricardo Ratcliff","Missouri",2,14,1,17,-92.33,38.93
+2012,"James","Marquis Teague","Kentucky",1,80,6,32,-84.5,38.05
+2012,"James","Bernard James","Florida State",3,31,2,33,-84.29,30.44
+2012,"James","Isiah Canaan","Murray State",6,31,2,48,-88.32,36.62
+2012,"James","Ian Miller","Florida State",3,8,2,49,-84.29,30.44
+2012,"James","Brady Heslip","Baylor",3,59,4,64,-97.11,31.55
+2012,"Josh","Marcus Denmon","Missouri",2,20,1,2,-92.33,38.93
+2012,"Josh","Kim English","Missouri",2,2,1,15,-92.33,38.93
+2012,"Josh","William Buford","Ohio State",2,66,5,18,-83.02,40.01
+2012,"Josh","Jason Clark","Georgetown",3,31,2,31,-77.02,38.9
+2012,"Josh","Tim Hardaway Jr.","Michigan",4,14,1,34,-83.75,42.26
+2012,"Josh","Quincy Acy","Baylor",3,53,4,47,-97.11,31.55
+2012,"Josh","Tu Holloway","Xavier",10,68,3,50,-84.47,39.15
+2012,"Josh","Phil Pressey","Missouri",2,20,1,63,-92.33,38.93
+2012,"Bryan","Jared Sullinger","Ohio State",2,85,5,3,-83.02,40.01
+2012,"Bryan","Doron Lamb","Kentucky",1,99,6,14,-84.5,38.05
+2012,"Bryan","Austin Rivers","Duke",2,19,1,19,-78.94,36
+2012,"Bryan","Jordan Taylor","Wisconsin",4,48,3,30,-89.4,43.07
+2012,"Bryan","Elijah Johnson","Kansas",2,80,6,35,-95.25,38.95
+2012,"Bryan","Drew Gordon","New Mexico",5,39,2,46,-106.63,35.07
+2012,"Bryan","Mason Plumlee","Duke",2,21,1,51,-78.94,36
+2012,"Bryan","Kendall Marshall","North Carolina",1,29,4,62,-79.04,35.9
+2012,"Andrew F","Tyshawn Taylor","Kansas",2,77,6,4,-95.25,38.95
+2012,"Andrew F","Darius Johnson-Odom","Marquette",3,51,3,13,-87.92,43.04
+2012,"Andrew F","Jae Crowder","Marquette",3,57,3,20,-87.92,43.04
+2012,"Andrew F","John Jenkins","Vanderbilt",5,40,2,29,-86.81,36.14
+2012,"Andrew F","Ramone Moore","Temple",5,5,1,36,-75.15856,39.97987
+2012,"Andrew F","Joe Ragland","Wichita State",5,15,1,45,-97.3,37.72
+2012,"Andrew F","Brandon Wood","Michigan State",1,31,3,52,-84.49,42.73
+2012,"Andrew F","J'Covan Brown","Texas",11,19,1,61,-97.73,30.28
+2012,"Andrew L","Anthony Davis","Kentucky",1,82,6,5,-84.5,38.05
+2012,"Andrew L","Deshaun Thomas","Ohio State",2,98,5,12,-83.02,40.01
+2012,"Andrew L","Perry Jones III","Baylor",3,40,4,21,-97.11,31.55
+2012,"Andrew L","Dion Waiters","Syracuse",1,52,4,28,-76.14,43.04
+2012,"Andrew L","Kyle Kuric","Louisville",4,45,5,37,-85.75,38.26
+2012,"Andrew L","Khalif Wyatt","Temple",5,19,1,44,-75.15856,39.97987
+2012,"Andrew L","Will Barton","Memphis",8,16,1,53,-90.05058,35.13812
+2012,"Andrew L","Sean Kilpatrick","Cincinatti",6,41,3,60,-84.46,39.03
+2012,"Alex","Draymond Green","Michigan State",1,53,3,6,-84.49,42.73
+2012,"Alex","Thomas Robinson","Kansas",1,100,6,11,-95.25,38.95
+2012,"Alex","Keith Appling","Michigan State",1,35,3,22,-84.49,42.73
+2012,"Alex","Trey Burke","Michigan",4,16,1,27,-83.75,42.26
+2012,"Alex","Ryan Kelly","Duke",2,0,0,38,-78.94,36
+2012,"Alex","Darius Miller","Kentucky",1,70,6,43,-84.5,38.05
+2012,"Alex","Kevin Jones","West Virginia",10,13,1,54,-79.98,39.65
+2012,"Alex","Mike Scott","Virginia",10,15,1,59,-78.51,38.05
+2012,"Adam","Tyler Zeller","North Carolina",1,60,4,7,-79.04,35.9
+2012,"Adam","Terrence Jones","Kentucky",1,69,6,10,-84.5,38.05
+2012,"Adam","Michael Snaer","Florida State",3,11,2,23,-84.29,30.44
+2012,"Adam","Pierre Jackson","Baylor",3,70,4,26,-97.11,31.55
+2012,"Adam","Cody Zeller","Indiana",4,50,3,39,-86.52,39.18
+2012,"Adam","Brandon Triche","Syracuse",1,39,4,42,-76.14,43.04
+2012,"Adam","Donte Poole","Murray State",6,20,2,55,-88.32,36.62
+2012,"Adam","Kendall Williams","New Mexico",5,27,2,58,-106.63,35.07
+2012,"Rob","John Henson","North Carolina",1,37,4,8,-79.04,35.9
+2012,"Rob","Kris Joseph","Syracuse",1,40,4,9,-76.14,43.04
+2012,"Rob","Michael Dixon","Missouri",2,22,1,24,-92.33,38.93
+2012,"Rob","Seth Curry","Duke",2,7,1,25,-78.94,36
+2012,"Rob","Jeffrey Taylor","Vanderbilt",5,24,2,40,-86.81,36.14
+2012,"Rob","Hollis Thompson","Georgetown",3,29,2,41,-77.02,38.9
+2012,"Rob","Russ Smith","Louisville",4,62,5,56,-85.75,38.26
+2012,"Rob","Jeremy Lamb","Connecticut",9,19,1,57,-72.67619,41.76826
+2013,"Rob","Russ Smith","Louisville",1,134,6,1,-85.75,38.26
+2013,"Rob","Kenny Kadji","Miami",2,27,3,16,-80.28,25.72
+2013,"Rob","Markel Starks","Georgetown",2,23,1,17,-77.02,38.9
+2013,"Rob","Doug McDermott","Creighton",7,48,2,32,-95.93,41.26
+2013,"Rob","PJ Hairston","North Carolina",8,38,2,33,-79.04,35.9
+2013,"Rob","Lenzelle Smith","Ohio State",2,29,4,48,-83.02,40.01
+2013,"Rob","Anthony Bennett","UNLV",5,13,1,49,-115.15,36.1
+2013,"Rob","Markel Brown","Oklahoma State",5,16,1,64,-97.07,36.12
+2013,"James","Cody Zeller","Indiana",1,36,3,2,-86.52,39.18
+2013,"James","Christian Watford","Indiana",1,31,3,15,-86.52,39.18
+2013,"James","Jordan Hulls","Indiana",1,15,3,18,-86.52,39.18
+2013,"James","Will Sheehey","Indiana",1,34,3,31,-86.52,39.18
+2013,"James","Rodney McGruder","Kansas State",4,13,1,34,-96.59,39.2
+2013,"James","Angel Rodriguez","Kansas State",4,2,1,47,-96.59,39.2
+2013,"James","Nik Stauskas","Michigan",4,52,6,50,-83.75,42.26
+2013,"James","Yogi Ferrell","Indiana",1,16,3,63,-86.52,39.18
+2013,"Josh","Kelly Olynyk","Gonzaga",1,47,2,3,-117.4,47.67
+2013,"Josh","Trey Burke","Michigan",4,93,6,14,-83.75,42.26
+2013,"Josh","Kevin Pangos","Gonzaga",1,35,2,19,-117.4,47.67
+2013,"Josh","Durand Scott","Miami",2,37,3,30,-80.28,25.72
+2013,"Josh","James Southerland","Syracuse",4,49,5,35,-76.14,43.04
+2013,"Josh","Marcus Smart","Oklahoma State",5,14,1,46,-97.07,36.12
+2013,"Josh","Brandon Triche","Syracuse",4,62,5,51,-76.14,43.04
+2013,"Josh","Glenn Robinson III","Michigan",4,76,6,62,-83.75,42.26
+2013,"Andrew F","Ben McLemore","Kansas",1,33,3,4,-95.25,38.95
+2013,"Andrew F","Jeff Withey","Kansas",1,45,3,13,-95.25,38.95
+2013,"Andrew F","Keith Appling","Michigan State",3,33,3,20,-84.49,42.73
+2013,"Andrew F","Gary Harris","Michigan State",3,39,3,29,-84.49,42.73
+2013,"Andrew F","Dwayne Evans","Saint Louis",4,40,2,36,-90.23,38.63
+2013,"Andrew F","C.J. Fair","Syracuse",4,77,5,45,-76.14,43.04
+2013,"Andrew F","Adreian Payne","Michigan State",3,35,3,52,-84.49,42.73
+2013,"Andrew F","Rotnei Clarke","Butler",6,40,2,61,-86.17,39.84
+2013,"Bryan","Elias Harris","Gonzaga",1,17,2,5,-117.4,47.67
+2013,"Bryan","Shane Larkin","Miami",2,41,3,12,-80.28,25.72
+2013,"Bryan","Peyton Siva","Louisville",1,61,6,21,-85.75,38.26
+2013,"Bryan","Erik Murphy","Florida",3,37,4,28,-82.35,29.65
+2013,"Bryan","Tony Snell","New Mexico",3,9,1,37,-106.63,35.07
+2013,"Bryan","Treveon Graham","VCU",5,17,2,44,-77.45299,37.55286
+2013,"Bryan","Gary Bell Jr.","Gonzaga",1,11,2,53,-117.4,47.67
+2013,"Bryan","Alex Kirk","New Mexico",3,22,1,60,-106.63,35.07
+2013,"Adam","Mason Plumlee","Duke",2,64,4,6,-78.94,36
+2013,"Adam","Ryan Kelly","Duke",2,25,4,11,-78.94,36
+2013,"Adam","Kenny Boynton","Florida",3,38,4,22,-82.35,29.65
+2013,"Adam","Elijah Johnson","Kansas",1,23,3,27,-95.25,38.95
+2013,"Adam","Travis Releford","Kansas",1,49,3,38,-95.25,38.95
+2013,"Adam","Mike Rosario","Florida",3,57,4,43,-82.35,29.65
+2013,"Adam","Michael Carter-Williams","Syracuse",4,54,5,54,-76.14,43.04
+2013,"Adam","Trey McKinney Jones","Miami",2,20,3,59,-80.28,25.72
+2013,"Andrew L","Deshaun Thomas","Ohio State",2,89,4,7,-83.02,40.01
+2013,"Andrew L","Otto Porter","Georgetown",2,13,1,10,-77.02,38.9
+2013,"Andrew L","Vander Blue","Marquette",3,73,4,23,-87.92,43.04
+2013,"Andrew L","Gorgui Dieng","Louisville",1,52,6,26,-85.75,38.26
+2013,"Andrew L","Quinn Cook","Duke",2,23,4,39,-78.94,36
+2013,"Andrew L","Kendall Williams","New Mexico",3,8,1,42,-106.63,35.07
+2013,"Andrew L","Patric Young","Florida",3,33,4,55,-82.35,29.65
+2013,"Andrew L","Rasheed Sulaimon","Duke",2,47,4,58,-78.94,36
+2013,"Alex","Victor Oladipo","Indiana",1,43,3,8,-86.52,39.18
+2013,"Alex","Seth Curry","Duke",2,84,4,9,-78.94,36
+2013,"Alex","Aaron Craft","Ohio State",2,44,4,24,-83.02,40.01
+2013,"Alex","Tim Hardaway Jr.","Michigan",4,79,6,25,-83.75,42.26
+2013,"Alex","Chane Behanan","Louisville",1,53,6,40,-85.75,38.26
+2013,"Alex","Davante Gardner","Marquette",3,45,4,41,-87.92,43.04
+2013,"Alex","Ben Brust","Wisconsin",5,6,1,56,-89.4,43.07
+2013,"Alex","DÕVauntes Smith-Rivera","Georgetown",2,6,1,57,-77.02,38.9
+2014,"Andrew F","Doug McDermott","Creighton",3,45,2,1,-95.93,41.26
+2014,"Andrew F","DeAndre Kane","Iowa State",3,53,3,16,-93.64,42.02
+2014,"Andrew F","Georges Niang","Iowa State",3,24,1,17,-93.64,42.02
+2014,"Andrew F","Jordan Adams","UCLA",4,57,3,32,-118.45,34.07
+2014,"Andrew F","Kyle Anderson","UCLA",4,34,3,33,-118.45,34.07
+2014,"Andrew F","Chris Jones","Louisville",4,28,3,48,-85.75,38.26
+2014,"Andrew F","Cameron Bairstow","New Mexico",7,24,1,49,-106.63,35.07
+2014,"Andrew F","Rasheed Sulaimon","Duke",3,20,1,64,-78.94,36
+2014,"Andrew L","Nick Johnson","Arizona",1,66,4,2,-110.95,32.23
+2014,"Andrew L","Nik Stauskas","Michigan",2,70,4,15,-83.75,42.26
+2014,"Andrew L","Adreian Payne","Michigan State",4,82,4,18,-84.49,42.73
+2014,"Andrew L","Tyler Ennis","Syracuse",3,35,2,31,-76.14,43.04
+2014,"Andrew L","Sam Dekker","Wisconsin",2,52,5,34,-89.4,43.07
+2014,"Andrew L","Branden Dawson","Michigan State",4,65,4,47,-84.49,42.73
+2014,"Andrew L","Wayne Selden","Kansas",2,4,2,50,-95.25,38.95
+2014,"Andrew L","Dwayne Evans","Saint Louis",5,27,2,63,-90.23,38.63
+2014,"Bryan","Cleanthony Early","Wichita State",1,54,2,3,-97.3,37.72
+2014,"Bryan","Malcolm Brogdon","Virginia",1,39,3,14,-78.51,38.05
+2014,"Bryan","Ron Baker","Wichita State",1,27,2,19,-97.3,37.72
+2014,"Bryan","Joe Harris","Virginia",1,44,3,30,-78.51,38.05
+2014,"Bryan","Darrun Hilliard","Villanova",2,29,2,35,-75.17,39.9
+2014,"Bryan","Treveon Graham","VCU",5,19,1,46,-77.45299,37.55286
+2014,"Bryan","LaQuinton Ross","Ohio State",6,10,1,51,-83.02,40.01
+2014,"Bryan","Anthony Gill","Virginia",1,33,3,62,-78.51,38.05
+2014,"Rob","Andrew Wiggins","Kansas",2,23,2,4,-95.25,38.95
+2014,"Rob","Melvin Ejim","Iowa State",3,43,3,13,-93.64,42.02
+2014,"Rob","Rodney Hood","Duke",3,6,1,20,-78.94,36
+2014,"Rob","Frank Kaminski","Wisconsin",2,82,5,29,-89.4,43.07
+2014,"Rob","Marcus Paige","North Carolina",6,38,2,36,-79.04,35.9
+2014,"Rob","Fred VanVleet","Wichita State",1,8,2,45,-97.3,37.72
+2014,"Rob","Buddy Hield","Oklahoma",5,9,1,52,-97.44,35.19
+2014,"Rob","Julius Randle","Kentucky",8,89,6,61,-84.5,38.05
+2014,"James","Casey Prather","Florida",1,57,5,5,-82.35,29.65
+2014,"James","Gary Harris","Michigan State",4,56,4,12,-84.49,42.73
+2014,"James","Patric Young","Florida",1,52,5,21,-82.35,29.65
+2014,"James","Keith Appling","Michigan State",4,10,4,28,-84.49,42.73
+2014,"James","Caris Lavert","Michigan",2,39,4,37,-83.75,42.26
+2014,"James","Ben Brust","Wisconsin",2,63,5,44,-89.4,43.07
+2014,"James","Traevon Jackson","Wisconsin",2,63,5,53,-89.4,43.07
+2014,"James","Ryan Arcidiacono","Villanova",2,20,2,60,-75.17,39.9
+2014,"Josh","Russ Smith","Louisville",4,52,3,6,-85.75,38.26
+2014,"Josh","CJ Fair","Syracuse",3,28,2,11,-76.14,43.04
+2014,"Josh","James Bell","Villanova",2,26,2,22,-75.17,39.9
+2014,"Josh","Xavier Thames","San Diego State",4,78,3,27,-117.07,32.77
+2014,"Josh","Luke Hancock","Louisville",4,56,3,38,-85.75,38.26
+2014,"Josh","Trevor Cooney","Syracuse",3,20,2,43,-76.14,43.04
+2014,"Josh","James Michael McAdoo","North Carolina",6,30,2,54,-79.04,35.9
+2014,"Josh","Ethan Wragge","Creighton",3,19,2,59,-95.93,41.26
+2014,"Adam","Jabari Parker","Duke",3,14,1,7,-78.94,36
+2014,"Adam","Aaron Gordon","Arizona",1,57,4,10,-110.95,32.23
+2014,"Adam","Perry Ellis","Kansas",2,23,2,23,-95.25,38.95
+2014,"Adam","JayVaughn Pinkston","Villanova",2,26,2,26,-75.17,39.9
+2014,"Adam","Jerami Grant","Syracuse",3,20,2,39,-76.14,43.04
+2014,"Adam","Tekele Cotton","Wichita State",1,5,2,42,-97.3,37.72
+2014,"Adam","Shabazz Napier","Connecticut",7,127,6,55,-72.67619,41.76826
+2014,"Adam","T.J. McConnell","Arizona",1,32,4,58,-110.95,32.23
+2014,"Alex","Scottie Wilbekin","Florida",1,71,5,8,-82.35,29.65
+2014,"Alex","Michael Frazier II","Florida",1,45,5,9,-82.35,29.65
+2014,"Alex","Montrezl Harrel","Louisville",4,37,3,24,-85.75,38.26
+2014,"Alex","Kaleb Tarczewski ","Arizona",1,35,4,25,-110.95,32.23
+2014,"Alex","Sean Kilpatrick","Cincinnati",5,18,1,40,-84.46,39.03
+2014,"Alex","Glenn Robinson III","Michigan",2,55,4,41,-83.75,42.26
+2014,"Alex","Quinn Cook","Duke",3,23,1,56,-78.94,36
+2014,"Alex","Joseph Young","Oregon",7,48,2,57,-123.07,44.05
+2015,"Andrew L","Frank Kaminsky","Wisconsin",1,132,6,1,-89.4,43.07
+2015,"Andrew L","Willie Cauley-Stein","Kentucky",1,32,5,16,-84.5,38.05
+2015,"Andrew L","Justise Winslow","Duke",1,86,6,17,-78.94,36
+2015,"Andrew L","Montrezl Harrell","Louisville",4,62,4,32,-85.75,38.26
+2015,"Andrew L","Pat Connaughton","Notre Dame",3,40,4,33,-86.23,41.7
+2015,"Andrew L","Kevin Pangos","Gonzaga",2,48,4,48,-117.4,47.67
+2015,"Andrew L","Juwan Staten","West Virginia",5,35,3,49,-79.98,39.65
+2015,"Andrew L","D'Angelo Russell","Ohio State",10,37,2,64,-83.02,40.01
+2015,"Josh","Jahlil Okafor","Duke",1,90,6,2,-78.94,36
+2015,"Josh","Buddy Hield","Oklahoma",3,51,3,15,-97.44,35.19
+2015,"Josh","Andrew Harrison","Kentucky",1,52,5,18,-84.5,38.05
+2015,"Josh","Justin Anderson","Virginia",2,23,2,31,-78.51,38.05
+2015,"Josh","Brice Johnson","North Carolina",4,29,3,34,-79.04,35.9
+2015,"Josh","D'Vauntes Smith-Rivera","Georgetown",4,37,2,47,-77.02,38.9
+2015,"Josh","Wayne Blackshear","Louisville",4,67,4,50,-85.75,38.26
+2015,"Josh","Nic Moore","Southern Methodist",6,24,1,63,-96.78,32.84
+2015,"Andrew F","Karl Anthony Towns","Kentucky",1,71,5,3,-84.5,38.05
+2015,"Andrew F","Nigel Hayes","Wisconsin",1,74,6,14,-89.4,43.07
+2015,"Andrew F","Jerian Grant","Notre Dame",3,57,4,19,-86.23,41.7
+2015,"Andrew F","Rondae Hollis-Jefferson","Arizona",2,56,4,30,-110.95,32.23
+2015,"Andrew F","Melo Trimble","Maryland",4,29,2,35,-76.94,39
+2015,"Andrew F","Delon Wright","Utah",5,35,3,46,-111.84,40.76
+2015,"Andrew F","Bobby Portis","Arkansas",5,33,2,51,-94.18,36.06
+2015,"Andrew F","Denzel Valentine","Michigan State",7,75,5,62,-84.49,42.73
+2015,"Bryan","Aaron Harrison","Kentucky",1,46,5,4,-84.5,38.05
+2015,"Bryan","Devin Booker","Kentucky",1,36,5,13,-84.5,38.05
+2015,"Bryan","Josh Hart","Villanova",1,12,2,20,-75.17,39.9
+2015,"Bryan","Monte Morris","Iowa State",3,15,1,29,-93.64,42.02
+2015,"Bryan","Seth Tuttle","Northern Iowa",5,28,2,36,-92.46734,42.51426
+2015,"Bryan","Isaiah Cousins","Oklahoma",3,20,3,45,-97.44,35.19
+2015,"Bryan","Przemek Karnowski","Gonzaga",2,42,4,52,-117.4,47.67
+2015,"Bryan","Jameel McKay","Iowa State",3,10,1,61,-93.64,42.02
+2015,"Alex","Malcom Brogdon","Virginia",2,28,2,5,-78.51,38.05
+2015,"Alex","Sam Dekker","Wisconsin",1,115,6,12,-89.4,43.07
+2015,"Alex","Georges Niang","Iowa State",3,11,1,21,-93.64,42.02
+2015,"Alex","Taurean Prince","Baylor",3,18,1,28,-97.11,31.55
+2015,"Alex","Anthony Gill","Virginia",2,27,2,37,-78.51,38.05
+2015,"Alex","Frank Mason","Kansas",2,33,2,44,-95.25,38.95
+2015,"Alex","Zach Auguste","Notre Dame",3,68,4,53,-86.23,41.7
+2015,"Alex","Kellen Dunham","Butler",6,28,2,60,-86.17,39.84
+2015,"Rob","Quinn Cook","Duke",1,80,6,6,-78.94,36
+2015,"Rob","Perry Ellis","Kansas",2,26,2,11,-95.25,38.95
+2015,"Rob","Terry Rozier","Louisville",4,67,4,22,-85.75,38.26
+2015,"Rob","Marcus Paige","North Carolina",4,46,3,27,-79.04,35.9
+2015,"Rob","Dez Wells","Maryland",4,23,2,38,-76.94,39
+2015,"Rob","Rico Gathers","Baylor",3,9,1,43,-97.11,31.55
+2015,"Rob","LaDontae Henton","Providence",6,18,1,54,-71.44,41.85
+2015,"Rob","Michael Qualls","Arkansas",5,47,2,59,-94.18,36.06
+2015,"James","Stanley Johnson","Arizona",2,44,4,7,-110.95,32.23
+2015,"James","Brandon Ashley","Arizona",2,46,4,10,-110.95,32.23
+2015,"James","Tyus Jones","Duke",1,78,6,23,-78.94,36
+2015,"James","Ryan Arcidiacono","Villanova",1,17,2,26,-75.17,39.9
+2015,"James","JayVaughn Pinkston","Villanova",1,25,2,39,-75.17,39.9
+2015,"James","Demetrius Jackson","Notre Dame",3,44,4,42,-86.23,41.7
+2015,"James","TJ McConnell","Arizona",2,62,4,55,-110.95,32.23
+2015,"James","Daniel Ochefu","Villanova",2,18,2,58,-75.17,39.9
+2015,"Adam","Darrun Hilliard","Villanova",1,39,2,8,-75.17,39.9
+2015,"Adam","Kyle Wiltjer","Gonzaga",2,71,4,9,-117.4,47.67
+2015,"Adam","Bronson Koenig","Wisconsin",1,57,6,24,-89.4,43.07
+2015,"Adam","Trey Lyles","Kentucky",1,53,5,25,-84.5,38.05
+2015,"Adam","Travis Trice","Michigan State",7,95,5,40,-84.49,42.73
+2015,"Adam","Joseph Young","Oregon",8,57,2,41,-123.07,44.05
+2015,"Adam","Ron Baker","Wichita State",7,36,3,56,-97.3,37.72
+2016,"Andrew L","Denzel Valentine","Michigan State",2,13,1,1,-84.49,42.73
+2016,"Andrew L","Josh Hart","Villanova",2,90,6,16,-75.17,39.9
+2016,"Andrew L","Georges Niang","Iowa State",4,86,3,17,-93.64,42.02
+2016,"Andrew L","Myles Davis","Xavier",2,11,2,32,-84.47,39.15
+2016,"Andrew L","Jaylen Brown","California",4,4,1,33,-122.2622,37.86938
+2016,"Andrew L","Diamond Stone","Maryland",5,23,3,48,-76.94,39
+2016,"Andrew L","Luke Kennard","Duke",4,31,3,49,-78.94,36
+2016,"Andrew L","Kennedy Meeks","North Carolina",1,50,6,64,-79.04,35.9
+2016,"Bryan","Buddy Hield","Oklahoma",2,126,5,2,-97.44,35.19
+2016,"Bryan","Trevon Bluiett","Xavier",2,17,2,15,-84.47,39.15
+2016,"Bryan","Sheldon McClellan","Miami",3,64,3,18,-80.28,25.72
+2016,"Bryan","Devin Williams","West Virginia",3,12,1,31,-79.98,39.65
+2016,"Bryan","Brandon Ingram","Duke",4,69,3,34,-78.94,36
+2016,"Bryan","A.J. Hammons","Purdue",5,16,1,47,-86.92,40.43
+2016,"Bryan","Kyle Wiltjer","Gonzaga",11,53,3,50,-117.4,47.67
+2016,"Bryan","Jarrod Uthoff","Iowa",7,39,2,63,-91.55495,41.66347
+2016,"Rob","Malcom Brogdon","Virginia",1,57,4,3,-78.51,38.05
+2016,"Rob","Marcus Paige","North Carolina",1,90,6,14,-79.04,35.9
+2016,"Rob","Kris Jenkins","Villanova",2,93,6,19,-75.17,39.9
+2016,"Rob","Justin Jackson","North Carolina",1,77,6,30,-79.04,35.9
+2016,"Rob","Chris Boucher","Oregon",1,45,4,35,-123.07,44.05
+2016,"Rob","Taurean Prince","Baylor",5,28,1,46,-97.11,31.55
+2016,"Rob","Ryan Anderson","Arizona",6,8,1,51,-110.95,32.23
+2016,"Rob","Jordan Loveridge","Utah",3,16,2,62,-111.84,40.76
+2016,"Alex","Perry Ellis","Kansas",1,73,4,4,-95.25,38.95
+2016,"Alex","Jacob Poeltl","Utah",3,21,2,13,-111.84,40.76
+2016,"Alex","Anthony Gill","Virginia",1,71,4,20,-78.51,38.05
+2016,"Alex","London Perrantes","Virginia",1,44,4,29,-78.51,38.05
+2016,"Alex","Angel Rodriguez","Miami",3,65,3,36,-80.28,25.72
+2016,"Alex","Yogi Ferrell","Indiana",5,63,3,45,-86.52,39.18
+2016,"Alex","Tyler Davis","Texas A&M",3,39,3,52,-96.35,30.61
+2016,"Alex","Melvin Johnson","VCU",10,35,2,61,-77.45299,37.55286
+2016,"Josh","Dillon Brooks","Oregon",1,65,4,5,-123.07,44.05
+2016,"Josh","Frank Mason III","Kansas",1,42,4,12,-95.25,38.95
+2016,"Josh","Jayseon Paige","West Virginia",3,9,1,21,-79.98,39.65
+2016,"Josh","Matt Costello","Michigan State",2,22,1,28,-84.49,42.73
+2016,"Josh","Jalen Jones","Texas A&M",3,38,3,37,-96.35,30.61
+2016,"Josh","Eron Harris","Michigan State",2,9,1,44,-84.49,42.73
+2016,"Josh","Isaiah Whitehead","Seton Hall",6,10,1,53,-74.17,40.73
+2016,"Josh","Gary Payton II","Oregon State",7,19,1,60,-123.2807,44.56118
+2016,"Andrew F","Brice Johnson","North Carolina",1,114,6,6,-79.04,35.9
+2016,"Andrew F","Tyler Ulis","Kentucky",4,37,2,11,-84.5,38.05
+2016,"Andrew F","Elgin Cook","Oregon",1,69,4,22,-123.07,44.05
+2016,"Andrew F","Joel Berry II","North Carolina",1,82,6,27,-79.04,35.9
+2016,"Andrew F","Melo Trimble","Maryland",5,60,3,38,-76.94,39
+2016,"Andrew F","Gabe York","Arizona",6,10,1,43,-110.95,32.23
+2016,"Andrew F","Vince Edwards","Purdue",5,24,1,54,-86.92,40.43
+2016,"Andrew F","Jordan Mathews","California",4,23,1,59,-122.2622,37.86938
+2016,"Adam","Jamal Murray","Kentucky",4,35,2,7,-84.5,38.05
+2016,"Adam","Grayson Allen","Duke",4,67,3,10,-78.94,36
+2016,"Adam","Devonte' Graham","Kansas",1,32,4,23,-95.25,38.95
+2016,"Adam","Tyler Dorsey","Oregon",1,41,4,26,-123.07,44.05
+2016,"Adam","Danuel House","Texas A&M",3,52,3,39,-96.35,30.61
+2016,"Adam","Edmond Sumner","Xavier",2,13,2,42,-84.47,39.15
+2016,"Adam","Monte Morris","Iowa State",4,38,3,55,-93.64,42.02
+2016,"Adam","Domantas Sabonis","Gonzaga",11,59,3,58,-117.4,47.67
+2016,"James","Wayne Selden","Kansas",1,71,4,8,-95.25,38.95
+2016,"James","Bryn Forbes","Michigan State",2,14,1,9,-84.49,42.73
+2016,"James","Isaiah Cousins","Oklahoma",2,52,5,24,-97.44,35.19
+2016,"James","Jordan Woodard","Oklahoma",2,79,5,25,-97.44,35.19
+2016,"James","Ryan Spangler","Oklahoma",2,31,5,40,-97.44,35.19
+2016,"James","Ryan Arcidiacano","Villanova",2,90,6,41,-75.17,39.9
+2016,"James","Ben Bentil","Providence",9,40,2,56,-71.44,41.85
+2016,"James","Daniel Ochefu","Villanova",2,69,6,57,-75.17,39.9
+2015,"Adam","Dylan Ennis","Villanova",1,22,2,57,-75.17,39.9
+2017,"Alex","Frank Mason III","Kansas",1,89,4,1,-95.25,38.95
+2017,"Alex","Grayson Allen","Duke",2,41,2,16,-78.94,36
+2017,"Alex","Dwayne Bacon","Florida State",3,45,2,17,-84.29,30.44
+2017,"Alex","Bonzie Colson","Notre Dame",5,45,2,32,-86.23,41.7
+2017,"Alex","Tyler Dorsey","Oregon",3,118,5,33,-123.07,44.05
+2017,"Alex","Marcus Foster","Creighton",6,15,1,48,-95.93,41.26
+2017,"Alex","Aaron Holiday","UCLA",3,25,3,49,-118.45,34.07
+2017,"Alex","Nate Mason","Minnesota",5,5,1,64,-93.228,44.97681
+2017,"Rob","Justin Jackson","North Carolina",1,117,6,2,-79.04,35.9
+2017,"Rob","Donovan Mitchell","Louisville",2,28,2,15,-85.75,38.26
+2017,"Rob","Lauri Markannen","Arizona",2,45,3,18,-110.95,32.23
+2017,"Rob","Johnathan Motley","Baylor",3,52,3,31,-97.11,31.55
+2017,"Rob","Sindarius Thornwell","South Carolina",7,118,5,34,-81.04,33.99
+2017,"Rob","Kelan Martin","Butler",4,45,3,47,-86.17,39.84
+2017,"Rob","Melo Trimble","Maryland",6,13,1,50,-76.94,39
+2017,"Rob","Manu Lecomte","Baylor",3,30,3,63,-97.11,31.55
+2017,"Adam","Josh Hart","Villanova",1,30,2,3,-75.17,39.9
+2017,"Adam","Kris Jenkins","Villanova",1,13,2,14,-75.17,39.9
+2017,"Adam","Edrice Adebayo","Kentucky",2,43,4,19,-84.5,38.05
+2017,"Adam","Isaac Hamilton","UCLA",3,41,3,30,-118.45,34.07
+2017,"Adam","Semi Ojeleye","Southern Methodist",6,24,1,35,-96.78,32.84
+2017,"Adam","Jock Landale","Saint Mary's",7,37,2,46,-122.11,37.84
+2017,"Adam","Nazareth Mitrou-Long","Iowa State",5,18,2,51,-93.64,42.02
+2017,"Adam","Frank Jackson","Duke",2,29,2,62,-78.94,36
+2017,"Andrew F","Luke Kennard","Duke",2,19,2,4,-78.94,36
+2017,"Andrew F","De'Aaron Fox","Kentucky",2,85,4,13,-84.5,38.05
+2017,"Andrew F","Devonte' Graham","Kansas",1,63,4,20,-95.25,38.95
+2017,"Andrew F","Caleb Swanigan","Purdue",4,54,3,29,-86.92,40.43
+2017,"Andrew F","Deng Adel","Louisville",2,32,2,36,-85.75,38.26
+2017,"Andrew F","Kadeem Allen","Arizona",2,30,3,45,-110.95,32.23
+2017,"Andrew F","Matt Farrell","Notre Dame",5,24,2,52,-86.23,41.7
+2017,"Andrew F","Deonte Burton","Iowa State",5,39,2,61,-93.64,42.02
+2017,"Andrew L","Malik Monk","Kentucky",1,59,4,5,-84.5,38.05
+2017,"Andrew L","Przemek Karnowski","Gonzaga",1,59,6,12,-117.4,47.67
+2017,"Andrew L","Bryce Alford","UCLA",3,35,3,21,-118.45,34.07
+2017,"Andrew L","Kennedy Meeks","North Carolina",1,73,6,28,-79.04,35.9
+2017,"Andrew L","Rawle Alkins","Arizona",2,30,3,37,-110.95,32.23
+2017,"Andrew L","VJ Beachem","Notre Dame",5,11,2,44,-86.23,41.7
+2017,"Andrew L","Jonathan Isaac","Florida State",3,25,2,53,-84.29,30.44
+2017,"Andrew L","Vince Edwards","Purdue",4,50,3,60,-86.92,40.43
+2017,"James","Allonzo Trier","Arizona",2,51,3,6,-110.95,32.23
+2017,"James","Josh Jackson","Kansas",1,65,4,11,-95.25,38.95
+2017,"James","Lonzo Ball","UCLA",3,43,3,22,-118.45,34.07
+2017,"James","TJ Leaf","UCLA",3,51,3,27,-118.45,34.07
+2017,"James","MIkal Bridges","Villanova",1,13,2,38,-75.17,39.9
+2017,"James","Amile Jefferson","Duke",2,22,2,43,-78.94,36
+2017,"James","Isaiah Briscoe","Kentucky",2,34,4,54,-84.5,38.05
+2017,"James","Donte DiVincenzo","Villanova",1,36,2,59,-75.17,39.9
+2017,"Josh","Jayson Tatum","Duke",2,33,2,7,-78.94,36
+2017,"Josh","Joel Berry II","North Carolina",1,83,6,10,-79.04,35.9
+2017,"Josh","Dillon Brooks","Oregon",3,76,5,23,-123.07,44.05
+2017,"Josh","Jordan Mathews","Gonzaga",1,72,6,26,-117.4,47.67
+2017,"Josh","KeVaughn Allen","Florida",4,59,4,39,-82.35,29.65
+2017,"Josh","Monte Morris","Iowa State",5,37,2,42,-93.64,42.02
+2017,"Josh","Jawun Evans","Oklahoma State",10,23,1,55,-97.07,36.12
+2017,"Josh","Trevon Bluiett","Xavier",11,85,4,58,-84.47,39.15
+2017,"Bryan","Nigel Williams-Goss","Gonzaga",1,100,6,8,-117.4,47.67
+2017,"Bryan","Jalen Brunson","Villanova",1,25,2,9,-75.17,39.9
+2017,"Bryan","Quentin Snider","Louisville",2,16,2,24,-85.75,38.26
+2017,"Bryan","Isaiah Hicks","North Carolina",1,54,6,25,-79.04,35.9
+2017,"Bryan","Jevon Carter","West Virginia",4,56,3,40,-79.98,39.65
+2017,"Bryan","London Perrantes","Virginia",5,30,2,41,-78.51,38.05
+2017,"Bryan","Sterling Brown","Southern Methodist",6,17,1,56,-96.78,32.84
+2017,"Bryan","Derrick Walton Jr.","Michigan",7,57,3,57,-83.75,42.26
+2018,"Andrew F","Jalen Brunson","Villanova",1,97,6,1,-75.17,39.9
+2018,"Andrew F","Moritz Wagner","Michigan",3,90,6,16,-83.75,42.26
+2018,"Andrew F","Gary Trent Jr.","Duke",2,65,4,17,-78.94,36
+2018,"Andrew F","Vince Edwards","Purdue",2,47,3,32,-86.92,40.43
+2018,"Andrew F","Wendell Clark Jr.","Duke",2,46,4,33,-78.94,36
+2018,"Andrew F","Kenny Williams","North Carolina",2,23,2,48,-79.04,35.9
+2018,"Andrew F","Udoka Azubuike","Kansas",1,41,5,49,-95.25,38.95
+2018,"Andrew F","Daxter Miles","West Virginia",5,34,3,64,-79.98,39.65
+2018,"Adam","Mikal Bridges","Villanova",1,93,6,2,-75.17,39.9
+2018,"Adam","Isaac Haas","Purdue",2,9,3,15,-86.92,40.43
+2018,"Adam","Keita Bates-Diop","Ohio State",5,52,2,18,-83.02,40.01
+2018,"Adam","Malik Newman","Kansas",1,108,5,31,-95.25,38.95
+2018,"Adam","Admiral Schofield","Tennessee",3,29,2,34,-83.92506,35.95114
+2018,"Adam","Shai Gilgeous-Alexander","Kentucky",5,61,3,47,-84.5,38.05
+2018,"Adam","Theo Pinson","North Carolina",2,19,2,50,-79.04,35.9
+2018,"Adam","Bryce Brown","Auburn",4,22,2,63,-85.49251,32.60272
+2018,"Rob","Trevon Bluiett","Xavier",1,34,2,3,-84.47,39.15
+2018,"Rob","Sviatoslav Mykhailiuk","Kansas",1,57,5,14,-95.25,38.95
+2018,"Rob","Donte DiVincenzo","Villanova",1,90,6,19,-75.17,39.9
+2018,"Rob","Grant Williams","Tennessee",3,26,2,30,-83.92506,35.95114
+2018,"Rob","Cameron Johnson","North Carolina",2,19,2,35,-79.04,35.9
+2018,"Rob","Kevin Knox","Kentucky",5,46,3,46,-84.5,38.05
+2018,"Rob","Jaylen Barford","Arkansas",7,15,1,51,-94.18,36.06
+2018,"Rob","Marcus Foster","Creighton",8,5,1,62,-95.93,41.26
+2018,"Bryan","Kyle Guy","Virginia",1,15,1,4,-78.51,38.05
+2018,"Bryan","Devon Hall","Virginia",1,2,1,13,-78.51,38.05
+2018,"Bryan","J.P. Macura","Xavier",1,47,2,20,-84.47,39.15
+2018,"Bryan","Cassius Winston","Michigan State",3,26,2,29,-84.49,42.73
+2018,"Bryan","Johnathan Williams","Gonzaga",4,36,3,36,-117.4,47.67
+2018,"Bryan","Robert Gray Jr.","Houston",6,62,2,45,-95.34693,29.72468
+2018,"Bryan","Landry Shamet","Wichita State",4,11,1,52,-97.3,37.72
+2018,"Bryan","Kelan Martin","Butler",10,54,2,61,-86.17,39.84
+2018,"Andrew L","DeVonte Graham","Kansas",1,87,5,5,-95.25,38.95
+2018,"Andrew L","DeAndre Ayton","Arizona",4,14,1,12,-110.95,32.23
+2018,"Andrew L","Muhammad-Ali Abdur-Rahkman","Michigan",3,86,6,21,-83.75,42.26
+2018,"Andrew L","Jacob Evans","Cincinnati",2,29,2,28,-84.46,39.03
+2018,"Andrew L","Nick Ward","Michigan State",3,18,2,37,-84.49,42.73
+2018,"Andrew L","Mustapha Heron","Auburn",4,28,2,44,-85.49251,32.60272
+2018,"Andrew L","Shaquille Morris","Wichita State",4,12,1,53,-97.3,37.72
+2018,"Andrew L","Jae'Sean Tate","Ohio State",5,19,2,60,-83.02,40.01
+2018,"James","Marvin Bagley III","Duke",2,82,4,6,-78.94,36
+2018,"James","Miles Bridges","Michigan State",3,40,2,11,-84.49,42.73
+2018,"James","Allonzo Trier","Arizona",4,10,1,22,-110.95,32.23
+2018,"James","Rawle Alkins","Arizona",4,8,1,27,-110.95,32.23
+2018,"James","Phil Booth","Villanova",1,37,6,38,-75.17,39.9
+2018,"James","Jaren Jackson Jr.","Michigan State",3,8,2,43,-84.49,42.73
+2018,"James","Lagerald Vick","Kansas",1,62,5,54,-95.25,38.95
+2018,"James","Eric Paschall","Villanova",1,74,6,59,-75.17,39.9
+2018,"Alex","Joel Berry","North Carolina",2,35,2,7,-79.04,35.9
+2018,"Alex","Luke Maye","North Carolina",2,23,2,10,-79.04,35.9
+2018,"Alex","Ty Jerome","Virginia",1,15,1,23,-78.51,38.05
+2018,"Alex","Keenan Evans","Texas Tech",3,73,4,26,-101.8866,33.58132
+2018,"Alex","Jevon Carter","West Virginia",5,61,3,39,-79.98,39.65
+2018,"Alex","Marcquise Reed","Clemson",5,44,3,42,-82.84641,34.6804
+2018,"Alex","Zach Norvell Jr.","Gonzaga",4,57,3,55,-117.4,47.67
+2018,"Alex","Kerem Kanter","Xavier",1,39,2,58,-84.47,39.15
+2018,"Josh","Grayson Allen","Duke",2,53,4,8,-78.94,36
+2018,"Josh","Carsen Edwards","Purdue",2,58,3,9,-86.92,40.43
+2018,"Josh","Killian Tillie","Gonzaga",4,9,3,24,-117.4,47.67
+2018,"Josh","Gary Clark","Cincinnati",2,22,2,25,-84.46,39.03
+2018,"Josh","Trae Young","Oklahoma",10,28,1,40,-97.44,35.19
+2018,"Josh","Dakota Mathias","Purdue",2,22,3,41,-86.92,40.43
+2018,"Josh","Collin Sexton","Alabama",9,42,2,56,-87.5397,33.20297
+2018,"Josh","Josh Perkins","Gonzaga",4,35,3,57,-117.4,47.67
+2019,"Rob","Zion Williamson","Duke",1,104,4,1,-78.94,36
+2019,"Rob","Zach Norvell Jr","Gonzaga",1,44,4,16,-117.4,47.67
+2019,"Rob","Tyler Herro","Kentucky",2,49,4,17,-84.5,38.05
+2019,"Rob","Tremont Waters","LSU",3,50,3,32,-91.18462,30.41424
+2019,"Rob","Nassir Little","North Carolina",1,43,3,33,-79.04,35.9
+2019,"Rob","Jordan Bowden","Tennessee",2,38,3,48,-83.92506,35.95114
+2019,"Rob","Sam Merrill","Utah State",8,10,1,49,-111.8129,41.74817
+2019,"Rob","Jordan Nwora","Louisville",7,10,1,64,-85.75,38.26
+2019,"Bryan","RJ Barrett","Duke",1,81,4,2,-78.94,36
+2019,"Bryan","PJ Washington","Kentucky",2,44,4,15,-84.5,38.05
+2019,"Bryan","Ignas Brazdeikis","Michigan",2,36,3,18,-83.75,42.26
+2019,"Bryan","Bryce Brown","Auburn",5,85,5,31,-85.49251,32.60272
+2019,"Bryan","Josh Perkins","Gonzaga",1,46,4,34,-117.4,47.67
+2019,"Bryan","Anthony Cowan Jr","Maryland",6,20,2,47,-76.94,39
+2019,"Bryan","Fletcher Magee","Wofford",7,32,2,50,-81.93362,34.96342
+2019,"Bryan","Payton Pritchard","Oregon",12,48,3,63,-123.07,44.05
+2019,"James","Grant Williams","Tennessee",2,49,3,3,-83.92506,35.95114
+2019,"James","Cam Reddish","Duke",1,33,4,14,-78.94,36
+2019,"James","Jarrett Culver","Texas Tech",3,111,6,19,-101.8866,33.58132
+2019,"James","Xavier Tillman","Michigan State",2,68,5,30,-84.49,42.73
+2019,"James","Nickeil Alexander-Walker","Virginia Tech",4,35,3,35,-80.41953,37.22311
+2019,"James","CJ Massinburg","Buffalo",6,32,2,46,-78.78118,43.00011
+2019,"James","Ja Morant","Murray State",12,45,2,51,-88.32,36.62
+2019,"James","Jordan Caroline","Nevada",7,7,1,62,-119.8183,39.54508
+2019,"Adam","Rui Hachimura","Gonzaga",1,66,4,4,-117.4,47.67
+2019,"Adam","Luke Maye","North Carolina",1,49,3,13,-79.04,35.9
+2019,"Adam","Ty Jerome","Virginia",1,99,6,20,-78.51,38.05
+2019,"Adam","Ethan Happ","Wisconsin",5,12,1,29,-89.4,43.07
+2019,"Adam","Kerry Blackshear Jr","Virginia Tech",4,52,3,36,-80.41953,37.22311
+2019,"Adam","Charles Matthews","Michigan",2,43,3,45,-83.75,42.26
+2019,"Adam","Reid Travis","Kentucky",2,47,4,52,-84.5,38.05
+2019,"Adam","Nick Ward","Michigan State",2,32,5,61,-84.49,42.73
+2019,"Andrew L","Coby White","North Carolina",1,42,3,5,-79.04,35.9
+2019,"Andrew L","Admiral Schofield","Tennessee",2,59,3,12,-83.92506,35.95114
+2019,"Andrew L","Jordan Poole","Michigan",2,37,3,21,-83.75,42.26
+2019,"Andrew L","Markus Howard","Marquette",5,26,1,28,-87.92,43.04
+2019,"Andrew L","Mfiondu Kabengele","Florida State",4,51,3,37,-84.29,30.44
+2019,"Andrew L","Armoni Brooks","Houston",3,33,3,44,-95.34693,29.72468
+2019,"Andrew L","Barry Brown Jr","Kansas State",4,5,1,53,-96.59,39.2
+2019,"Andrew L","Ryan Cline","Purdue",3,51,4,60,-86.92,40.43
+2019,"Andrew F","Cameron Johnson","North Carolina",1,49,3,6,-79.04,35.9
+2019,"Andrew F","Cassius Winston","Michigan State",2,92,5,11,-84.49,42.73
+2019,"Andrew F","Corey Davis Jr","Houston",3,61,3,22,-95.34693,29.72468
+2019,"Andrew F","Jordan Bone","Tennessee",2,40,3,27,-83.92506,35.95114
+2019,"Andrew F","Phil Booth","Villanova",6,35,2,38,-75.17,39.9
+2019,"Andrew F","Eric Paschall","Villanova",6,33,2,43,-75.17,39.9
+2019,"Andrew F","Dylan Windler","Belmont",11,35,1,54,-86.79465,36.13227
+2019,"Andrew F","Jarron Cumberland","Cincinnati",7,18,1,59,-84.46,39.03
+2019,"Alex","Kyle Guy","Virginia",1,86,6,7,-78.51,38.05
+2019,"Alex","De'Andre Hunter","Virginia",1,95,6,10,-78.51,38.05
+2019,"Alex","Keldon Johnson","Kentucky",2,55,4,23,-84.5,38.05
+2019,"Alex","Tre Jones","Duke",1,42,4,26,-78.94,36
+2019,"Alex","Matt McQuaid","Michigan State",2,46,5,39,-84.49,42.73
+2019,"Alex","Davide Moretti","Texas Tech",3,68,6,42,-101.8866,33.58132
+2019,"Alex","Ahmed Hill","Virginia Tech",4,39,3,55,-80.41953,37.22311
+2019,"Alex","Zavier Simpson","Michigan",2,13,3,58,-83.75,42.26
+2019,"Josh","Brandon Clarke","Gonzaga",1,83,4,8,-117.4,47.67
+2019,"Josh","Carsen Edwards","Purdue",3,139,4,9,-86.92,40.43
+2019,"Josh","Quinndary Weatherspoon","Mississippi St.",5,27,1,24,-88.79404,33.46135
+2019,"Josh","Dedric Lawson","Kansas",4,50,2,25,-95.25,38.95
+2019,"Josh","Marial Shayok","Iowa State",6,23,1,40,-93.64,42.02
+2019,"Josh","Naz Reid","LSU",3,37,3,41,-91.18462,30.41424
+2019,"Josh","Jared Harper","Auburn",5,81,5,56,-85.49251,32.60272
+2019,"Josh","Caleb Martin","Nevada",7,19,1,57,-119.8183,39.54508
