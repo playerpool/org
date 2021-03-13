@@ -97,12 +97,12 @@ var data = d3.csv("data/pp.csv", function(d) {
         });
 
     svg.append("g")
-        .attr("class", "axis") // assigning an axis attribute (optional)
+        .attr("class", "x axis") // assigning an axis attribute (optional)
         .attr("transform", "translate(" + margin.left + "," + (h + margin.top) + ")")
         .call(xaxis);
 
     svg.append("g")
-        .attr("class", "axis") // assigning an axis attribute (optional)
+        .attr("class", "y axis") // assigning an axis attribute (optional)
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(yaxis);
 
@@ -114,12 +114,12 @@ var data = d3.csv("data/pp.csv", function(d) {
             var color = d3.select(this).attr("color")
 
             dataset = data.filter(function(d) { 
-            return d.person == person; 
+                return d.person == person; 
             });
 
             yscale.domain([0, d3.max(dataset, function(d) {
-                    return d.totalpoints;
-            })])
+                return d.totalpoints;
+            })]) 
 
             xscale.domain([d3.min(dataset, function(d) {
                 return d.year;
