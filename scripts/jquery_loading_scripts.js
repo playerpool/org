@@ -489,6 +489,20 @@ $("#drafter2").click(function(){
     $('.chart').load("words/bestdrafter2.html");
 });
     
+$("#roads1").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").show();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/balance.html");
+});
+    
 /* ---------------------------------------- IN SITU ---------------------------------------- */    
 
 $("#columbia").click(function(){    
