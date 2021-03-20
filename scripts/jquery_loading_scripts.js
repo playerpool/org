@@ -400,6 +400,20 @@ $("#preview19").click(function(){
     $(".chart_desc").empty();
     $('.chart').load("words/preview19.html");
 });
+    
+$("#preview21").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#feature_side").hide();
+    $("#preview_side").show();
+    $("#shaq_side").hide();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/preview21.html");
+});
    
 /* ---------------------------------------- Features ---------------------------------------- */      
     
