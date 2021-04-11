@@ -39,7 +39,12 @@ var data = d3.csv("data/cumrank.csv", function(d) {
             .text("Overall rank");
 
         var x = d3.scaleLinear()
-            .domain([2009, 2019])
+            .domain([d3.min(dataset, function(d) {
+                    return d.year;
+                }), 
+                d3.max(dataset, function(d) {
+                    return d.year;
+                })])
             .range([margin.left, width + margin.left]);
 
         var y = d3.scaleLinear()
@@ -116,7 +121,12 @@ var data = d3.csv("data/cumrank.csv", function(d) {
                     return d.person == person; 
                     });
 
-                x.domain([2009, 2019]);
+                x.domain([d3.min(dataset, function(d) {
+                        return d.year;
+                    }), 
+                    d3.max(dataset, function(d) {
+                        return d.year;
+                    })]);
                 y.domain([8, 1]);
 
                 var duration = 1000;
