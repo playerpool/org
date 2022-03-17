@@ -313,7 +313,20 @@ $("#sheet19").click(function(){
     $(".chart_title").empty();
     $(".chart_desc").empty();
     $("#iframe").attr('src', "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJ_913JtwMstyKD0Kjlol1vjMNKFceqA94tM9gwDeASJE89ck81h1uzuiSzm57tx8F_RQ-XBklvXhz/pubhtml?widget=true&amp;headers=false");
-});  
+});
+    
+$("#sheet21").click(function(){
+    $("#iframe").show();
+    $(".chart").empty();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").hide();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $("#iframe").attr('src', "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWjim_6VDoXT-e_JEpw8ZKMckjYbbsxpMA3lpW6-DECVdWcizE6MBxWT_NOa_5gYWlF4U0tzaRuIzh/pubhtml?gid=216228750&amp;single=true&amp;widget=true&amp;headers=false");
+}); 
 
 /* ---------------------------------------- PREVIEWS ---------------------------------------- */    
 
@@ -515,6 +528,34 @@ $("#roads1").click(function(){
     $(".chart_title").empty();
     $(".chart_desc").empty();
     $('.chart').load("words/balance.html");
+});
+    
+$("#roads2").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").show();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/roads2.html");
+});
+    
+$("#kazaam").click(function(){
+    $("#iframe").empty();
+    $(".chart").empty();
+    $("#iframe").hide();
+    $("#alt_side").hide();
+    $("#preview_side").hide();
+    $("#feature_side").hide();
+    $("#shaq_side").show();
+    $("#side").hide();
+    $(".chart_title").empty();
+    $(".chart_desc").empty();
+    $('.chart').load("words/KAZAAM.html");
 });
     
 /* ---------------------------------------- IN SITU ---------------------------------------- */    
