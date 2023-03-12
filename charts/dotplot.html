@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet21">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet22">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../words/preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='../words/feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='../words/bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../travel/columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='../travel/tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+            <div id="side" class="side">
+                <h3>Data filter</h3>
+                <button class="button Adam" color=#003f5c id="Adam">Adam</button>
+                <button class="button Alex" color=#2f4b7c id="Alex">Dr. Katz</button>
+                <button class="button Farach" color=#665191 id="Andrew F">Farach</button>
+                <button class="button Lloyd" color=#a05195 id="Andrew L">Lloyd</button>
+                <button class="button Bryan" color=#d45087 id="Bryan">Bryan</button>
+                <button class="button James" color=#f95d6a id="James">James</button>
+                <button class="button Josh" color=#ff7c43 id="Josh">Josh</button>
+                <button class="button Rob" color=#ffa600 id="Rob">Rob</button>
+            </div>    
+            <div class="main">
+                <div class="chart_title">Individual scoring</div>
+                <div class="chart_desc">Dotplot of total tournament scoring by player. Mouse over data points for more information. </div>
+                <div class="chart"></div>
+                <script>var dataset;
+
+                        var margin = {top: 30, right: 50, bottom: 50, left: 150},
+                            w = 900 - margin.left - margin.right,
+                            h = 500 - margin.top - margin.bottom,
+                            pad = 10;
+
+                        var div = d3.select(".main")
+                            .append("div")
+                            .attr("class","tooltip")				
+                            .style("opacity", 0);
+
+                        var data = d3.csv("../data/pp.csv", function(d) {
+                            return {
+                                year: +d.year,
+                                person: d.person,
+                                totalpoints: +d.totalpoints,
+                                player: d.player,
+                                school: d.school,
+                                seed: +d.seed,
+                                gamesplayed: +d.gamesplayed,
+                                pick: +d.overallpick
+                            };
+                        }).then(function(data) {
+                            dataset = data.filter(function(d) { 
+                                return d.person == "Adam"; 
+                            });
+
+                            var yscale = d3.scaleLinear()
+                                .domain([0, d3.max(dataset, function(d) {
+                                    return d.totalpoints;
+                                })])
+                                .rangeRound([h, 0]);
+
+                            var xscale = d3.scaleLinear()
+                                .domain([d3.min(dataset, function(d) {
+                                    return d.year;
+                                }),
+                                 d3.max(dataset, function(d) {
+                                    return d.year;
+                                })])
+                                .rangeRound([pad, w-2*pad]);
+
+                            var xaxis = d3.axisBottom()
+                                .scale(xscale)
+                                .tickFormat(d3.format("d"));
+
+                            var yaxis = d3.axisLeft()
+                                .scale(yscale);
+
+                            var svg = d3.select(".chart")
+                                .append("svg")
+                                .attr("width", w + margin.left + margin.right)
+                                .attr("height", h + margin.top + margin.bottom);
+
+                            svg.append("text")
+                                .attr("class", "ylabel")
+                                .attr("x", 0)
+                                .attr("y", (h + margin.top + margin.bottom)/2)
+                                .style("text-anchor", "right")
+                                .text("Total points");
+
+                            var circles = svg.selectAll("circle")
+                                .data(dataset)
+                                .enter()
+                                .append("circle")
+                                .attr("r", h/90)
+                                .attr("cx", function(d) { 
+                                    return xscale(d.year) + margin.left;
+                                })
+                                .attr("cy", function(d) {
+                                    return yscale(d.totalpoints) + margin.top;
+                                })
+                                .attr("fill", "#003f5c")
+                                .on("mouseover", function(d) {		
+                                    div.transition()		
+                                        .duration(200)		
+                                        .style("opacity", 1)
+                                        .style("font-size", "16px");		
+                                    div.html(d.player + "<br/>" + d.school + " - " + d.seed + "<br/>" + "Pts: " + d.totalpoints + ", Gms: " + d.gamesplayed+ "<br/>" + "Pick #" + d.pick)	
+                                        .style("left", (d3.event.pageX + 20) + "px")		
+                                        .style("top", (d3.event.pageY - 70) + "px");	
+                                    })					
+                                .on("mouseout", function(d) {		
+                                    div.transition()		
+                                        .duration(500)		
+                                        .style("opacity", 0);	
+                                });
+
+                            svg.append("g")
+                                .attr("class", "x axis") // assigning an axis attribute (optional)
+                                .attr("transform", "translate(" + margin.left + "," + (h + margin.top) + ")")
+                                .call(xaxis);
+
+                            svg.append("g")
+                                .attr("class", "y axis") // assigning an axis attribute (optional)
+                                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                                .call(yaxis);
+
+                            d3.selectAll("button")
+                                .on("click", function() {
+
+                                    var person = d3.select(this).attr("id")
+
+                                    var color = d3.select(this).attr("color")
+
+                                    dataset = data.filter(function(d) { 
+                                        return d.person == person; 
+                                    });
+
+                                    yscale.domain([0, d3.max(dataset, function(d) {
+                                        return d.totalpoints;
+                                    })]) 
+
+                                    xscale.domain([d3.min(dataset, function(d) {
+                                        return d.year;
+                                    }),
+                                     d3.max(dataset, function(d) {
+                                        return d.year;
+                                    })])
+
+                                    var duration = 500;
+
+                                    svg.selectAll("circle")
+                                        .data(dataset)
+                                        .transition()
+                                        .delay(function(d,i) {
+                                            return i*dataset.length/15;
+                                        })
+                                        .duration(duration)
+                                        .attr("cx", function(d) { 
+                                            return xscale(d.year) + margin.left;
+                                        })
+                                        .attr("cy", function(d) {
+                                            return yscale(d.totalpoints) + margin.top;
+                                        })
+                                        .attr("fill", color);
+
+                                    svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                    svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+                            });
+                        });</script>
+            </div>
+        </div> 
+    </body>
+    <div class='footer'>Portions of this analysis were previously published in <i>The New Yorker</i> and <i>Bowhunter Magazine.</i></div>
+</html>

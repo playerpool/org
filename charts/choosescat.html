@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet21">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet22">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../words/preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='../words/feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='../words/bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../travel/columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='../travel/tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+            <div id="alt_side" class="side">
+                <h3>Data filter</h3>
+                <p id="yaxisp">Y axis</p>
+                  <button id="selecty" class="Total points">Points</button>
+                  <button id="selecty" class="Games">Games</button>
+                  <button id="selecty" class="Overall pick">Pick</button>
+                  <button id="selecty" class="Seed">Seed</button>
+                  <button id="selecty" class="Year">Year</button> 
+                <p id="xaxisp">X axis</p>            
+                  <button id="selectx" class="Total points">Points</button>
+                  <button id="selectx" class="Games">Games</button>
+                  <button id="selectx" class="Overall pick">Pick</button>
+                  <button id="selectx" class="Seed">Seed</button>
+                  <button id="selectx" class="Year">Year</button>
+            </div>    
+            <div class="main">
+                <div class="chart_title">Choose your own scatter</div>
+                <div class="chart_desc">Our data as a group. Use the data filter to select variables for comparison. Hover over data points for additional information. Note: for display purposes, a jitter has been applied to all variables except points.</div>
+                <div class="chart"></div>
+                <script>var dataset;
+
+                        var duration = 750;
+
+                        var jitternum = 10;
+
+                        function getRandomIntInclusive(min, max) {
+                          min = Math.ceil(min);
+                          max = Math.floor(max);
+                          return Math.floor(Math.random() * (max - min + 1)) + min;
+                        }
+
+                        var margin = {top: 30, right: 50, bottom: 40, left: 150},
+                            w = 900 - margin.left - margin.right,
+                            h = 520 - margin.top - margin.bottom,
+                            pad = 10;
+
+                        var yvar = ["Total points", "Games", "Overall pick", "Seed", "Year"];
+                        var xvar = ["Overall pick", "Total points", "Games", "Seed", "Year"];
+
+                        var div = d3.select("body")
+                            .append("div")
+                            .attr("class", "tooltip")				
+                            .style("opacity", 0);
+
+                        var data = d3.csv("../data/pp.csv", function(d) {
+                            return {
+                                year: +d.year,
+                                person: d.person,
+                                totalpoints: +d.totalpoints,
+                                player: d.player,
+                                school: d.school,
+                                seed: +d.seed,
+                                gamesplayed: +d.gamesplayed,
+                                pick: +d.overallpick
+                            };
+                        }).then(function(data) {
+                            dataset = data;
+
+                            var yscale = d3.scaleLinear()
+                                .domain([0, d3.max(dataset, function(d) {
+                                    return d.totalpoints;
+                                })])
+                                .rangeRound([h, 0]);
+
+                            var xscale = d3.scaleLinear()
+                                .domain([d3.min(dataset, function(d) {
+                                    return d.pick;
+                                }),
+                                 d3.max(dataset, function(d) {
+                                    return d.pick;
+                                })])
+                                .rangeRound([pad, w-2*pad]);
+
+                            var xaxis = d3.axisBottom()
+                                .scale(xscale)
+                                .ticks(14);
+
+                            var yaxis = d3.axisLeft()
+                                .scale(yscale)
+                                .ticks(14);
+
+                            var svg = d3.select(".chart")
+                                .append("svg")
+                                    .attr("width", w + margin.left + margin.right)
+                                    .attr("height", h + margin.top + margin.bottom + 50);
+
+                            svg.append("text")
+                                .attr("class", "xlabel")
+                                .attr("x", (w + margin.left + margin.right + pad*2)/2)
+                                .attr("y", h + margin.top + margin.bottom + pad*2)
+                                .style("text-anchor", "left")
+                                .text("Overall pick");
+
+                            svg.append("text")
+                                .attr("class", "ylabel")
+                                .attr("x", 0)
+                                .attr("y", (h + margin.top + margin.bottom + pad*2) / 2)
+                                .style("text-anchor", "left")
+                                .text("Total points");
+
+                            var circles = svg.selectAll("circle")
+                                .data(dataset)
+                                .enter()
+                                .append("circle")
+                                .attr("r", h/90)
+                                .attr("cx", function(d) { 
+                                    return xscale(d.pick) + margin.left;
+                                })
+                                .attr("cy", function(d) {
+                                    return yscale(d.totalpoints) + margin.top;
+                                })
+                                .attr("fill", "#8E8D8A")
+                                .attr("stroke", "#8E8D8A")
+                                .attr("fill-opacity", 0.4)
+                                .attr("stroke-width", 1.5)
+                                .on("mouseover", function(d) {		
+                                    div.transition()		
+                                        .duration(200)		
+                                        .style("opacity", 1);		
+                                    div	.html(d.player + "<br/>" + d.school + " - " + d.seed + "<br/>" + d.person + ", Gms: " + d.gamesplayed+ "<br/>" + "Pts: "+ d.totalpoints + " Pick #" + d.pick)	
+                                        .style("left", (d3.event.pageX) + "px")		
+                                        .style("top", (d3.event.pageY - 28) + "px");	
+                                    })					
+                                .on("mouseout", function(d) {		
+                                    div.transition()		
+                                        .duration(500)		
+                                        .style("opacity", 0);	
+                                });
+
+                            svg.append("g")
+                                .attr("class", "x axis")
+                                .attr("transform", "translate(" + margin.left + "," + (h + margin.top) + ")")
+                                .call(xaxis);
+
+                            svg.append("g")
+                                .attr("class", "y axis")
+                                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                                .call(yaxis);
+
+                            var inputElems_y = d3.selectAll("#selecty");
+                            var inputElems_x = d3.selectAll("#selectx");
+
+                            inputElems_y.on("click", inputChange_y);
+                            inputElems_x.on("click", inputChange_x);
+
+                            function inputChange_y() {
+                                var inputValue = d3.select(this).attr("class");
+
+                                if      (inputValue === "Total points" ) { changey_points();  }
+                                else if (inputValue === "Games") { changey_games(); }
+                                else if (inputValue === "Overall pick") { changey_pick(); }
+                                else if (inputValue === "Seed") { changey_seed(); }
+                                else if (inputValue === "Year") { changey_year(); };
+                            };
+
+                            function changey_points () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                yaxis.ticks(14);
+
+                                yscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.totalpoints;
+                                    })]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cy", function(d) {
+                                            return yscale(d.totalpoints) + margin.top;
+                                        });
+
+                                svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+
+                                svg.select(".ylabel")
+                                    .text("Total points");
+                            };
+
+                            function changey_games () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                yaxis.ticks(6);
+
+                                yscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.gamesplayed;
+                                    })+1]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cy", function(d) {
+                                            if (d.gamesplayed === 0 ) {return yscale(d.gamesplayed) + margin.top - getRandomIntInclusive(0,jitternum);  }
+                                            else {return yscale(d.gamesplayed) + margin.top - getRandomIntInclusive(-1*jitternum,jitternum);}
+                                        });
+
+                                svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+
+                                svg.select(".ylabel")
+                                    .text("Games played");
+                            }; 
+
+                            function changey_pick () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                yaxis.ticks(14);
+
+                                yscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.pick;
+                                    })+5]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cy", function(d) {
+                                            return yscale(d.pick) + margin.top  - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+
+                                svg.select(".ylabel")
+                                    .text("Overall pick");
+                            };
+
+                            function changey_seed () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                yaxis.ticks(10);
+
+                                yscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.seed;
+                                    })+1]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cy", function(d) {
+                                            return yscale(d.seed) + margin.top - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+
+                                svg.select(".ylabel")
+                                    .text("Seed");
+                            };
+
+                            function changey_year () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                yaxis.ticks(10);
+
+                                yscale.domain([d3.min(dataset, function(d) {
+                                            return d.year;
+                                    })-1, d3.max(dataset, function(d) {
+                                            return d.year;
+                                    })+1]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cy", function(d) {
+                                            return yscale(d.year) + margin.top - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis);
+
+                                svg.select(".ylabel")
+                                    .text("Year");
+                            }; 
+
+                            function inputChange_x() {
+                                var inputValue = d3.select(this).attr("class");
+
+                                if      (inputValue === "Total points" ) { changex_points();  }
+                                else if (inputValue === "Games") { changex_games(); }
+                                else if (inputValue === "Overall pick") { changex_pick(); }
+                                else if (inputValue === "Seed") { changex_seed(); }
+                                else if (inputValue === "Year") { changex_year(); };
+                            };
+
+                            function changex_points () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                xaxis.ticks(14);
+
+                                xscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.totalpoints;
+                                    })]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cx", function(d) {
+                                            return xscale(d.totalpoints) + margin.left;
+                                        });
+
+                                svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                svg.select(".xlabel")
+                                    .text("Total points");
+                            };
+
+                            function changex_games () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                xaxis.ticks(6);
+
+                                xscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.gamesplayed;
+                                    })]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cx", function(d) {
+                                            if (d.gamesplayed === 0 ) {return xscale(d.gamesplayed) + margin.left + getRandomIntInclusive(0,jitternum);  }
+                                            else {return xscale(d.gamesplayed) + margin.left - getRandomIntInclusive(-1*jitternum,jitternum);}
+                                        });
+
+                                svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                svg.select(".xlabel")
+                                    .text("Games played");
+                            }; 
+
+                            function changex_pick () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                xaxis.ticks(14);
+
+                                xscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.pick;
+                                    })]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cx", function(d) {
+                                            return xscale(d.pick) + margin.left - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                svg.select(".xlabel")
+                                    .text("Overall pick");
+                            };
+
+                            function changex_seed () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                xaxis.ticks(10);
+
+                                xscale.domain([0, d3.max(dataset, function(d) {
+                                            return d.seed;
+                                    })]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cx", function(d) {
+                                            return xscale(d.seed) + margin.left - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                svg.select(".xlabel")
+                                    .text("Seed");
+                            };
+
+                            function changex_year () {
+                                var dur = duration;
+
+                                var circ = svg.selectAll("circle")
+                                        .data(dataset);
+
+                                xaxis.ticks(10);
+
+                                xscale.domain([d3.min(dataset, function(d) {
+                                            return d.year;
+                                    })-1, d3.max(dataset, function(d) {
+                                            return d.year;
+                                    })+1]);
+
+                                circ.transition()
+                                        .duration(dur)
+                                        .attr("cx", function(d) {
+                                            return xscale(d.year) + margin.left - getRandomIntInclusive(-1*jitternum,jitternum);
+                                        });
+
+                                svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                svg.select(".xlabel")
+                                    .text("Year");
+                            }; 
+                        });</script>
+            </div>
+        </div> 
+    </body>
+    <div class='footer'>Portions of this analysis were previously published in <i>The New Yorker</i> and <i>Bowhunter Magazine.</i></div>
+</html>

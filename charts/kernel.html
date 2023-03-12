@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet21">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet22">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../words/preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='../words/feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='../words/bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../travel/columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='../travel/tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+            <div id="side" class="side">
+                <h3>Data filter</h3>
+                <button class="button Adam" color=#003f5c id="Adam">Adam</button>
+                <button class="button Alex" color=#2f4b7c id="Alex">Dr. Katz</button>
+                <button class="button Farach" color=#665191 id="Andrew F">Farach</button>
+                <button class="button Lloyd" color=#a05195 id="Andrew L">Lloyd</button>
+                <button class="button Bryan" color=#d45087 id="Bryan">Bryan</button>
+                <button class="button James" color=#f95d6a id="James">James</button>
+                <button class="button Josh" color=#ff7c43 id="Josh">Josh</button>
+                <button class="button Rob" color=#ffa600 id="Rob">Rob</button>
+            </div>    
+            <div class="main">
+                <div class="chart_title">Player Scoring Distribution</div>
+                <div class="chart_desc">What we have here is a kernel density plot of the points scored by each your players. I was able to remove the y axis line, but now there's a shadown on the area fill. Still in over my head here.</div>
+                <div class="chart"></div>
+                <script>var dataset;
+                    // set the dimensions and margins of the graph
+                    var margin = {top: 30, right: 50, bottom: 60, left: 100},
+                        width = 900 - margin.left - margin.right,
+                        height = 420 - margin.top - margin.bottom,
+                        pad = 10;
+
+                    // append the svg object to the body of the page
+                    var svg = d3.select(".chart")
+                      .append("svg")
+                        .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                      .append("g")
+                        .attr("transform",
+                              "translate(" + margin.left + "," + margin.top + ")");
+
+                    // get the data
+                    var data = d3.csv("../data/pp.csv", function(d) {
+
+                      return {
+                                year: +d.year,
+                                person: d.person,
+                                totalpoints: +d.totalpoints,
+                                player: d.player,
+                                school: d.school,
+                                seed: +d.seed,
+                                gamesplayed: +d.gamesplayed,
+                                pick: +d.overallpick
+                            };
+                        }).then(function(data) {
+                            dataset = data.filter(function(d) { 
+                                return d.person == "Adam"; 
+                            });
+
+                      var x = d3.scaleLinear()
+                        .domain([0, 141])
+                        .range([0, width]);
+
+                      var y = d3.scaleLinear()
+                                .range([height, 0])
+                                .domain([0, 0.025]);
+
+                        var xaxis = d3.axisBottom()
+                                .scale(x);
+
+                        var yaxis = d3.axisLeft()
+                                .scale(y)
+                                .ticks(0);
+
+                      // Compute kernel density estimation for the first group
+                      var kde = kernelDensityEstimator(kernelEpanechnikov(15), x.ticks(140))
+                      var density =  kde( data
+                        .filter(function(d){ return d.person == "Adam"})
+                        .map(function(d){  return +d.totalpoints; })
+                      )
+
+                      // Plot the curve
+                      var area = d3.area()
+                              .x(function(d) { return x(d[0]); })
+                              .y0(function() { return y.range()[0]})
+                              .y1(function(d) { return y(d[1]); });
+                      var curve = svg
+                        .append('g')
+                        .append("path")
+                          .attr("class", "mypath")
+                          .datum(density)
+                          .attr("fill", "#003f5c")
+                          .attr("opacity", ".8")
+                          .attr("stroke", "#003f5c")
+                          .attr("stroke-width", 3)
+                          .attr("stroke-linejoin", "round")
+                          .attr("d", area);
+
+                        svg.append("g")
+                                .attr("class", "x axis") // assigning an axis attribute (optional)
+                                .attr("transform", "translate(0," + (height) + ")")
+                                .call(xaxis);
+                        
+                        svg.append("text")
+                                .attr("class", "xlabel")
+                                .attr("x", width/2 -100)
+                                .attr("y", height+50)
+                                .attr("text-anchor", "center")
+                                .text("Player tournament points");
+
+                        svg.append("g")
+                            .attr("class", "y axis") // assigning an axis attribute (optional)
+                            .attr("transform", "translate(0,0)")
+                            .style("color", "#EAE7DC")
+                            .call(yaxis);
+
+                      d3.selectAll("button")
+                                .on("click", function() {
+
+                                    var person = d3.select(this).attr("id")
+
+                                    var color = d3.select(this).attr("color")
+
+                                    x.domain([0, 141]);
+                                    y.domain([0, 0.025]);
+
+                                    kde = kernelDensityEstimator(kernelEpanechnikov(15), x.ticks(140))
+                                    var density = kde(data.filter(function(d) { 
+                                    return d.person == person; 
+                                    })
+                                    .map(function(d){return +d.totalpoints; }))
+
+                        var duration = 1000;
+
+                        var area = d3.area()
+                            .x(function(d) { return x(d[0]); })
+                              .y0(function() { return y.range()[0]})
+                              .y1(function(d) { return y(d[1]); });
+
+                          curve
+                          .datum(density)
+                          .transition()
+                          .duration(duration)
+                          .attr("d", area)
+                          .attr("stroke", color)
+                          .attr("fill", color);
+
+                          svg.select(".x.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(xaxis);
+
+                                    svg.select(".y.axis")
+                                        .transition()
+                                        .duration(duration)
+                                        .call(yaxis); 
+                           }); 
+
+
+                    });
+
+                    // Function to compute density
+                    function kernelDensityEstimator(kernel, X) {
+                      return function(V) {
+                        return X.map(function(x) {
+                          return [x, d3.mean(V, function(v) { return kernel(x - v); })];
+                        });
+                      };
+                    }
+                    function kernelEpanechnikov(k) {
+                      return function(v) {
+                        return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+                      };
+                    }
+                    </script>
+            </div>
+        </div> 
+    </body>
+    <div class='footer'>The bandwidth of the kernel is unknown to me. Code makes it seem like 75% but that can't be correct.</i></div>
+</html>
