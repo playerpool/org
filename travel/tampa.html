@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet19">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet19">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='../charts/kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='../charts/cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='../charts/statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='../charts/sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='../charts/choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='../charts/byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='../charts/seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../words/preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='../words/feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='../words/bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+            <div class="main"><head>
+                    <style>
+                        /* The grid: Four equal columns that floats next to each other */
+                        .columnz {
+                          float: left;
+                          width: 20%;
+                          padding: 10px;
+                        }
+
+                        /* Style the images inside the grid */
+                        .columnz img {
+                          opacity: 0.8;
+                          cursor: pointer;
+                        }
+
+                        .columnz img:hover {
+                          opacity: 1;
+                        }
+
+                        /* Clear floats after the columns */
+                        .rowz:after {
+                          content: "";
+                          display: table;
+                          clear: both;
+                        }
+
+                        /* The expanding image container (positioning is needed to position the close button and the text) */
+                        .containerz {
+                          position: relative;
+                          display: none;
+                        }
+
+                        /* Expanding image text */
+                        #imgtext {
+                          position: absolute;
+                          top: 15px;
+                          left: 62%;
+                          color: darkblue;
+                          font-size: 20px;
+                        }
+
+                        /* Closable button inside the image */
+                        .closebtn {
+                          position: absolute;
+                          top: 5px;
+                          left: 15px;
+                          color: aliceblue;
+                          font-size: 85px;
+                          cursor: pointer;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div>
+                        <h3><strike>2020 - Tampa, Florida</strike></h3>
+                        <hr>
+                        <h3>A special message from the office of the Comptroller</h3>
+                        <p>March 12, 2020, 11:10 AM EST</p>
+                        <p>Dear Player Pool Participants,</p>
+
+                        <p>In light of the growing public-health concern about coronavirus (COVID-19), the office of the Comptroller would like to share an update with you about our continuing actions and decisions in the face of this ever-changing, fluid situation.</p>
+
+                        <p>Yesterday evening, Dr. Zahm and I held a lengthy teleconference with Mark Emmert, President of the National Collegiate Athletic Association (NCAA), which was both informative and productive. Mark reassured us that the NCAA is taking this threat very seriously and, as always, has the best interests of the student-athletes in mind. This conversation coming after Adam Silver's decision to suspend the NBA season, Mark did admit that nothing is off the table right now -- including the complete cancellation of the NCAA Tournament. After impressing upon Mark the seriousness of this matter for the Player Pool, we came away reassured that we would be among the first to know if such a decision is made.</p>
+
+                        <p>As a world-renowned statistician, epidemiologist, molecular biologist, researcher, scientist and citizen of the world, Dr. Zahm has made the bold decision to travel into the heart of the outbreak in Northern Italy where he is now currently working on finding a cure. We wish him the best and cannot say enough how proud we are of him.</p>
+
+                        <p>As of now, we are planning to run the Player Pool just as in previous years with a draft order video to come this Selection Sunday after the brackets are announced and a full feature preview article to arrive in your inboxes on the evening of Wednesday the 18th of March. Dr. Zahm also has a couple surprises in store for you that he was been working on diligently for the last calendar year. I know you'll be as excited about these as I am.</p>
+
+                        <p>After very careful consideration and in support of our community, public health, wellness, as well as our wives, girlfriends and children, The Player Pool has made the difficult decision to cancel Player Pool Trip #2 to Tampa the weekend of March 20-22. The Player Pool is not taking this action in response to any known or suspected cases of COVID-19 in our community but we are seeing both public and private organizations and universities respond to COVID-19 in a variety of ways, and at the core of the responses is the notion of “social distancing” — techniques used to slow the spread of a virus or disease.</p>
+
+                        <p>We are proud to have made this decision even before the NBA and NCAA turned to such drastic measures of emptying stadiums and suspending seasons. As the news cycle is moving so quickly, I urge each of you to remind your significant others of the proactive stance the Player Pool has taken from day one. We do regret to inform you that the Player Pool cannot provide travel reimbursement at this time. Please contact your travel provider's website for such queries.</p>
+
+                        <p>If you have any further questions or concerns please reach out to me directly or reply-all to this email. While these events are certainly concerning, I am confident the Player Pool will rise to this historic occasion and provide a show for the ages in the coming weeks. On a positive note, this could make for a fascinating (albeit small sample size) case-study in the effect of crowds on upsets.</p>
+
+                        <p>In health,</p>
+
+                        <p>The Comptroller</p>
+
+                        <hr>
+
+                        <!-- The grid: four columns -->
+                        <div class="rowz">
+                          <div class="columnz">
+                            <img src="../images/tampa/covid.png" alt="Docking simulation predicts a root mean square deviation of just 0.7 angstrom between the 2019-nCoV S-protein receptor binding domain and human ACE2" style="width:50%" onclick="myFunction(this);">
+                          </div>
+                          <div class="columnz">
+                            <img src="../images/tampa/ship.jpg" alt="Alternative destinations are chosen: Iran and South Korea from the safety of the open ocean" style="width:50%" onclick="myFunction(this);">
+                          </div>
+                          <div class="columnz">
+                            <img src="../images/tampa/Lloyd.jpg" alt="The Comptroller travels prepared" style="width:60%" onclick="myFunction(this);">
+                          </div>
+                          <div class="columnz">
+                            <img src="../images/tampa/escort.jpg" alt="The boys' escort along the Iranian coast"  style="width:100%" onclick="myFunction(this);">
+                          </div>
+                          <div class="columnz">
+                            <img src="../images/tampa/korea.jpg" alt="Ashore at Gangneung" style="width:100%" onclick="myFunction(this);">
+                          </div>
+                        </div>
+
+                        <!-- The expanding image container -->
+                        <div class="containerz">
+                          <!-- Close the image -->
+                          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+                          <!-- Expanded image -->
+                          <img id="expandedImg" style="width:60%">
+
+                          <!-- Image text -->
+                          <div id="imgtext"></div>
+                        </div>
+
+                    </div>
+
+                    <script type="text/javascript">
+                        function myFunction(imgs) {
+                          // Get the expanded image
+                          var expandImg = document.getElementById("expandedImg");
+                          // Get the image text
+                          var imgText = document.getElementById("imgtext");
+                          // Use the same src in the expanded image as the image being clicked on from the grid
+                          expandImg.src = imgs.src;
+                          // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                          imgText.innerHTML = imgs.alt;
+                          // Show the container element (hidden with CSS)
+                          expandImg.parentElement.style.display = "block";
+                        }
+                    </script>
+                </body></div>
+        </div> 
+    </body>
+    <div class='footer'>Portions of this analysis were previously published in <i>The New Yorker</i> and <i>Bowhunter Magazine.</i></div>
+</html>
