@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet21">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet22">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='../charts/kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='../charts/cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='../charts/statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='../charts/sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='../charts/choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='../charts/byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='../charts/seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../travel/columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='../travel/tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+            <div id="shaq_side" class="side">
+            <h3>StatShaq</h3>
+                <button onclick="document.location='bestdrafter.html'" class="button" id="drafter1">Drafter 1</button>
+                <button onclick="document.location='bestdrafter2.html'" class="button" id="drafter2">Drafter 2</button>
+                <button onclick="document.location='roads1.html'" class="button" id="roads1">Roads 1</button>
+            </div> 
+            <div class="main"><h1>Who's the best drafter?</h1>
+        
+        <h2>Part I - Draft Skill</h2>
+        
+        <h4><img src="../images/shaq.jpg" alt="Steel" style="width:75px;heigh99px;">&nbsp by Shaquille 'Shaq' O'Neal</h4>
+        
+        <p>March 2020<br/>Springfield, MA</p>
+        
+        <hr>
+        
+        <p>An interesting tidbit about Josh's dominance in the Player Pool thus far is that he's yet to draft from the first position. Does this suggest the first pick doesn't offer any advantage, or worse, handicaps the contestant? I suspect that draft position indeed influences your final standings in some way. If so, your skill of selecting players isn't necessarily reflected when the orchestra strikes up "One Shining Moment." We have eleven years of spreadsheet data, so let's take a look.</p>
+        
+        <p>Below are the point totals for picks 1-64 in the spreadsheet era. Not surprisingly, there's a drop in point output as players are taken off the board. We can use this data to calculate an expected point total for each draft pick via locally estimated scatterplot smoothing:</p>
+        <img src="../images/statshack1.jpg" alt="Points vs Pick - Loess" style="width:700px;height:500px;">
+        
+        <p>We now have scoring outputs (red fit line) for all 64 draft picks and can use these to predict scoring for each of the eight draft slots:</p>
+                
+        <table>
+                  <tr>
+                    <th>Draft slot</th>
+                    <th>Expected pts</th>
+                  </tr>
+                  <tr>
+                    <td id="centered">1</td>
+                    <td>361</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">2</td>
+                    <td>351</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">3</td>
+                    <td>344</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">4</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">5</td>
+                    <td>341</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">6</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">7</td>
+                    <td>342</td>
+                  </tr>
+                  <tr>
+                    <td id="centered">8</td>
+                    <td>343</td>
+                  </tr>
+        </table>
+        <p>Drafting first has provided about a 10 point edge over slot two, which in turn has a 7-10 point advantage over slots 3-8. I wondered whether this result fits with other horseshoe/snake draft results. A quick search came up with <a href="https://www.reddit.com/r/fantasyfootball/comments/93i8uz/which_draft_pick_is_best_a_numerical_analysis/">a single analysis</a>. In a given fantasy football league, each lineup is guaranteed to play in the same number of games, so I'd argue more draft skill is required in the Player Pool, as you need to gauge team success much more stringently. This difference may explain why Player Pool slots 3-8 are essentially equal, whereas football slots continue to degrade as the good running backs are picked.</p>
+        
+        <p>You're all familiar with your respective Player Pool cumulative points ranking, but how does your performance compare to the expected point total based on your draft position?</p>
+                
+        <table>
+                  <tr>
+                    <th></th>
+                    <th>Points rank</th>
+                    <th>Expected</th>
+                    <th>Actual</th>
+                    <th>Difference</th>
+                    <th>Diff % (skill)</th>
+                    <th>Skill rank</th>
+                  </tr>
+                  <tr>
+                    <td>Adam</td>
+                    <td>5</td>
+                    <td>3794</td>
+                    <td>3780</td>
+                    <td>-14</td>
+                    <td>-0.37</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Alex</td>
+                    <td>4</td>
+                    <td>3810</td>
+                    <td>3834</td>
+                    <td>24</td>
+                    <td>0.63</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Farach</td>
+                    <td>2</td>
+                    <td>3818</td>
+                    <td>3864</td>
+                    <td>46</td>
+                    <td>1.20</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Lloyd</td>
+                    <td>1</td>
+                    <td>3809</td>
+                    <td>3893</td>
+                    <td>84</td>
+                    <td>2.21</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Bryan</td>
+                    <td>6</td>
+                    <td>3785</td>
+                    <td>3732</td>
+                    <td>-53</td>
+                    <td>-1.40</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>James</td>
+                    <td>7</td>
+                    <td>3793</td>
+                    <td>3674</td>
+                    <td>-119</td>
+                    <td>-3.14</td>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td>Josh</td>
+                    <td>2</td>
+                    <td>3784</td>
+                    <td>3864</td>
+                    <td>80</td>
+                    <td>2.11</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Rob</td>
+                    <td>8</td>
+                    <td>3835</td>
+                    <td>3658</td>
+                    <td>-177</td>
+                    <td>-4.62</td>
+                    <td>8</td>
+                  </tr>
+        </table>
+        <p>I’ve scaled the gross difference by the original expectation to define skill. As you can see, draft skill rankings track nearly perfectly with your cumulative points rankings. Eleven years of Lloyd’s hat draws have produced a well-balanced distribution of draft slots, so draft position hasn’t drastically affected your cumulative point totals. The more years you play, the closer you’ll get to equivalent point expectations.
+        
+        <p>For now, we can say that Josh has drafted better than Farach, despite them having identical point totals.</p>
+            </div>
+        </div> 
+    </body>
+    <div class='footer'>Portions of this analysis were previously published in <i>The New Yorker</i> and <i>Bowhunter Magazine.</i></div>
+</html>

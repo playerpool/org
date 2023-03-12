@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../images/favicon.jpg"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|PT+Serif|Forum&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style></style>
+    </head>
+    <title>Player Pool dot org</title>
+    <body>
+        <!-- Header -->
+        <div class="header">
+          <img src="../images/logo.svg" height="100" id="logo" onclick="window.location.href='https://playerpool.org'">
+          <h1>NCAA Player Pool</h1>
+        </div>
+
+        <!-- Navigation Bars -->
+        <div class="navbar1">
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Xu9t-mPDanNmIp1VONDjg0AiUvYxGP7dKM7YMerSZf0/edit?usp=sharing'" class="buttontop">The Spreadsheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1wLDPDsA9sQtbKF-9byHxvXoi-bvaCEpcrriL4d-yUt4/edit?usp=sharing'" class="buttontop" align="right">Draft Sheet</button>
+            <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1Lds86mE11bDtiS-5lsH0WCY03OSfU_JcQ_xkqeoL-vk/edit?usp=sharing'" class="buttontop" align="right">Cheat Sheet</button>
+        </div>
+        <div class="navbar2">
+                <div class="dropdown">    
+                    <button class="dropbtn">Sheets</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../sheets/record.html'" id="record_book">Record book</button>
+                        <hr>
+                        <button onclick="document.location='../sheets/2009.html'" id="sheet09">2009</button>
+                        <button onclick="document.location='../sheets/2010.html'" id="sheet10">2010</button>
+                        <button onclick="document.location='../sheets/2011.html'" id="sheet11">2011</button>
+                        <button onclick="document.location='../sheets/2012.html'" id="sheet12">2012</button>
+                        <button onclick="document.location='../sheets/2013.html'" id="sheet13">2013</button>
+                        <button onclick="document.location='../sheets/2014.html'" id="sheet14">2014</button>
+                        <button onclick="document.location='../sheets/2015.html'" id="sheet15">2015</button>
+                        <button onclick="document.location='../sheets/2016.html'" id="sheet16">2016</button>
+                        <button onclick="document.location='../sheets/2017.html'" id="sheet17">2017</button>
+                        <button onclick="document.location='../sheets/2018.html'" id="sheet18">2018</button>
+                        <button onclick="document.location='../sheets/2019.html'" id="sheet19">2019</button>
+                        <button onclick="document.location='../sheets/2021.html'" id="sheet21">2021</button>
+                        <button onclick="document.location='../sheets/2022.html'" id="sheet22">2022</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Charts</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/dotplot.html'" id="dotplot">Individual scoring</button>
+                        <button onclick="document.location='../charts/kernel.html'" id="kernel">Scoring density</button>
+                        <button onclick="document.location='../charts/cumrank.html'" id="cumrank">Cumulative rank</button>
+                        <button onclick="document.location='../charts/statscatter.html'" id="statscatter">Points vs. draft pick</button>
+                        <button onclick="document.location='../charts/sankey.html'" id="sankey">Draft pick vs. finish</button>
+                        <button onclick="document.location='../charts/choosescat.html'" id="statchoose">Stats scatter</button>
+                        <button onclick="document.location='../charts/byround.html'" id="pointsbyround">Points by round</button>
+                        <button onclick="document.location='../charts/seedbar.html'" id="seedspicked">Picks by seed</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Tables</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../tables/table1.html'" id="table1">Tournament level</button>
+                        <button onclick="document.location='../tables/table2.html'" id="table2">Round level</button>
+                        <button onclick="document.location='../talbes/table3.html'" id="table3">Best of the Rest</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Maps</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../charts/homecourts.html'" id="map1">Homecourts</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Words</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='preview14.html'" id="preview14menu">Previews</button>
+                        <button onclick="document.location='feature18.html'" id="feature18menu">Features</button>
+                        <button onclick="document.location='bestdrafter.html'" id="statshaqmenu">StatShaq</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">In situ</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../travel/columbia.html'" id="columbia">Columbia, SC</button>
+                        <button onclick="document.location='../travel/tampa.html'" id="tampa">Tampa, FL</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Squads</button>
+                    <div class="dropdown-content">
+                        <button onclick="document.location='../squads/adam.html'">2023</button>
+                    </div>
+                </div>
+            </div>
+        <!-- The flexible grid (content) -->
+        <div class="row"> 
+             <div id="preview_side" class="side">
+            <h3>Previews</h3>
+                <button class="buttonside" onclick="document.location='preview14.html'" id="preview14">2014</button>
+                <button class="buttonside" onclick="document.location='preview15.html'" id="preview15">2015</button>
+                <button class="buttonside" onclick="document.location='preview16.html'" id="preview16">2016</button>
+                <button class="buttonside" onclick="document.location='preview17.html'" id="preview17">2017</button>
+                <button class="buttonside" onclick="document.location='preview19.html'" id="preview19">2019</button>
+            </div>   
+            <div class="main"><h1>2015 Player Pool Preview</h1>
+            <h3>by The Comptroller</h3>
+            <hr>
+            <p>Player Pool Participants,</p>
+            <p>For those of us that have watched a lot of college basketball this year, we know that it hasn't always been the prettiest of seasons. Scoring is down (second lowest points per game since 1952) and the pace is slow (fewest possessions per game probably since the 1940's). See the article below for full details. I'm sure Josh is loving this.</p>
+            <a href="http://www.nytimes.com/2015/03/19/sports/ncaabasketball/beauty-of-ncaa-tournament-may-not-hide-games-warts.html?action=click&contentCollection=College%20Basketball&module=RelatedCoverage&region=Marginalia&pgtype=article">College Basketball Is an Attraction. Is It Pretty? Well ...</a>
+            <p>But look at it this way. Last year was supposed to be the glory days of college basketball (Julius Randle, Andrew Wiggins, Joel Embiid). Great games. Epic mid-season clashes. And then the tournament came and a seven seed defeated an eight in the final and the Player Pool finished with the whimper of only having two players left on Championship Monday (Julius Randle and MOP Shabazz Napier). Defending champ UCONN failed to even make the tournament this year. So I, at least, think there is still hope for an exciting tournament to finish off the year. You just never know as they say.</p>
+            <p>Adam and I dusted off an old email showing who won Player Pool I back in 2007 (which means that we did it the first year of medical school). The winner was Alex that year though I can't find record of who he had that year when Florida won its second championship in a row by defeating Mike Conley, Greg Oden and the Ohio State Buckeyes. Dave Goldberg participated that year (does anyone know where he is now?) and Adam and Josh did not. These have been updated into the record book.</p>
+            <p>Here is a full list of champions:</p>
+            <p>2007: Alex<br>2008: Farach<br>2009: Bryan<br>2010: Josh<br>2011: Rob<br>2012: Bryan*<br>2013: Josh*<br>2014: Lloyd</p>
+            <p>*two time champions</p>
+            <p>It's easy to look at the obvious fact that James and Adam are now the only people without championships but there are other noticeable shortcomings in the group. For example, Josh is the only one to have yet to complete residency (and will hold that distinction for another three years it sounds like). Adam and Josh are the only ones still single (i.e. pressure is on for a March Madness themed bachelor party when you tie the knot). Alex is somehow still a Knicks fan and is moving to Washington DC (this counts as a shortcoming because Bryan and James snatched him from NYC in a last second Calipari-esque recruiting maneuver that the NCAA would definitely sweep under the rug). And I'm not even writing this behind a curtain in the OR anymore. Since my fellowship is so easy, I just do it right in plain sight and no one even questions what I'm doing with my time.</p>
+            <p>I have to admit I don't even know who a good percentage of the players drafted are this year so take my analysis with a grain of salt but....</p>
+            <p>My own team.... as we know, having the #1 overall pick is no advantage really. In fact, according to my research, not once has someone with the #1 pick won the player pool. Not good odds for me. I made the mistake of drafting two players not on Kentucky in Kentucky's region so they'll be knocked out. Unless Ohio State miraculously gets three games and Russell scores thirty in each I don't like my chances.</p>
+            <p>Josh... let's just hope Josh doesn't become the first third time champ. I probably say the same thing every year. How many times will Josh cheer when Harrison scores only then realize that it was his brother? Can anyone tell them apart? I can't.</p>
+            <p>Farach... A first round pick who scores under ten points a game and who might be the #1 overall pick in the draft. That sums up the strangeness of this college basketball season. Has anyone watched Jerian Grant? he can get so hot when he's on. I think he's the key here.</p>
+            <p>Bryan... Riding the Calipari Wagon with guard play. The other Harrison and frosh Devin Booker, who I'm still bitter about choosing Big Blue over Michigan on the recruiting trail. Booker looks like an ashen ghost to me. Who's with me? Who are some of the other guys on this team? Karnowski? This is some east coast bias on display not knowing him. Two guys on Iowa State? Seth Tuttle is a baller though.</p>
+            <p>Alex... choosing a UVA player with the first pick might be good in real life but I question doing it in the player pool. Alex will need Niang to redeem himself after last year's injury in the tournament. Dekker may average 13 a game for Wisconsin but in my experience he disappears in the tournament when they either score by three or Kaminsky (and Dekker is an awful shooter).</p>
+            <p>Rob... Terry Rozier averages 17 a game?? Good for him. Didn't Louisville get rid of some rapist this season? And Duke did too. That was another theme of the season. Henton seems like a low round pick who can surprise and Quinn Cook's been great all year from deep as much as Rob probably doesn't want to admit it. I see Marcus Paige as the key here. Is he an All American or an under achiever? Just can't get a handle on this guy.</p>
+            <p>James... Will he break his title less streak from the 7 hole? He'll be riding Wildcats to do so. With his top two picks from Arizona he will need them to advance. We all know it's dangerous business drafting from your favorite team so he'll be doubly disappointed if steady and experienced Nova gets bounced early.</p>
+            <p>Adam... I like a lot of what Adam has going here. First of all, Joseph Young on Oregon is so explosive. If I was an NBA team I would get on him fast. Wiltzjer on Gonzaga is out to prove he's better than anyone on Kentucky and can score from anywhere. Forget Bronson Koenig's scoring average. Since Traevon Jackson went out with an injury this guy has been amazing. He's confident. He can shoot. He can drive. He's of Native American ancestry so it's really hard to criticize him without sounding racist. He's been scoring like crazy of late. He's going to be a big pick up is my prediction.</p>
+            <p>I think Adam is going to do it this year and win from the 8 slot. We'll see.</p>
+            <p>Are we doing this for money? Paypal me if so. Or if there's some more modern way of doing it let me know. Feel free to pay me for last year at the same time, assholes. Actually I probably still have some of the cash stashed away from when I collected and never paid people when I was bitter I lost.</p>
+            <p>Thanks again to Adam who has made the Player Pool vastly better with the record keeping.</p>
+            <p>Sincerely,<br>Andrew</p>
+            </div>
+        </div> 
+    </body>
+    <div class='footer'>Portions of this analysis were previously published in <i>The New Yorker</i> and <i>Bowhunter Magazine.</i></div>
+</html>
