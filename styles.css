@@ -476,10 +476,22 @@ td:first-child {
     padding-left: 5%;
 }
 
-.player img {
-    width: 120px;
-    border: 1px solid #8E8D8A;
-    border-radius: 2px;
+.player{
+    display: flex;
 }
 
+.playerz{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.player img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #8E8D8A;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: 50% 10%;
+}
 
