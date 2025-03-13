@@ -1,7 +1,7 @@
 person,picks,seed
-Adam,37,1
-Adam,24,2
-Adam,21,3
+Adam,39,1
+Adam,26,2
+Adam,25,3
 Adam,10,4
 Adam,7,5
 Adam,5,6
@@ -11,11 +11,11 @@ Adam,0,9
 Adam,0,10
 Adam,1,11
 Adam,0,12
-Alex,35,1
-Alex,21,2
+Alex,36,1
+Alex,24,2
 Alex,18,3
-Alex,13,4
-Alex,10,5
+Alex,16,4
+Alex,11,5
 Alex,7,6
 Alex,4,7
 Alex,1,8
@@ -23,35 +23,35 @@ Alex,0,9
 Alex,3,10
 Alex,0,11
 Alex,0,12
-Andrew F,22,1
-Andrew F,26,2
-Andrew F,20,3
-Andrew F,17,4
-Andrew F,13,5
+Andrew F,23,1
+Andrew F,28,2
+Andrew F,22,3
+Andrew F,18,4
+Andrew F,14,5
 Andrew F,6,6
 Andrew F,4,7
 Andrew F,1,8
-Andrew F,1,9
+Andrew F,2,9
 Andrew F,0,10
 Andrew F,2,11
 Andrew F,0,12
-Andrew L,29,1
+Andrew L,33,1
 Andrew L,22,2
 Andrew L,22,3
-Andrew L,18,4
+Andrew L,20,4
 Andrew L,13,5
 Andrew L,3,6
-Andrew L,0,7
+Andrew L,2,7
 Andrew L,2,8
 Andrew L,1,9
 Andrew L,2,10
 Andrew L,0,11
 Andrew L,0,12
-Bryan,35,1
-Bryan,24,2
-Bryan,17,3
-Bryan,10,4
-Bryan,11,5
+Bryan,39,1
+Bryan,25,2
+Bryan,18,3
+Bryan,11,4
+Bryan,12,5
 Bryan,9,6
 Bryan,3,7
 Bryan,0,8
@@ -59,11 +59,11 @@ Bryan,0,9
 Bryan,1,10
 Bryan,1,11
 Bryan,1,12
-James,39,1
-James,27,2
-James,19,3
-James,11,4
-James,2,5
+James,40,1
+James,30,2
+James,20,3
+James,12,4
+James,4,5
 James,5,6
 James,3,7
 James,1,8
@@ -71,39 +71,39 @@ James,3,9
 James,0,10
 James,0,11
 James,2,12
-Josh,15,1
-Josh,30,2
-Josh,18,3
+Josh,17,1
+Josh,31,2
+Josh,20,3
 Josh,24,4
-Josh,7,5
+Josh,9,5
 Josh,6,6
 Josh,2,7
 Josh,2,8
 Josh,2,9
 Josh,3,10
 Josh,3,11
-Josh,0,12
-Rob,22,1
-Rob,29,2
-Rob,16,3
-Rob,12,4
+Josh,1,12
+Rob,24,1
+Rob,31,2
+Rob,18,3
+Rob,13,4
 Rob,13,5
-Rob,7,6
+Rob,8,6
 Rob,5,7
 Rob,6,8
 Rob,1,9
 Rob,1,10
 Rob,0,11
 Rob,0,12
-Total,234,1
-Total,203,2
-Total,151,3
-Total,115,4
-Total,76,5
-Total,48,6
-Total,25,7
+Total,251,1
+Total,217,2
+Total,163,3
+Total,124,4
+Total,83,5
+Total,49,6
+Total,27,7
 Total,16,8
-Total,8,9
+Total,9,9
 Total,10,10
 Total,7,11
-Total,3,12
+Total,4,12

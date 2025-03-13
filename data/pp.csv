@@ -831,67 +831,131 @@ year,person,cumrank,player,school,seed,seasonppg,round1,round2,round3,round4,rou
 2022,Andrew F,,Jules Bernard,UCLA,4,12.8,10,14,16,,,,40,3,13.3,6,41,8,East,Pac-12,830,UCLA,-118.45,34.07
 2022,Andrew F,,AJ Griffin,Duke,2,10.4,10,7,11,18,6,,52,5,10.4,7,56,8,West,ACC,831,Duke,-78.940002,36
 2022,Andrew F,,Alfonso Plummer,Illinois,4,14.8,15,8,,,,,23,2,11.5,8,57,8,South,Big Ten,832,Illinois,-88.239998,40.099998
-2023,Alex,,Brandon Miller,Alabama,1,19.5,0,19,9,,,,28,3,9.3000002,1,1,1,,,,Alabama,-87.539696,33.202972
-2023,Alex,,Trayce Jackson-Davis,Indiana,4,20.799999,24,23,,,,,47,2,23.5,2,16,1,,,,Indiana,-86.519997,39.18
-2023,Alex,,Kam Jones,Marquette,2,15,19,14,,,,,33,2,16.5,3,17,1,,,,Marquette,-87.919998,43.040001
-2023,Alex,,Mike Miles Jr.,TCU,6,17.299999,26,24,,,,,50,2,25,4,32,1,,,,TCU,-97.370003,32.709999
-2023,Alex,,Santiago Vescovi,Tennessee,4,12.9,3,14,9,,,,26,3,8.6999998,5,33,1,,,,Tennessee,-83.925056,35.951138
-2023,Alex,,Braden Smith,Purdue,1,10,7,,,,,,7,1,7,6,48,1,,,,Purdue,-86.919998,40.43
-2023,Alex,,Tramon Mark,Houston,1,9.6999998,4,26,14,,,,44,3,14.7,7,49,1,,,,Houston,-95.346931,29.724676
-2023,Alex,,Wade Taylor IV,Texas A&M,8,16.6,10,,,,,,10,1,10,8,64,1,,,,Texas A&M,-96.349998,30.610001
-2023,Josh,,Jalen Wilson,Kansas,1,20.1,20,20,,,,,40,2,20,1,2,2,,,,Kansas,-95.25,38.950001
-2023,Josh,,Keyonte George,Baylor,3,15.8,9,7,,,,,16,2,8,2,15,2,,,,Baylor,-97.110001,31.549999
-2023,Josh,,Markquis Nowell,Kansas St.,3,16.799999,17,27,20,30,,,94,4,23.5,3,18,2,,,,Kansas St.,-96.589996,39.200001
-2023,Josh,,Sir'Jabari Rice,Texas,2,12.6,23,13,16,15,,,67,4,16.799999,4,31,2,,,,Texas,-97.730003,30.280001
-2023,Josh,,Kendric Davis,Memphis,8,21.799999,16,,,,,,16,1,16,5,34,2,,,,Memphis,-90.050583,35.138123
-2023,Josh,,Tyrese Hunter,Texas,2,10.2,10,6,19,9,,,44,4,11,6,47,2,,,,Texas,-97.730003,30.280001
-2023,Josh,,Jeremy Roach,Duke,5,13.3,23,13,,,,,36,2,18,7,50,2,,,,Duke,-78.940002,36
-2023,Josh,,Armaan Franklin,Virginia,4,12.5,8,,,,,,8,1,8,8,63,2,,,,Virginia,-78.510002,38.049999
-2023,Adam,,Zach Edey,Purdue,1,22.1,21,,,,,,21,1,21,1,3,3,,,,Purdue,-86.919998,40.43
-2023,Adam,,Oumar Ballo,Arizona,2,14.2,13,,,,,,13,1,13,2,14,3,,,,Arizona,-110.95,32.23
-2023,Adam,,Julian Strawther,Gonzaga,3,15.1,28,10,16,11,,,65,4,16.299999,3,19,3,,,,Gonzaga,-117.4,47.669998
-2023,Adam,,Jamal Shead,Houston,1,10.2,13,10,15,,,,38,3,12.7,4,30,3,,,,Houston,-95.346931,29.724676
-2023,Adam,,J'Wan Roberts,Houston,1,10.3,11,6,2,,,,19,3,6.3000002,5,35,3,,,,Houston,-95.346931,29.724676
-2023,Adam,,Jahvon Quinerly,Alabama,1,7.6999998,13,22,10,,,,45,3,15,6,46,3,,,,Alabama,-87.539696,33.202972
-2023,Adam,,DeAndre Williams,Memphis,8,17.9,13,,,,,,13,1,13,7,51,3,,,,Memphis,-90.050583,35.138123
-2023,Adam,,Kevin McCullar Jr.,Kansas,1,10.7,10,13,,,,,23,2,11.5,8,62,3,,,,Kansas,-95.25,38.950001
-2023,Rob,,Azuolas Tubelis,Arizona,2,19.799999,22,,,,,,22,1,22,1,4,4,,,,Arizona,-110.95,32.23
-2023,Rob,,Marcus Carr,Texas,2,15.9,17,10,18,17,,,62,4,15.5,2,13,4,,,,Texas,-97.730003,30.280001
-2023,Rob,,Fletcher Loyer,Purdue,1,11.1,13,,,,,,13,1,13,3,20,4,,,,Purdue,-86.919998,40.43
-2023,Rob,,K.J. Adams Jr.,Kansas,1,10.4,13,14,,,,,27,2,13.5,4,29,4,,,,Kansas,-95.25,38.950001
-2023,Rob,,Olivier-Maence Prosper,Marquette,2,12.4,11,16,,,,,27,2,13.5,5,36,4,,,,Marquette,-87.919998,43.040001
-2023,Rob,,Isaiah Wong,Miami,5,16.200001,5,27,20,14,15,,81,5,16.200001,6,45,4,,,,Miami,-80.279999,25.719999
-2023,Rob,,Aidan Mahaney,Saint Mary's,5,14.5,0,9,,,,,9,2,4.5,7,52,4,,,,Saint Mary's,-122.11,37.84
-2023,Rob,,Jahmir Young,Maryland,8,16.1,10,12,,,,,22,2,11,8,61,4,,,,Maryland,-76.940002,39
-2023,Bryan,,Marcus Sasser,Houston,1,17.1,5,22,14,,,,41,3,13.7,1,5,5,,,,Houston,-95.346931,29.724676
-2023,Bryan,,Mark Sears,Alabama,1,12.8,15,6,16,,,,37,3,12.3,2,12,5,,,,Alabama,-87.539696,33.202972
-2023,Bryan,,Tyler Kolek,Marquette,2,13.3,8,7,,,,,15,2,7.5,3,21,5,,,,Marquette,-87.919998,43.040001
-2023,Bryan,,Noah Clowney,Alabama,1,10.2,10,5,3,,,,18,3,6,4,28,5,,,,Alabama,-87.539696,33.202972
-2023,Bryan,,Colby Jones,Xavier,3,15.2,12,10,12,,,,34,3,11.3,5,37,5,,,,Xavier,-84.470001,39.150002
-2023,Bryan,,Logan Johnson,Saint Mary's,5,14.7,12,9,,,,,21,2,10.5,6,44,5,,,,Saint Mary's,-122.11,37.84
-2023,Bryan,,Josiah-Jordan James,Tennessee,4,10.2,8,7,10,,,,25,3,8.3000002,7,53,5,,,,Tennessee,-83.925056,35.951138
-2023,Bryan,,Trey Aleander,Creighton,6,13.6,9,17,19,8,,,53,4,13.3,8,60,5,,,,Creighton,-95.93,41.259998
-2023,Andrew F,,Jaime Jaquez Jr.,UCLA,2,17.299999,17,24,29,,,,70,3,23.299999,1,6,6,,,,UCLA,-118.45,34.07
-2023,Andrew F,,Tyger Campbell,UCLA,2,13.6,7,12,14,,,,33,3,11,2,11,6,,,,UCLA,-118.45,34.07
-2023,Andrew F,,Souley Boum,Xavier,3,16.5,17,14,12,,,,43,3,14.3,3,22,6,,,,Xavier,-84.470001,39.150002
-2023,Andrew F,,Jordan Hawkins,Connecticut,4,16.4,13,12,24,20,13,16,98,6,16.299999,4,27,6,,,,Connecticut,-72.676193,41.768265
-2023,Andrew F,,Oscar Tshiebwe,Kentucky,6,16.5,8,25,,,,,33,2,16.5,5,38,6,,,,Kentucky,-84.5,38.049999
-2023,Andrew F,,Ryan Kalkbrenner,Creighton,6,15.4,31,10,22,17,,,80,4,20,6,43,6,,,,Creighton,-95.93,41.259998
-2023,Andrew F,,Adam Kunkel,Xavier,3,10.2,8,15,21,,,,44,3,14.7,7,54,6,,,,Xavier,-84.470001,39.150002
-2023,Andrew F,,Ricky Council IV,Arkansas,8,15.9,18,21,17,,,,56,3,18.700001,8,59,6,,,,Arkansas,-94.18,36.060001
-2023,James,,Drew Timme,Gonzaga,3,20.9,21,28,36,12,,,97,4,24.299999,1,7,7,,,,Gonzaga,-117.4,47.669998
-2023,James,,Keyontae Johnson,Kansas St.,3,17.700001,18,13,22,9,,,62,4,15.5,2,10,7,,,,Kansas St.,-96.589996,39.200001
-2023,James,,Adam Flagler,Baylor,3,15.5,18,15,,,,,33,2,16.5,3,23,7,,,,Baylor,-97.110001,31.549999
-2023,James,,LJ Cryer,Baylor,3,14.5,15,30,,,,,45,2,22.5,4,26,7,,,,Baylor,-97.110001,31.549999
-2023,James,,Anton Watson,Gonzaga,3,11.3,14,9,8,6,,,37,4,9.3000002,5,39,7,,,,Gonzaga,-117.4,47.669998
-2023,James,,Jack Nunge,Xavier,3,14.1,10,18,15,,,,43,3,14.3,6,42,7,,,,Xavier,-84.470001,39.150002
-2023,James,,Kris Murray,Iowa,8,20.4,15,,,,,,15,1,15,7,55,7,,,,Iowa,-91.554955,41.663471
-2023,James,,Tucker DeVries,Drake,12,19,3,,,,,,3,1,3,8,58,7,,,,Drake,-93.650002,41.599998
-2023,Andrew L,,Gradey Dick,Kansas,1,14.1,19,7,,,,,26,2,13,1,8,8,,,,Kansas,-95.25,38.950001
-2023,Andrew L,,Kyle Filipowski,Duke,5,15.4,6,13,,,,,19,2,9.5,2,9,8,,,,Duke,-78.940002,36
-2023,Andrew L,,Jarace Walker,Houston,1,11,16,7,16,,,,39,3,13,3,24,8,,,,Houston,-95.346931,29.724676
-2023,Andrew L,,Adama Sanogo,Connecticut,4,16.799999,28,24,18,10,21,17,118,6,19.700001,4,25,8,,,,Connecticut,-72.676193,41.768265
-2023,Andrew L,,Amari Bailey,UCLA,2,10.6,17,14,19,,,,50,3,16.700001,5,40,8,,,,UCLA,-118.45,34.07
-2023,Andrew L,,Rasir Bolton,Gonzaga,3,10.4,6,17,0,6,,,29,4,7.3000002,6,41,8,,,,Gonzaga,-117.4,47.669998
-2023,Andrew L,,Matt Bradley,San Diego St.,5,12.9,17,10,6,2,21,8,64,6,10.7,7,56,8,,,,San Diego St.,-117.07,32.77
-2023,Andrew L,,Tyrese Proctor,Duke,5,9.3000002,7,16,,,,,23,2,11.5,8,57,8,,,,Duke,-78.940002,36
+2023,Alex,,Brandon Miller,Alabama,1,19.5,0,19,9,,,,28,3,9.3000002,1,1,1,,,833,Alabama,-87.539696,33.202972
+2023,Alex,,Trayce Jackson-Davis,Indiana,4,20.799999,24,23,,,,,47,2,23.5,2,16,1,,,834,Indiana,-86.519997,39.18
+2023,Alex,,Kam Jones,Marquette,2,15,19,14,,,,,33,2,16.5,3,17,1,,,835,Marquette,-87.919998,43.040001
+2023,Alex,,Mike Miles Jr.,TCU,6,17.299999,26,24,,,,,50,2,25,4,32,1,,,836,TCU,-97.370003,32.709999
+2023,Alex,,Santiago Vescovi,Tennessee,4,12.9,3,14,9,,,,26,3,8.6999998,5,33,1,,,837,Tennessee,-83.925056,35.951138
+2023,Alex,,Braden Smith,Purdue,1,10,7,,,,,,7,1,7,6,48,1,,,838,Purdue,-86.919998,40.43
+2023,Alex,,Tramon Mark,Houston,1,9.6999998,4,26,14,,,,44,3,14.7,7,49,1,,,839,Houston,-95.346931,29.724676
+2023,Alex,,Wade Taylor IV,Texas A&M,8,16.6,10,,,,,,10,1,10,8,64,1,,,840,Texas A&M,-96.349998,30.610001
+2023,Josh,,Jalen Wilson,Kansas,1,20.1,20,20,,,,,40,2,20,1,2,2,,,841,Kansas,-95.25,38.950001
+2023,Josh,,Keyonte George,Baylor,3,15.8,9,7,,,,,16,2,8,2,15,2,,,842,Baylor,-97.110001,31.549999
+2023,Josh,,Markquis Nowell,Kansas St.,3,16.799999,17,27,20,30,,,94,4,23.5,3,18,2,,,843,Kansas St.,-96.589996,39.200001
+2023,Josh,,Sir'Jabari Rice,Texas,2,12.6,23,13,16,15,,,67,4,16.799999,4,31,2,,,844,Texas,-97.730003,30.280001
+2023,Josh,,Kendric Davis,Memphis,8,21.799999,16,,,,,,16,1,16,5,34,2,,,845,Memphis,-90.050583,35.138123
+2023,Josh,,Tyrese Hunter,Texas,2,10.2,10,6,19,9,,,44,4,11,6,47,2,,,846,Texas,-97.730003,30.280001
+2023,Josh,,Jeremy Roach,Duke,5,13.3,23,13,,,,,36,2,18,7,50,2,,,847,Duke,-78.940002,36
+2023,Josh,,Armaan Franklin,Virginia,4,12.5,8,,,,,,8,1,8,8,63,2,,,848,Virginia,-78.510002,38.049999
+2023,Adam,,Zach Edey,Purdue,1,22.1,21,,,,,,21,1,21,1,3,3,,,849,Purdue,-86.919998,40.43
+2023,Adam,,Oumar Ballo,Arizona,2,14.2,13,,,,,,13,1,13,2,14,3,,,850,Arizona,-110.95,32.23
+2023,Adam,,Julian Strawther,Gonzaga,3,15.1,28,10,16,11,,,65,4,16.299999,3,19,3,,,851,Gonzaga,-117.4,47.669998
+2023,Adam,,Jamal Shead,Houston,1,10.2,13,10,15,,,,38,3,12.7,4,30,3,,,852,Houston,-95.346931,29.724676
+2023,Adam,,J'Wan Roberts,Houston,1,10.3,11,6,2,,,,19,3,6.3000002,5,35,3,,,853,Houston,-95.346931,29.724676
+2023,Adam,,Jahvon Quinerly,Alabama,1,7.6999998,13,22,10,,,,45,3,15,6,46,3,,,854,Alabama,-87.539696,33.202972
+2023,Adam,,DeAndre Williams,Memphis,8,17.9,13,,,,,,13,1,13,7,51,3,,,855,Memphis,-90.050583,35.138123
+2023,Adam,,Kevin McCullar Jr.,Kansas,1,10.7,10,13,,,,,23,2,11.5,8,62,3,,,856,Kansas,-95.25,38.950001
+2023,Rob,,Azuolas Tubelis,Arizona,2,19.799999,22,,,,,,22,1,22,1,4,4,,,857,Arizona,-110.95,32.23
+2023,Rob,,Marcus Carr,Texas,2,15.9,17,10,18,17,,,62,4,15.5,2,13,4,,,858,Texas,-97.730003,30.280001
+2023,Rob,,Fletcher Loyer,Purdue,1,11.1,13,,,,,,13,1,13,3,20,4,,,859,Purdue,-86.919998,40.43
+2023,Rob,,K.J. Adams Jr.,Kansas,1,10.4,13,14,,,,,27,2,13.5,4,29,4,,,860,Kansas,-95.25,38.950001
+2023,Rob,,Olivier-Maence Prosper,Marquette,2,12.4,11,16,,,,,27,2,13.5,5,36,4,,,861,Marquette,-87.919998,43.040001
+2023,Rob,,Isaiah Wong,Miami,5,16.200001,5,27,20,14,15,,81,5,16.200001,6,45,4,,,862,Miami,-80.279999,25.719999
+2023,Rob,,Aidan Mahaney,Saint Mary's,5,14.5,0,9,,,,,9,2,4.5,7,52,4,,,863,Saint Mary's,-122.11,37.84
+2023,Rob,,Jahmir Young,Maryland,8,16.1,10,12,,,,,22,2,11,8,61,4,,,864,Maryland,-76.940002,39
+2023,Bryan,,Marcus Sasser,Houston,1,17.1,5,22,14,,,,41,3,13.7,1,5,5,,,865,Houston,-95.346931,29.724676
+2023,Bryan,,Mark Sears,Alabama,1,12.8,15,6,16,,,,37,3,12.3,2,12,5,,,866,Alabama,-87.539696,33.202972
+2023,Bryan,,Tyler Kolek,Marquette,2,13.3,8,7,,,,,15,2,7.5,3,21,5,,,867,Marquette,-87.919998,43.040001
+2023,Bryan,,Noah Clowney,Alabama,1,10.2,10,5,3,,,,18,3,6,4,28,5,,,868,Alabama,-87.539696,33.202972
+2023,Bryan,,Colby Jones,Xavier,3,15.2,12,10,12,,,,34,3,11.3,5,37,5,,,869,Xavier,-84.470001,39.150002
+2023,Bryan,,Logan Johnson,Saint Mary's,5,14.7,12,9,,,,,21,2,10.5,6,44,5,,,870,Saint Mary's,-122.11,37.84
+2023,Bryan,,Josiah-Jordan James,Tennessee,4,10.2,8,7,10,,,,25,3,8.3000002,7,53,5,,,871,Tennessee,-83.925056,35.951138
+2023,Bryan,,Trey Aleander,Creighton,6,13.6,9,17,19,8,,,53,4,13.3,8,60,5,,,872,Creighton,-95.93,41.259998
+2023,Andrew F,,Jaime Jaquez Jr.,UCLA,2,17.299999,17,24,29,,,,70,3,23.299999,1,6,6,,,873,UCLA,-118.45,34.07
+2023,Andrew F,,Tyger Campbell,UCLA,2,13.6,7,12,14,,,,33,3,11,2,11,6,,,874,UCLA,-118.45,34.07
+2023,Andrew F,,Souley Boum,Xavier,3,16.5,17,14,12,,,,43,3,14.3,3,22,6,,,875,Xavier,-84.470001,39.150002
+2023,Andrew F,,Jordan Hawkins,Connecticut,4,16.4,13,12,24,20,13,16,98,6,16.299999,4,27,6,,,876,Connecticut,-72.676193,41.768265
+2023,Andrew F,,Oscar Tshiebwe,Kentucky,6,16.5,8,25,,,,,33,2,16.5,5,38,6,,,877,Kentucky,-84.5,38.049999
+2023,Andrew F,,Ryan Kalkbrenner,Creighton,6,15.4,31,10,22,17,,,80,4,20,6,43,6,,,878,Creighton,-95.93,41.259998
+2023,Andrew F,,Adam Kunkel,Xavier,3,10.2,8,15,21,,,,44,3,14.7,7,54,6,,,879,Xavier,-84.470001,39.150002
+2023,Andrew F,,Ricky Council IV,Arkansas,8,15.9,18,21,17,,,,56,3,18.700001,8,59,6,,,880,Arkansas,-94.18,36.060001
+2023,James,,Drew Timme,Gonzaga,3,20.9,21,28,36,12,,,97,4,24.299999,1,7,7,,,881,Gonzaga,-117.4,47.669998
+2023,James,,Keyontae Johnson,Kansas St.,3,17.700001,18,13,22,9,,,62,4,15.5,2,10,7,,,882,Kansas St.,-96.589996,39.200001
+2023,James,,Adam Flagler,Baylor,3,15.5,18,15,,,,,33,2,16.5,3,23,7,,,883,Baylor,-97.110001,31.549999
+2023,James,,LJ Cryer,Baylor,3,14.5,15,30,,,,,45,2,22.5,4,26,7,,,884,Baylor,-97.110001,31.549999
+2023,James,,Anton Watson,Gonzaga,3,11.3,14,9,8,6,,,37,4,9.3000002,5,39,7,,,885,Gonzaga,-117.4,47.669998
+2023,James,,Jack Nunge,Xavier,3,14.1,10,18,15,,,,43,3,14.3,6,42,7,,,886,Xavier,-84.470001,39.150002
+2023,James,,Kris Murray,Iowa,8,20.4,15,,,,,,15,1,15,7,55,7,,,887,Iowa,-91.554955,41.663471
+2023,James,,Tucker DeVries,Drake,12,19,3,,,,,,3,1,3,8,58,7,,,888,Drake,-93.650002,41.599998
+2023,Andrew L,,Gradey Dick,Kansas,1,14.1,19,7,,,,,26,2,13,1,8,8,,,889,Kansas,-95.25,38.950001
+2023,Andrew L,,Kyle Filipowski,Duke,5,15.4,6,13,,,,,19,2,9.5,2,9,8,,,890,Duke,-78.940002,36
+2023,Andrew L,,Jarace Walker,Houston,1,11,16,7,16,,,,39,3,13,3,24,8,,,891,Houston,-95.346931,29.724676
+2023,Andrew L,,Adama Sanogo,Connecticut,4,16.799999,28,24,18,10,21,17,118,6,19.700001,4,25,8,,,892,Connecticut,-72.676193,41.768265
+2023,Andrew L,,Amari Bailey,UCLA,2,10.6,17,14,19,,,,50,3,16.700001,5,40,8,,,893,UCLA,-118.45,34.07
+2023,Andrew L,,Rasir Bolton,Gonzaga,3,10.4,6,17,0,6,,,29,4,7.3000002,6,41,8,,,894,Gonzaga,-117.4,47.669998
+2023,Andrew L,,Matt Bradley,San Diego St.,5,12.9,17,10,6,2,21,8,64,6,10.7,7,56,8,,,895,San Diego St.,-117.07,32.77
+2023,Andrew L,,Tyrese Proctor,Duke,5,9.3000002,7,16,,,,,23,2,11.5,8,57,8,,,896,Duke,-78.940002,36
+2024,Alex,,Zach Edey,Purdue,1,24.4,30,23,27,40,20,37,177,6,29.5,1,1,1,,,897,Purdue,-86.919998,40.43
+2024,Alex,,Johni Broome,Auburn,4,16.200001,24,,,,,,24,1,24,2,16,1,,,898,Auburn,-85.492508,32.602722
+2024,Alex,,Kyle Filipowski,Duke,4,17.1,3,14,16,11,,,44,4,11,3,17,1,,,899,Duke,-78.940002,36
+2024,Alex,,Pelle Larsson,Arizona,2,12.8,15,13,8,,,,36,3,12,4,32,1,,,900,Arizona,-110.95,32.23
+2024,Alex,,Keshad Johnson,Arizona,2,11.6,13,13,6,,,,32,3,10.7,5,33,1,,,901,Arizona,-110.95,32.23
+2024,Alex,,Hunter Dickinson,Kansas,4,18,19,15,,,,,34,2,17,6,48,1,,,902,Kansas,-95.25,38.950001
+2024,Alex,,Milan Momcilovic,Iowa St.,2,11,19,10,1,,,,30,3,10,7,49,1,,,903,Iowa St.,-93.639999,42.02
+2024,Alex,,Augustas Marciulionis,Saint Mary's,5,12.4,10,,,,,,10,1,10,8,64,1,,,904,Saint Mary's,-122.11,37.84
+2024,Josh,,RJ Davis,North Carolina,1,21.4,22,20,16,,,,58,3,19.299999,1,2,2,,,905,North Carolina,-79.040001,35.900002
+2024,Josh,,Kam Jones,Marquette,2,16.799999,28,18,20,,,,66,3,22,2,15,2,,,906,Marquette,-87.919998,43.040001
+2024,Josh,,Alex Karaban,Connecticut,1,13.9,12,9,8,10,14,5,58,6,9.6999998,3,18,2,,,907,Connecticut,-72.676193,41.768265
+2024,Josh,,Jaedon LeDee,San Diego St.,5,21.1,32,26,18,,,,76,3,25.299999,4,31,2,,,908,San Diego St.,-117.07,32.77
+2024,Josh,,Marcus Domask,Illinois,3,15.7,12,22,7,17,,,58,4,14.5,5,34,2,,,909,Illinois,-88.239998,40.099998
+2024,Josh,,AJ Storr,Wisconsin,5,16.700001,13,,,,,,13,1,13,6,47,2,,,910,Wisconsin,-89.400002,43.07
+2024,Josh,,Coleman Hawkins,Illinois,3,12.6,10,11,12,5,,,38,4,9.5,7,50,2,,,911,Illinois,-88.239998,40.099998
+2024,Josh,,Shahada Wells,McNeese St.,12,17.799999,17,,,,,,17,1,17,8,63,2,,,912,McNeese St.,-93.209763,30.175711
+2024,Adam,,Terrence Shannon Jr,Illinois,3,22.6,26,30,29,8,,,93,4,23.299999,1,3,3,,,913,Illinois,-88.239998,40.099998
+2024,Adam,,Trey Alexander,Creighton,3,17.6,19,20,13,,,,52,3,17.299999,2,14,3,,,914,Creighton,-95.93,41.259998
+2024,Adam,,Donovan Clingan,Connecticut,1,12.5,19,14,8,22,18,11,92,6,15.3,3,19,3,,,915,Connecticut,-72.676193,41.768265
+2024,Adam,,Emanuel Sharp,Houston,1,12.2,13,30,7,,,,50,3,16.700001,4,30,3,,,916,Houston,-95.346931,29.724676
+2024,Adam,,Zakai Zeigler,Tennessee,2,11.9,11,6,18,9,,,44,4,11,5,35,3,,,917,Tennessee,-83.925056,35.951138
+2024,Adam,,Reed Sheppard,Kentucky,3,12.8,3,,,,,,3,1,3,6,46,3,,,918,Kentucky,-84.5,38.049999
+2024,Adam,,Jalen Bridges,Baylor,3,11.9,23,10,,,,,33,2,16.5,7,51,3,,,919,Baylor,-97.110001,31.549999
+2024,Adam,,David Joplin,Marquette,2,10.9,13,14,4,,,,31,3,10.3,8,62,3,,,920,Marquette,-87.919998,43.040001
+2024,Andrew L,,Tristen Newton,Connecticut,1,15.2,13,20,17,5,12,20,87,6,14.5,1,4,4,,,921,Connecticut,-72.676193,41.768265
+2024,Andrew L,,Cam Spencer,Connecticut,1,14.5,15,11,18,11,14,11,80,6,13.3,2,13,4,,,922,Connecticut,-72.676193,41.768265
+2024,Andrew L,,Braden Smith,Purdue,1,12.5,11,5,14,9,3,12,54,6,9,3,20,4,,,923,Purdue,-86.919998,40.43
+2024,Andrew L,,Harrison Ingram,North Carolina,1,12.1,9,17,12,,,,38,3,12.7,4,29,4,,,924,North Carolina,-79.040001,35.900002
+2024,Andrew L,,Jeremy Roach,Duke,4,14,14,15,14,13,,,56,4,14,5,36,4,,,925,Duke,-78.940002,36
+2024,Andrew L,,Aaron Estrada,Alabama,4,13.5,13,8,19,10,13,,63,5,12.6,6,45,4,,,926,Alabama,-87.539696,33.202972
+2024,Andrew L,,Walter Clayton Jr,Florida,7,17.299999,33,,,,,,33,1,33,7,52,4,,,927,Florida,-82.349998,29.65
+2024,Andrew L,,DaRon Holmes II,Dayton,7,20.4,18,23,,,,,41,2,20.5,8,61,4,,,928,Dayton,-84.199997,39.735649
+2024,Bryan,,L.J. Cryer,Houston,1,15.3,17,20,15,,,,52,3,17.299999,1,5,5,,,929,Houston,-95.346931,29.724676
+2024,Bryan,,Jamal Shead,Houston,1,13.1,11,21,2,,,,34,3,11.3,2,12,5,,,930,Houston,-95.346931,29.724676
+2024,Bryan,,Keshon Gilbert,Iowa St.,2,13.8,15,10,14,,,,39,3,13,3,21,5,,,931,Iowa St.,-93.639999,42.02
+2024,Bryan,,Lance Jones,Purdue,1,12.2,6,9,12,7,14,5,53,6,8.8000002,4,28,5,,,932,Purdue,-86.919998,40.43
+2024,Bryan,,Fletcher Loyer,Purdue,1,10.4,8,15,10,14,11,0,58,6,9.6999998,5,37,5,,,933,Purdue,-86.919998,40.43
+2024,Bryan,,RayJ Dennis,Baylor,3,13.3,10,27,,,,,37,2,18.5,6,44,5,,,934,Baylor,-97.110001,31.549999
+2024,Bryan,,Jaylin Williams,Auburn,4,12.6,13,,,,,,13,1,13,7,53,5,,,935,Auburn,-85.492508,32.602722
+2024,Bryan,,Aidan Mahaney,Saint Mary's,5,13.9,13,,,,,,13,1,13,8,60,5,,,936,Saint Mary's,-122.11,37.84
+2024,James,,Dalton Knecht,Tennessee,2,21.1,23,18,26,37,,,104,4,26,1,6,6,,,937,Tennessee,-83.925056,35.951138
+2024,James,,Mark Sears,Alabama,4,21.1,30,26,18,23,24,,121,5,24.200001,2,11,6,,,938,Alabama,-87.539696,33.202972
+2024,James,,Rob Dillingham,Kentucky,3,15.4,10,,,,,,10,1,10,3,22,6,,,939,Kentucky,-84.5,38.049999
+2024,James,,Tyler Kolek,Marquette,2,15,18,21,17,,,,56,3,18.700001,4,27,6,,,940,Marquette,-87.919998,43.040001
+2024,James,,Oso Ighodaro,Marquette,2,14,4,10,6,,,,20,3,6.6999998,5,38,6,,,941,Marquette,-87.919998,43.040001
+2024,James,,Stephon Castle,Connecticut,1,10.8,14,7,16,2,21,15,75,6,12.5,6,43,6,,,942,Connecticut,-72.676193,41.768265
+2024,James,,Anton Watson,Gonzaga,5,14.4,13,21,14,,,,48,3,16,7,54,6,,,943,Gonzaga,-117.4,47.669998
+2024,James,,Ryan Nembhard,Gonzaga,5,12.9,8,5,14,,,,27,3,9,8,59,6,,,944,Gonzaga,-117.4,47.669998
+2024,Rob,,Armando Bacot,North Carolina,1,14.1,20,18,19,,,,57,3,19,1,7,7,,,945,North Carolina,-79.040001,35.900002
+2024,Rob,,Antonio Reeves,Kentucky,3,20,27,,,,,,27,1,27,2,10,7,,,946,Kentucky,-84.5,38.049999
+2024,Rob,,Ryan Kalkbrenner,Creighton,3,17.1,23,19,14,,,,56,3,18.700001,3,23,7,,,947,Creighton,-95.93,41.259998
+2024,Rob,,Cormac Ryan,North Carolina,1,11.2,13,14,17,,,,44,3,14.7,4,26,7,,,948,North Carolina,-79.040001,35.900002
+2024,Rob,,Tamin Lipsey,Iowa St.,2,12.3,17,15,8,,,,40,3,13.3,5,39,7,,,949,Iowa St.,-93.639999,42.02
+2024,Rob,,Jonas Aidoo,Tennessee,2,11.9,15,11,4,0,,,30,4,7.5,6,42,7,,,950,Tennessee,-83.925056,35.951138
+2024,Rob,,PJ Hall,Clemson,6,18.799999,14,11,17,14,,,56,4,14,7,55,7,,,951,Clemson,-82.846413,34.680397
+2024,Rob,,KJ Adams,Kansas,4,12.4,20,10,,,,,30,2,15,8,58,7,,,952,Kansas,-95.25,38.950001
+2024,Andrew F,,Caleb Love,Arizona,2,18.1,18,19,13,,,,50,3,16.700001,1,8,8,,,953,Arizona,-110.95,32.23
+2024,Andrew F,,Baylor Scheierman,Creighton,3,18.4,15,18,25,,,,58,3,19.299999,2,9,8,,,954,Creighton,-95.93,41.259998
+2024,Andrew F,,Oumar Ballo,Arizona,2,13.1,11,8,15,,,,34,3,11.3,3,24,8,,,955,Arizona,-110.95,32.23
+2024,Andrew F,,Ja'Kobe Walter,Baylor,3,14.2,19,20,,,,,39,2,19.5,4,25,8,,,956,Baylor,-97.110001,31.549999
+2024,Andrew F,,Graham Ike,Gonzaga,5,16.5,16,15,18,,,,49,3,16.299999,5,40,8,,,957,Gonzaga,-117.4,47.669998
+2024,Andrew F,,Jared McCain,Duke,4,13.4,15,30,7,32,,,84,4,21,6,41,8,,,958,Duke,-78.940002,36
+2024,Andrew F,,Tyson Walker,Michigan St.,9,18.200001,19,24,,,,,43,2,21.5,7,56,8,,,959,Michigan St.,-84.489998,42.73
+2024,Andrew F,,J'Wan Roberts,Houston,1,9.3999996,7,13,13,,,,33,3,11,8,57,8,,,960,Houston,-95.346931,29.724676
