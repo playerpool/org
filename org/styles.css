@@ -328,6 +328,16 @@ h3 {
   color: black;
 }
 
+.main .podcast {
+  background-color: #EAE7DC;
+  font-family: 'Trebuchet MS';
+  font-size: 24px;
+  padding-left: 0%;
+  padding-right: 15%;
+  padding-top: 10px;
+  color: black;
+}
+
 .axis text {
     font-family: 'Trebuchet MS';
     font-size: 18px;
@@ -476,9 +486,22 @@ td:first-child {
     padding-left: 5%;
 }
 
+.player{
+    display: flex;
+}
+
+.playerz{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
 .player img {
     width: 120px;
+    height: 120px;
     border: 1px solid #8E8D8A;
     border-radius: 2px;
+    object-fit: cover;
+    object-position: 50% 10%;
 }
 
